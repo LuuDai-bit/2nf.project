@@ -1,0 +1,14 @@
+E:\javaworkspace\crm\crm-core\src\main\java\com\example\dto\BaseDTO.java
+E:\javaworkspace\crm\crm-core\src\main\java\com\example\dto\UserDTO.java
+E:\javaworkspace\crm\crm-core\src\main\java\com\example\config\JPAConfig.java
+E:\javaworkspace\crm\crm-core\src\main\java\com\example\controller\admin\AdminController.java
+E:\javaworkspace\crm\crm-core\src\main\java\com\example\repository\IUserRepository.java
+E:\javaworkspace\crm\crm-core\src\main\java\com\example\controller\web\WebController.java
+E:\javaworkspace\crm\crm-core\src\main\java\com\example\config\ApplicationConfig.java
+E:\javaworkspace\crm\crm-core\src\main\java\com\example\service\impl\UserService.java
+E:\javaworkspace\crm\crm-core\src\main\java\com\example\dto\RoleDTO.java
+E:\javaworkspace\crm\crm-core\src\main\java\com\example\controller\web\UserController.java
+E:\javaworkspace\crm\crm-core\src\main\java\com\example\service\IUserService.java
+E:\javaworkspace\crm\crm-core\src\main\java\com\example\entity\UserEntity.java
+E:\javaworkspace\crm\crm-core\src\main\java\com\example\entity\RoleEntity.java
+E:\javaworkspace\crm\crm-core\src\main\java\com\example\entity\BaseEntity.java

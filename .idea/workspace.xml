@@ -1,0 +1,1240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="crm-web:war exploded" />
+    </artifacts-to-build>
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="51b463de-13b6-4cb1-97fe-e0f2aa9f62ad" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/applicationfile/database/insert.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-core/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-core/src/main/java/com/example/config/ApplicationConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-core/src/main/java/com/example/config/JPAConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-core/src/main/java/com/example/controller/admin/AdminController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-core/src/main/java/com/example/controller/web/RestUploadController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-core/src/main/java/com/example/controller/web/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-core/src/main/java/com/example/controller/web/WebController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-core/src/main/java/com/example/dto/BaseDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-core/src/main/java/com/example/dto/RoleDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-core/src/main/java/com/example/dto/UserDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-core/src/main/java/com/example/entity/BaseEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-core/src/main/java/com/example/entity/RoleEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-core/src/main/java/com/example/entity/UserEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-core/src/main/java/com/example/entity/upload/UploadModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-core/src/main/java/com/example/exception/RestGlobalExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-core/src/main/java/com/example/repository/IRoleRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-core/src/main/java/com/example/repository/IUserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-core/src/main/java/com/example/service/IRoleService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-core/src/main/java/com/example/service/IUserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-core/src/main/java/com/example/service/impl/RoleService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/WEB-INF/context/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/WEB-INF/context/dispatcher-servlet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/WEB-INF/decorators.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/WEB-INF/views/admin/home.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/WEB-INF/views/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/WEB-INF/views/web/home.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/WEB-INF/views/web/user_add.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/common/admin/footer.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/common/admin/header.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/common/admin/menu.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/common/taglib.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/common/web/footer.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/common/web/header.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/decorators/admin.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/decorators/login.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/decorators/web.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/avatars/avatar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/avatars/avatar1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/avatars/avatar2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/avatars/avatar3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/avatars/avatar4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/avatars/avatar5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/avatars/profile-pic.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/avatars/user.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/css/ace-ie.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/css/ace-part2.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/css/ace-rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/css/ace.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/css/bootstrap-datetimepicker.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/css/bootstrap-duallistbox.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/css/bootstrap-editable.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/css/bootstrap-multiselect.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/css/bootstrap-timepicker.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/css/chosen-sprite.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/css/chosen-sprite@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/css/chosen.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/css/colorbox.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/css/colorpicker.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/css/colorpicker.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/css/datepicker.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/css/daterangepicker.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/css/dropzone.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/css/font-awesome.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/css/fullcalendar.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/css/images/border.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/css/images/controls.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/css/images/loading.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/css/images/loading_background.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/css/images/meteorshower2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/css/images/overlay.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/css/images/pattern.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/css/img/alpha.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/css/img/hue.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/css/img/saturation.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/css/jquery-ui.custom.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/css/jquery-ui.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/css/jquery.gritter.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/css/prettify.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/css/realestate_admin_style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/css/select2-spinner.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/css/select2.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/css/select2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/css/select2x2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/css/ui.jqgrid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/css/ui.jqgrid.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/font-awesome/4.1.0/css/font-awesome.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/font-awesome/4.1.0/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/font-awesome/4.1.0/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/font-awesome/4.1.0/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/font-awesome/4.1.0/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/font-awesome/4.2.0/css/font-awesome.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/font-awesome/4.2.0/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/font-awesome/4.2.0/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/font-awesome/4.2.0/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/font-awesome/4.2.0/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/fonts/fonts.googleapis.com.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/images/email1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/images/email2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/images/email3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/images/email4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/images/gallery/image-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/images/gallery/image-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/images/gallery/image-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/images/gallery/image-4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/images/gallery/image-5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/images/gallery/image-6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/images/gallery/thumb-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/images/gallery/thumb-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/images/gallery/thumb-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/images/gallery/thumb-4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/images/gallery/thumb-5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/images/gallery/thumb-6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/images/homeadmin.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/images/spritemap.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/images/spritemap@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/img/clear.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/img/loading.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/js/ace-editable.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/js/ace-elements.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/js/ace-extra.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/js/ace.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/js/additional-methods.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/js/bootbox.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/js/bootstrap-colorpicker.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/js/bootstrap-datepicker.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/js/bootstrap-datetimepicker.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/js/bootstrap-editable.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/js/bootstrap-markdown.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/js/bootstrap-multiselect.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/js/bootstrap-tag.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/js/bootstrap-timepicker.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/js/bootstrap-wysiwyg.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/js/chosen.jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/js/dataTables.colVis.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/js/dataTables.tableTools.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/js/daterangepicker.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/js/dropzone.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/js/excanvas.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/js/forms.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/js/fuelux.spinner.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/js/fuelux.tree.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/js/fuelux.wizard.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/js/fullcalendar.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/js/grid.locale-en.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/js/html5shiv.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/js/jquery-ui.custom.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/js/jquery-ui.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/js/jquery.1.11.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/js/jquery.2.1.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/js/jquery.autosize.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/js/jquery.bootstrap-duallistbox.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/js/jquery.colorbox-min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/js/jquery.colorbox.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/js/jquery.dataTables.bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/js/jquery.dataTables.bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/js/jquery.dataTables.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/js/jquery.easypiechart.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/js/jquery.flot.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/js/jquery.flot.pie.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/js/jquery.flot.resize.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/js/jquery.gritter.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/js/jquery.hotkeys.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/js/jquery.inputlimiter.1.3.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/js/jquery.jqGrid.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/js/jquery.knob.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/js/jquery.maskedinput.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/js/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/js/jquery.mobile.custom.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/js/jquery.nestable.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/js/jquery.raty.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/js/jquery.slimscroll.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/js/jquery.sparkline.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/js/jquery.ui.touch-punch.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/js/jquery.validate.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/js/jquery1x.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/js/markdown.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/js/mdb.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/js/moment.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/js/prettify.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/js/respond.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/js/select2.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/js/spin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/js/typeahead.jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/sweetalert2/sweetalert2.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/sweetalert2/sweetalert2.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/assets/swf/copy_csv_xls_pdf.swf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/CHANGES.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/LICENSE.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/adapters/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/build-config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/ckeditor.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/contents.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/lang/af.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/lang/ar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/lang/az.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/lang/bg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/lang/bn.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/lang/bs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/lang/ca.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/lang/cs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/lang/cy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/lang/da.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/lang/de-ch.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/lang/de.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/lang/el.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/lang/en-au.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/lang/en-ca.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/lang/en-gb.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/lang/en.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/lang/eo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/lang/es-mx.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/lang/es.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/lang/et.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/lang/eu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/lang/fa.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/lang/fi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/lang/fo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/lang/fr-ca.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/lang/fr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/lang/gl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/lang/gu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/lang/he.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/lang/hi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/lang/hr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/lang/hu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/lang/id.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/lang/is.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/lang/it.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/lang/ja.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/lang/ka.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/lang/km.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/lang/ko.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/lang/ku.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/lang/lt.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/lang/lv.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/lang/mk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/lang/mn.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/lang/ms.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/lang/nb.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/lang/nl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/lang/no.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/lang/oc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/lang/pl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/lang/pt-br.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/lang/pt.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/lang/ro.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/lang/ru.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/lang/si.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/lang/sk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/lang/sl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/lang/sq.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/lang/sr-latn.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/lang/sr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/lang/sv.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/lang/th.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/lang/tr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/lang/tt.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/lang/ug.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/lang/uk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/lang/vi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/lang/zh-cn.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/lang/zh.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/a11yhelp/dialogs/a11yhelp.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/a11yhelp/dialogs/lang/_translationstatus.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/a11yhelp/dialogs/lang/af.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/a11yhelp/dialogs/lang/ar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/a11yhelp/dialogs/lang/az.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/a11yhelp/dialogs/lang/bg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/a11yhelp/dialogs/lang/ca.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/a11yhelp/dialogs/lang/cs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/a11yhelp/dialogs/lang/cy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/a11yhelp/dialogs/lang/da.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/a11yhelp/dialogs/lang/de-ch.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/a11yhelp/dialogs/lang/de.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/a11yhelp/dialogs/lang/el.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/a11yhelp/dialogs/lang/en-au.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/a11yhelp/dialogs/lang/en-gb.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/a11yhelp/dialogs/lang/en.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/a11yhelp/dialogs/lang/eo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/a11yhelp/dialogs/lang/es-mx.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/a11yhelp/dialogs/lang/es.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/a11yhelp/dialogs/lang/et.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/a11yhelp/dialogs/lang/eu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/a11yhelp/dialogs/lang/fa.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/a11yhelp/dialogs/lang/fi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/a11yhelp/dialogs/lang/fo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/a11yhelp/dialogs/lang/fr-ca.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/a11yhelp/dialogs/lang/fr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/a11yhelp/dialogs/lang/gl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/a11yhelp/dialogs/lang/gu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/a11yhelp/dialogs/lang/he.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/a11yhelp/dialogs/lang/hi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/a11yhelp/dialogs/lang/hr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/a11yhelp/dialogs/lang/hu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/a11yhelp/dialogs/lang/id.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/a11yhelp/dialogs/lang/it.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/a11yhelp/dialogs/lang/ja.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/a11yhelp/dialogs/lang/km.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/a11yhelp/dialogs/lang/ko.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/a11yhelp/dialogs/lang/ku.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/a11yhelp/dialogs/lang/lt.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/a11yhelp/dialogs/lang/lv.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/a11yhelp/dialogs/lang/mk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/a11yhelp/dialogs/lang/mn.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/a11yhelp/dialogs/lang/nb.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/a11yhelp/dialogs/lang/nl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/a11yhelp/dialogs/lang/no.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/a11yhelp/dialogs/lang/oc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/a11yhelp/dialogs/lang/pl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/a11yhelp/dialogs/lang/pt-br.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/a11yhelp/dialogs/lang/pt.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/a11yhelp/dialogs/lang/ro.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/a11yhelp/dialogs/lang/ru.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/a11yhelp/dialogs/lang/si.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/a11yhelp/dialogs/lang/sk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/a11yhelp/dialogs/lang/sl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/a11yhelp/dialogs/lang/sq.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/a11yhelp/dialogs/lang/sr-latn.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/a11yhelp/dialogs/lang/sr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/a11yhelp/dialogs/lang/sv.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/a11yhelp/dialogs/lang/th.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/a11yhelp/dialogs/lang/tr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/a11yhelp/dialogs/lang/tt.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/a11yhelp/dialogs/lang/ug.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/a11yhelp/dialogs/lang/uk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/a11yhelp/dialogs/lang/vi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/a11yhelp/dialogs/lang/zh-cn.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/a11yhelp/dialogs/lang/zh.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/about/dialogs/about.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/about/dialogs/hidpi/logo_ckeditor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/about/dialogs/logo_ckeditor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/clipboard/dialogs/paste.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/colordialog/dialogs/colordialog.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/colordialog/dialogs/colordialog.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/copyformatting/cursors/cursor-disabled.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/copyformatting/cursors/cursor.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/copyformatting/styles/copyformatting.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/dialog/dialogDefinition.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/dialog/styles/dialog.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/div/dialogs/div.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/find/dialogs/find.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/flash/dialogs/flash.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/flash/images/placeholder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/forms/dialogs/button.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/forms/dialogs/checkbox.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/forms/dialogs/form.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/forms/dialogs/hiddenfield.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/forms/dialogs/radio.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/forms/dialogs/select.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/forms/dialogs/textarea.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/forms/dialogs/textfield.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/forms/images/hiddenfield.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/icons.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/icons_hidpi.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/iframe/dialogs/iframe.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/iframe/images/placeholder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/image/dialogs/image.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/image/images/noimage.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/link/dialogs/anchor.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/link/dialogs/link.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/link/images/anchor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/link/images/hidpi/anchor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/liststyle/dialogs/liststyle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/magicline/images/hidpi/icon-rtl.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/magicline/images/hidpi/icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/magicline/images/icon-rtl.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/magicline/images/icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/pagebreak/images/pagebreak.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/pastefromgdocs/filter/default.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/pastefromword/filter/default.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/pastetools/filter/common.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/pastetools/filter/image.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/preview/images/pagebreak.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/preview/preview.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/preview/styles/screen.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/scayt/CHANGELOG.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/scayt/LICENSE.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/scayt/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/scayt/dialogs/dialog.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/scayt/dialogs/options.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/scayt/dialogs/toolbar.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/scayt/skins/moono-lisa/scayt.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/showblocks/images/block_address.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/showblocks/images/block_blockquote.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/showblocks/images/block_div.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/showblocks/images/block_h1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/showblocks/images/block_h2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/showblocks/images/block_h3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/showblocks/images/block_h4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/showblocks/images/block_h5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/showblocks/images/block_h6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/showblocks/images/block_p.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/showblocks/images/block_pre.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/smiley/dialogs/smiley.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/smiley/images/angel_smile.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/smiley/images/angel_smile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/smiley/images/angry_smile.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/smiley/images/angry_smile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/smiley/images/broken_heart.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/smiley/images/broken_heart.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/smiley/images/confused_smile.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/smiley/images/confused_smile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/smiley/images/cry_smile.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/smiley/images/cry_smile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/smiley/images/devil_smile.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/smiley/images/devil_smile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/smiley/images/embaressed_smile.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/smiley/images/embarrassed_smile.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/smiley/images/embarrassed_smile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/smiley/images/envelope.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/smiley/images/envelope.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/smiley/images/heart.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/smiley/images/heart.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/smiley/images/kiss.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/smiley/images/kiss.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/smiley/images/lightbulb.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/smiley/images/lightbulb.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/smiley/images/omg_smile.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/smiley/images/omg_smile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/smiley/images/regular_smile.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/smiley/images/regular_smile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/smiley/images/sad_smile.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/smiley/images/sad_smile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/smiley/images/shades_smile.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/smiley/images/shades_smile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/smiley/images/teeth_smile.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/smiley/images/teeth_smile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/smiley/images/thumbs_down.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/smiley/images/thumbs_down.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/smiley/images/thumbs_up.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/smiley/images/thumbs_up.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/smiley/images/tongue_smile.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/smiley/images/tongue_smile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/smiley/images/tounge_smile.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/smiley/images/whatchutalkingabout_smile.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/smiley/images/whatchutalkingabout_smile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/smiley/images/wink_smile.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/smiley/images/wink_smile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/specialchar/dialogs/lang/_translationstatus.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/specialchar/dialogs/lang/af.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/specialchar/dialogs/lang/ar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/specialchar/dialogs/lang/az.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/specialchar/dialogs/lang/bg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/specialchar/dialogs/lang/ca.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/specialchar/dialogs/lang/cs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/specialchar/dialogs/lang/cy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/specialchar/dialogs/lang/da.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/specialchar/dialogs/lang/de-ch.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/specialchar/dialogs/lang/de.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/specialchar/dialogs/lang/el.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/specialchar/dialogs/lang/en-au.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/specialchar/dialogs/lang/en-ca.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/specialchar/dialogs/lang/en-gb.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/specialchar/dialogs/lang/en.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/specialchar/dialogs/lang/eo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/specialchar/dialogs/lang/es-mx.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/specialchar/dialogs/lang/es.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/specialchar/dialogs/lang/et.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/specialchar/dialogs/lang/eu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/specialchar/dialogs/lang/fa.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/specialchar/dialogs/lang/fi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/specialchar/dialogs/lang/fr-ca.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/specialchar/dialogs/lang/fr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/specialchar/dialogs/lang/gl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/specialchar/dialogs/lang/he.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/specialchar/dialogs/lang/hr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/specialchar/dialogs/lang/hu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/specialchar/dialogs/lang/id.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/specialchar/dialogs/lang/it.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/specialchar/dialogs/lang/ja.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/specialchar/dialogs/lang/km.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/specialchar/dialogs/lang/ko.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/specialchar/dialogs/lang/ku.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/specialchar/dialogs/lang/lt.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/specialchar/dialogs/lang/lv.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/specialchar/dialogs/lang/nb.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/specialchar/dialogs/lang/nl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/specialchar/dialogs/lang/no.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/specialchar/dialogs/lang/oc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/specialchar/dialogs/lang/pl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/specialchar/dialogs/lang/pt-br.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/specialchar/dialogs/lang/pt.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/specialchar/dialogs/lang/ro.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/specialchar/dialogs/lang/ru.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/specialchar/dialogs/lang/si.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/specialchar/dialogs/lang/sk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/specialchar/dialogs/lang/sl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/specialchar/dialogs/lang/sq.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/specialchar/dialogs/lang/sr-latn.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/specialchar/dialogs/lang/sr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/specialchar/dialogs/lang/sv.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/specialchar/dialogs/lang/th.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/specialchar/dialogs/lang/tr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/specialchar/dialogs/lang/tt.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/specialchar/dialogs/lang/ug.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/specialchar/dialogs/lang/uk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/specialchar/dialogs/lang/vi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/specialchar/dialogs/lang/zh-cn.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/specialchar/dialogs/lang/zh.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/specialchar/dialogs/specialchar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/table/dialogs/table.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/tableselection/styles/tableselection.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/tabletools/dialogs/tableCell.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/templates/dialogs/templates.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/templates/dialogs/templates.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/templates/templates/default.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/templates/templates/images/template1.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/templates/templates/images/template2.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/templates/templates/images/template3.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/widget/images/handle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/wsc/LICENSE.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/wsc/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/wsc/dialogs/ciframe.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/wsc/dialogs/tmpFrameset.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/wsc/dialogs/wsc.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/wsc/dialogs/wsc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/wsc/dialogs/wsc_ie.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/plugins/wsc/skins/moono-lisa/wsc.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/samples/css/samples.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/samples/img/github-top.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/samples/img/header-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/samples/img/header-separator.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/samples/img/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/samples/img/logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/samples/img/navigation-tip.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/samples/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/samples/js/sample.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/samples/js/sf.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/samples/old/ajax.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/samples/old/api.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/samples/old/appendto.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/samples/old/assets/inlineall/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/samples/old/assets/outputxhtml/outputxhtml.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/samples/old/assets/posteddata.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/samples/old/assets/sample.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/samples/old/assets/uilanguages/languages.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/samples/old/datafiltering.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/samples/old/dialog/assets/my_dialog.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/samples/old/dialog/dialog.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/samples/old/divreplace.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/samples/old/enterkey/enterkey.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/samples/old/htmlwriter/assets/outputforflash/outputforflash.fla" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/samples/old/htmlwriter/assets/outputforflash/outputforflash.swf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/samples/old/htmlwriter/assets/outputforflash/swfobject.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/samples/old/htmlwriter/outputforflash.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/samples/old/htmlwriter/outputhtml.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/samples/old/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/samples/old/inlineall.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/samples/old/inlinebycode.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/samples/old/inlinetextarea.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/samples/old/jquery.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/samples/old/magicline/magicline.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/samples/old/readonly.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/samples/old/replacebyclass.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/samples/old/replacebycode.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/samples/old/sample.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/samples/old/sample.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/samples/old/sample_posteddata.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/samples/old/tabindex.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/samples/old/toolbar/toolbar.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/samples/old/uicolor.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/samples/old/uilanguages.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/samples/old/wysiwygarea/fullpage.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/samples/old/xhtmlstyle.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/samples/toolbarconfigurator/css/fontello.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/samples/toolbarconfigurator/font/LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/samples/toolbarconfigurator/font/config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/samples/toolbarconfigurator/font/fontello.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/samples/toolbarconfigurator/font/fontello.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/samples/toolbarconfigurator/font/fontello.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/samples/toolbarconfigurator/font/fontello.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/samples/toolbarconfigurator/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/samples/toolbarconfigurator/js/abstracttoolbarmodifier.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/samples/toolbarconfigurator/js/fulltoolbareditor.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/samples/toolbarconfigurator/js/toolbarmodifier.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/samples/toolbarconfigurator/js/toolbartextmodifier.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/samples/toolbarconfigurator/lib/codemirror/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/samples/toolbarconfigurator/lib/codemirror/codemirror.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/samples/toolbarconfigurator/lib/codemirror/codemirror.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/samples/toolbarconfigurator/lib/codemirror/javascript.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/samples/toolbarconfigurator/lib/codemirror/neo.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/samples/toolbarconfigurator/lib/codemirror/show-hint.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/samples/toolbarconfigurator/lib/codemirror/show-hint.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/skins/moono-lisa/dialog.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/skins/moono-lisa/dialog_ie.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/skins/moono-lisa/dialog_ie8.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/skins/moono-lisa/dialog_iequirks.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/skins/moono-lisa/editor.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/skins/moono-lisa/editor_gecko.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/skins/moono-lisa/editor_ie.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/skins/moono-lisa/editor_ie8.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/skins/moono-lisa/editor_iequirks.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/skins/moono-lisa/icons.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/skins/moono-lisa/icons_hidpi.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/skins/moono-lisa/images/arrow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/skins/moono-lisa/images/close.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/skins/moono-lisa/images/hidpi/close.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/skins/moono-lisa/images/hidpi/lock-open.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/skins/moono-lisa/images/hidpi/lock.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/skins/moono-lisa/images/hidpi/refresh.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/skins/moono-lisa/images/lock-open.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/skins/moono-lisa/images/lock.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/skins/moono-lisa/images/refresh.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/skins/moono-lisa/images/spinner.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/skins/moono-lisa/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/styles.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/ckeditor/vendor/promise.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/data-table/data-table-bootstrap4-1.0.0.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/data-table/data_table-1.0.0.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/data-table/ellipsis.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/data-table/media/css/dataTables.bootstrap4_v4.6.1.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/data-table/media/css/dataTables.materia_v4.6.1.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/data-table/media/js/dataTables.material-1.0.0.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/data-table/sum.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/font-awesome/4.5.0/css/font-awesome.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/font/font-awesome.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/font/font-awesome.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/js/2.1.4/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/js/jquery-2.2.3.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/js/jquery-2.2.3.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/admin/js/realestate-javascript.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/css/ajax-loader.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/css/animate.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/css/aos.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/css/bootstrap-datepicker.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/css/bootstrap/bootstrap-grid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/css/bootstrap/bootstrap-reboot.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/css/css/bootstrap-reboot.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/css/css/mixins/_text-hide.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/css/flaticon.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/css/icomoon.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/css/ionicons.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/css/jquery.timepicker.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/css/magnific-popup.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/css/open-iconic-bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/css/owl.carousel.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/css/owl.theme.default.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/fonts/flaticon/backup.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/fonts/flaticon/font/Flaticon.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/fonts/flaticon/font/Flaticon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/fonts/flaticon/font/Flaticon.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/fonts/flaticon/font/Flaticon.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/fonts/flaticon/font/_flaticon.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/fonts/flaticon/font/flaticon.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/fonts/flaticon/font/flaticon.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/fonts/flaticon/license/license.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/fonts/icomoon/icomoon.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/fonts/icomoon/icomoon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/fonts/icomoon/icomoon.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/fonts/icomoon/icomoon.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/fonts/ionicons/css/_ionicons.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/fonts/ionicons/css/ionicons.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/fonts/ionicons/fonts/ionicons.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/fonts/ionicons/fonts/ionicons.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/fonts/ionicons/fonts/ionicons.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/fonts/ionicons/fonts/ionicons.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/fonts/ionicons/fonts/ionicons.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/fonts/open-iconic/open-iconic.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/fonts/open-iconic/open-iconic.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/fonts/open-iconic/open-iconic.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/fonts/open-iconic/open-iconic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/fonts/open-iconic/open-iconic.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/images/about.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/images/bg_1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/images/bg_2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/images/image_1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/images/image_2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/images/image_3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/images/image_4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/images/image_5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/images/image_6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/images/image_7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/images/image_8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/images/person_1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/images/person_2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/images/person_3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/images/person_4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/images/properties-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/images/properties-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/images/properties-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/images/properties-4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/images/properties-5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/images/properties-6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/images/properties-7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/images/properties-8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/images/properties-9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/images/staff-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/images/staff-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/images/staff-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/images/staff-4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/js/aos.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/js/bootstrap-datepicker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/js/google-map.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/js/jquery-3.2.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/js/jquery-migrate-3.0.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/js/jquery.animateNumber.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/js/jquery.easing.1.3.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/js/jquery.magnific-popup.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/js/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/js/jquery.stellar.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/js/jquery.waypoints.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/js/owl.carousel.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/js/popper.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/js/range.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/js/scrollax.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/scss/bootstrap/_alert.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/scss/bootstrap/_badge.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/scss/bootstrap/_breadcrumb.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/scss/bootstrap/_button-group.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/scss/bootstrap/_buttons.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/scss/bootstrap/_card.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/scss/bootstrap/_carousel.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/scss/bootstrap/_close.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/scss/bootstrap/_code.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/scss/bootstrap/_custom-forms.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/scss/bootstrap/_dropdown.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/scss/bootstrap/_forms.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/scss/bootstrap/_functions.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/scss/bootstrap/_grid.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/scss/bootstrap/_images.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/scss/bootstrap/_input-group.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/scss/bootstrap/_jumbotron.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/scss/bootstrap/_list-group.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/scss/bootstrap/_media.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/scss/bootstrap/_mixins.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/scss/bootstrap/_modal.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/scss/bootstrap/_nav.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/scss/bootstrap/_navbar.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/scss/bootstrap/_pagination.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/scss/bootstrap/_popover.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/scss/bootstrap/_print.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/scss/bootstrap/_progress.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/scss/bootstrap/_reboot.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/scss/bootstrap/_root.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/scss/bootstrap/_tables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/scss/bootstrap/_tooltip.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/scss/bootstrap/_transitions.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/scss/bootstrap/_type.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/scss/bootstrap/_utilities.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/scss/bootstrap/_variables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/scss/bootstrap/bootstrap-grid.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/scss/bootstrap/bootstrap-reboot.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/scss/bootstrap/bootstrap.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/scss/bootstrap/mixins/_alert.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/scss/bootstrap/mixins/_background-variant.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/scss/bootstrap/mixins/_badge.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/scss/bootstrap/mixins/_border-radius.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/scss/bootstrap/mixins/_box-shadow.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/scss/bootstrap/mixins/_breakpoints.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/scss/bootstrap/mixins/_buttons.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/scss/bootstrap/mixins/_caret.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/scss/bootstrap/mixins/_clearfix.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/scss/bootstrap/mixins/_float.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/scss/bootstrap/mixins/_forms.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/scss/bootstrap/mixins/_gradients.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/scss/bootstrap/mixins/_grid-framework.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/scss/bootstrap/mixins/_grid.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/scss/bootstrap/mixins/_hover.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/scss/bootstrap/mixins/_image.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/scss/bootstrap/mixins/_list-group.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/scss/bootstrap/mixins/_lists.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/scss/bootstrap/mixins/_nav-divider.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/scss/bootstrap/mixins/_pagination.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/scss/bootstrap/mixins/_reset-text.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/scss/bootstrap/mixins/_resize.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/scss/bootstrap/mixins/_screen-reader.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/scss/bootstrap/mixins/_size.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/scss/bootstrap/mixins/_table-row.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/scss/bootstrap/mixins/_text-emphasis.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/scss/bootstrap/mixins/_text-hide.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/scss/bootstrap/mixins/_text-truncate.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/scss/bootstrap/mixins/_transition.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/scss/bootstrap/mixins/_visibility.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/scss/bootstrap/utilities/_align.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/scss/bootstrap/utilities/_background.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/scss/bootstrap/utilities/_borders.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/scss/bootstrap/utilities/_clearfix.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/scss/bootstrap/utilities/_display.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/scss/bootstrap/utilities/_embed.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/scss/bootstrap/utilities/_flex.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/scss/bootstrap/utilities/_float.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/scss/bootstrap/utilities/_position.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/scss/bootstrap/utilities/_screenreaders.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/scss/bootstrap/utilities/_shadows.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/scss/bootstrap/utilities/_sizing.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/scss/bootstrap/utilities/_spacing.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/scss/bootstrap/utilities/_text.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/scss/bootstrap/utilities/_visibility.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/scss/style.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/js/building_admin_js_custom.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/js/global_admin_script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/js/user_controller.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/web/css/easy-responsive-tabs.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/web/css/global.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/web/css/owl.carousel.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/web/css/slider.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/web/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/web/font/Amble-Regular-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/web/images/Thumbs.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/web/images/about_img.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/web/images/arrow-next.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/web/images/arrow-prev.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/web/images/arrow_up.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/web/images/compare.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/web/images/delivery-img1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/web/images/delivery-img2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/web/images/delivery-img3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/web/images/dribbble.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/web/images/drop_arrow-hover.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/web/images/drop_arrow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/web/images/facebook.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/web/images/feature-pic1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/web/images/feature-pic2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/web/images/feature-pic3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/web/images/feature-pic4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/web/images/linkedin.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/web/images/list-img.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/web/images/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/web/images/new-pic1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/web/images/new-pic2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/web/images/new-pic3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/web/images/new-pic4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/web/images/newsimg1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/web/images/newsimg2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/web/images/newsimg3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/web/images/preview.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/web/images/price-rating.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/web/images/productslide-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/web/images/productslide-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/web/images/productslide-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/web/images/productslide-4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/web/images/productslide-5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/web/images/productslide-6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/web/images/quality-rating.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/web/images/search.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/web/images/skype.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/web/images/slide-1-image.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/web/images/slide-2-image.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/web/images/slide-3-image.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/web/images/tag.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/web/images/thumbnailslide-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/web/images/thumbnailslide-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/web/images/thumbnailslide-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/web/images/thumbnailslide-4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/web/images/thumbnailslide-5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/web/images/thumbnailslide-6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/web/images/twitter.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/web/images/value-rating.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/web/images/wishlist.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/web/js/easing.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/web/js/easyResponsiveTabs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/web/js/jquery-1.7.2.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/web/js/jquery.accordion.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/web/js/jquery.easing.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/web/js/move-top.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/web/js/owl.carousel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/web/js/paging/jquery.twbsPagination.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/web/js/paging/jquery.twbsPagination.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/web/js/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/web/js/slides.min.jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/web/js/startstop-slider.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../news-platform/news-core/src/main/java/com/example/dto/BaseDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../news-platform/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../news-platform/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../news-platform/applicationfile/database/insert_data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../news-platform/applicationfile/database/insert_data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../news-platform/news-core/src/main/java/com/example/config/ApplicationConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../news-platform/news-core/src/main/java/com/example/config/ApplicationConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../news-platform/news-core/src/main/java/com/example/controller/admin/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../news-platform/news-core/src/main/java/com/example/controller/admin/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../news-platform/news-core/src/main/java/com/example/controller/web/WebController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../news-platform/news-core/src/main/java/com/example/controller/web/WebController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../news-platform/news-core/src/main/java/com/example/dto/NewsDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../news-platform/news-core/src/main/java/com/example/dto/NewsDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../news-platform/news-core/src/main/java/com/example/dto/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../news-platform/news-core/src/main/java/com/example/dto/UserDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../news-platform/news-core/src/main/java/com/example/entity/BaseEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../news-platform/news-core/src/main/java/com/example/entity/BaseEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../news-platform/news-core/src/main/java/com/example/entity/UserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../news-platform/news-core/src/main/java/com/example/entity/UserEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../news-platform/news-core/src/main/java/com/example/repository/IUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../news-platform/news-core/src/main/java/com/example/repository/IUserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../news-platform/news-core/src/main/java/com/example/service/INewsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../news-platform/news-core/src/main/java/com/example/service/INewsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../news-platform/news-core/src/main/java/com/example/service/impl/NewsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../news-platform/news-core/src/main/java/com/example/service/impl/NewsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../news-platform/news-core/target/classes/META-INF/news-core.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../news-platform/news-core/target/classes/com/example/config/ApplicationConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/../news-platform/news-core/target/classes/com/example/config/ApplicationConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../news-platform/news-core/target/classes/com/example/controller/admin/AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../news-platform/news-core/target/classes/com/example/controller/admin/AdminController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../news-platform/news-core/target/classes/com/example/controller/web/WebController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../news-platform/news-core/target/classes/com/example/controller/web/WebController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../news-platform/news-core/target/classes/com/example/dto/UserDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/../news-platform/news-core/target/classes/com/example/dto/UserDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../news-platform/news-core/target/classes/com/example/entity/BaseEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/../news-platform/news-core/target/classes/com/example/entity/BaseEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../news-platform/news-core/target/classes/com/example/entity/UserEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/../news-platform/news-core/target/classes/com/example/entity/UserEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../news-platform/news-core/target/classes/com/example/repository/IUserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../news-platform/news-core/target/classes/com/example/repository/IUserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../news-platform/news-core/target/classes/com/example/service/INewsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../news-platform/news-core/target/classes/com/example/service/INewsService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../news-platform/news-core/target/classes/com/example/service/impl/NewsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../news-platform/news-core/target/classes/com/example/service/impl/NewsService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../news-platform/news-core/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../news-platform/news-core/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../news-platform/news-core/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../news-platform/news-core/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../news-platform/news-core/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../news-platform/news-core/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../news-platform/news-core/target/news-core-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../news-platform/news-core/target/news-core-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../news-platform/news-web/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../news-platform/news-web/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../news-platform/news-web/src/main/webapp/WEB-INF/context/dispatcher-servlet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../news-platform/news-web/src/main/webapp/WEB-INF/context/dispatcher-servlet.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../news-platform/news-web/src/main/webapp/WEB-INF/views/admin/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../news-platform/news-web/src/main/webapp/WEB-INF/views/admin/home.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../news-platform/news-web/src/main/webapp/WEB-INF/views/web/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../news-platform/news-web/src/main/webapp/WEB-INF/views/web/home.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../news-platform/news-web/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../news-platform/news-web/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../news-platform/news-web/target/classes/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../news-platform/news-web/target/classes/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../news-platform/news-web/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../news-platform/news-web/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../news-platform/news-web/target/news-web-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/../news-platform/news-web/target/news-web-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../news-platform/news-web/target/news-web-1.0-SNAPSHOT/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../news-platform/news-web/target/news-web-1.0-SNAPSHOT/WEB-INF/classes/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../news-platform/news-web/target/news-web-1.0-SNAPSHOT/WEB-INF/classes/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../news-platform/news-web/target/news-web-1.0-SNAPSHOT/WEB-INF/context/dispatcher-servlet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../news-platform/news-web/target/news-web-1.0-SNAPSHOT/WEB-INF/context/dispatcher-servlet.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../news-platform/news-web/target/news-web-1.0-SNAPSHOT/WEB-INF/lib/news-core-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../news-platform/news-web/target/news-web-1.0-SNAPSHOT/WEB-INF/lib/news-core-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../news-platform/news-web/target/news-web-1.0-SNAPSHOT/WEB-INF/views/admin/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../news-platform/news-web/target/news-web-1.0-SNAPSHOT/WEB-INF/views/admin/home.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../news-platform/news-web/target/news-web-1.0-SNAPSHOT/WEB-INF/views/web/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../news-platform/news-web/target/news-web-1.0-SNAPSHOT/WEB-INF/views/web/home.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../news-platform/news-web/target/news-web-1.0-SNAPSHOT/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../news-platform/news-web/target/news-web-1.0-SNAPSHOT/WEB-INF/web.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="Interface" />
+        <option value="Class" />
+        <option value="Jsp File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$PROJECT_DIR$/../../apache-maven-3.6.3" />
+        <option name="userSettingsFile" value="E:\apache-maven-3.6.3\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1eyd11VeWnyIN2Xi5coVRYVHU5V" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="ignore.virus.scanning.warn.message" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Estate" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\javaworkspace\crm\crm-web\src\main\resources" />
+      <recent name="E:\javaworkspace\crm\crm-web\src\main\web-app\WEB-INF" />
+      <recent name="E:\javaworkspace\crm\crm-web\src\main\web-app\decorators" />
+      <recent name="E:\javaworkspace\crm\crm-web\src\main\web-app\common" />
+      <recent name="E:\javaworkspace\crm\crm-web\src\main\web-app" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="tomcat" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.571" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="BROWSER_ID" value="b2a9dca7-9d0b-4e1e-98a8-afb19c1328d2" />
+      <deployment>
+        <artifact name="crm-web:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_crm" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="50544" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="crm-web:war exploded" />
+        </option>
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="51b463de-13b6-4cb1-97fe-e0f2aa9f62ad" name="Default Changelist" comment="" />
+      <created>1595297547482</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1595297547482</updated>
+      <workItem from="1595297552149" duration="4000" />
+      <workItem from="1595297569971" duration="11654000" />
+      <workItem from="1595316627240" duration="121000" />
+      <workItem from="1595382258127" duration="2502000" />
+      <workItem from="1595389078094" duration="6496000" />
+      <workItem from="1595459700562" duration="5324000" />
+      <workItem from="1595467360482" duration="7897000" />
+      <workItem from="1595478218352" duration="9545000" />
+      <workItem from="1595549349912" duration="3306000" />
+      <workItem from="1595554930656" duration="8780000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="463" y="169" key="#BuildArtifactsBeforeRunChooser" timestamp="1595461517642">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="169" key="#BuildArtifactsBeforeRunChooser/0.0.1366.728@0.0.1366.728" timestamp="1595461517642" />
+    <state x="309" y="42" key="#Inspections" timestamp="1595478585103">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="309" y="42" key="#Inspections/0.0.1366.728@0.0.1366.728" timestamp="1595478585103" />
+    <state x="163" y="0" key="#Project_Structure" timestamp="1595297878392">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="163" y="0" key="#Project_Structure/0.0.1366.728@0.0.1366.728" timestamp="1595297878392" />
+    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1595461520798">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1595461520798" />
+    <state x="488" y="48" key="#com.intellij.ide.util.MemberChooser" timestamp="1595485432269">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="488" y="48" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1595485432269" />
+    <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1595478322286">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1595478322286" />
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1595556876679">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1595556876679" />
+    <state width="1146" height="188" key="GridCell.Tab.0.bottom" timestamp="1595561724007">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1146" height="188" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1595561724007" />
+    <state width="1146" height="188" key="GridCell.Tab.0.center" timestamp="1595561724007">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1146" height="188" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1595561724007" />
+    <state width="1146" height="188" key="GridCell.Tab.0.left" timestamp="1595561724006">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1146" height="188" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1595561724006" />
+    <state width="1146" height="188" key="GridCell.Tab.0.right" timestamp="1595561724007">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1146" height="188" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1595561724007" />
+    <state width="1146" height="188" key="GridCell.Tab.1.bottom" timestamp="1595561724007">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1146" height="188" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1595561724007" />
+    <state width="1146" height="188" key="GridCell.Tab.1.center" timestamp="1595561724007">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1146" height="188" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1595561724007" />
+    <state width="1146" height="188" key="GridCell.Tab.1.left" timestamp="1595561724007">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1146" height="188" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1595561724007" />
+    <state width="1146" height="188" key="GridCell.Tab.1.right" timestamp="1595561724007">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1146" height="188" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1595561724007" />
+    <state width="1146" height="188" key="GridCell.Tab.2.bottom" timestamp="1595561723818">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1146" height="188" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1595561723818" />
+    <state width="1146" height="188" key="GridCell.Tab.2.center" timestamp="1595561723818">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1146" height="188" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1595561723818" />
+    <state width="1146" height="188" key="GridCell.Tab.2.left" timestamp="1595561723818">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1146" height="188" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1595561723818" />
+    <state width="1146" height="188" key="GridCell.Tab.2.right" timestamp="1595561723818">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1146" height="188" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1595561723818" />
+    <state width="1146" height="188" key="GridCell.Tab.3.bottom" timestamp="1595561723819">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1146" height="188" key="GridCell.Tab.3.bottom/0.0.1366.728@0.0.1366.728" timestamp="1595561723819" />
+    <state width="1146" height="188" key="GridCell.Tab.3.center" timestamp="1595561723818">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1146" height="188" key="GridCell.Tab.3.center/0.0.1366.728@0.0.1366.728" timestamp="1595561723818" />
+    <state width="1146" height="188" key="GridCell.Tab.3.left" timestamp="1595561723818">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1146" height="188" key="GridCell.Tab.3.left/0.0.1366.728@0.0.1366.728" timestamp="1595561723818" />
+    <state width="1146" height="188" key="GridCell.Tab.3.right" timestamp="1595561723819">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1146" height="188" key="GridCell.Tab.3.right/0.0.1366.728@0.0.1366.728" timestamp="1595561723819" />
+    <state x="213" y="19" key="Maven.ArtifactSearchDialog" timestamp="1595463943015">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="213" y="19" key="Maven.ArtifactSearchDialog/0.0.1366.728@0.0.1366.728" timestamp="1595463943015" />
+    <state x="184" y="0" key="SettingsEditor" timestamp="1595300099179">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="184" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1595300099179" />
+    <state x="65" y="25" key="new project wizard" timestamp="1595297700630">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="65" y="25" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1595297700630" />
+    <state x="339" y="162" key="run.anything.popup" timestamp="1595560244151">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1595560244151" />
+  </component>
+</project>
