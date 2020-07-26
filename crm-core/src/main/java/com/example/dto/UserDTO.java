@@ -1,13 +1,21 @@
 package com.example.dto;
 
+import java.util.List;
+
 public class UserDTO extends BaseDTO{
     private String name;
-
     private String email;
-
     private String phone;
-
     private String avatar;
+    private List<RoleDTO> roles;
+
+    public List<RoleDTO> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(List<RoleDTO> roles) {
+        this.roles = roles;
+    }
 
     public String getName() {
         return name;

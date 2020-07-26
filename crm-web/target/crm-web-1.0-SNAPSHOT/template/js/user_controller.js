@@ -1,9 +1,7 @@
 $(document).ready(function () {
 
-
-
 });
-
+let checkedUser = [];
 function fire_ajax_submit() {
 
     let form = $('#fileUploadForm')[0];
@@ -47,16 +45,28 @@ function submitUser(){
     let emailRe = /^[a-z][a-z0-9_\.]{5,32}@[a-z0-9]{2,}(\.[a-z0-9]{2,4}){1,2}$/;
     let nameRe = /^[a-zA-Z ]+$/;
 
-    user.name = document.getElementById('name').value.trim();
-    user.email = document.getElementById('email').value.trim();
-    user.phone = document.getElementById('phoneNumber').value.trim();
-    let avatar = document.getElementById('imgfile').files;
+    user.name = $("#name").val().trim();
+    user.email = $("#email").val().trim();
+    user.phone = $("#phoneNumber").val().trim();
+    user.roles = [];
+    let avatar = $("#imgfile")[0].files;
+    let role = $("#role option:selected")[0];
+    let roles = $("#role").data("textxml");
+
+    for(let i = 0; i < roles.length; i++){
+        if(roles[i].code == role){
+            user.roles.push(roles[i]);
+            break;
+        }
+    }
+
     for(let i = 0; i < avatar.length; i++){
         if(i==0) user.avatar = avatar[i].name + ',';
         else user.avatar += avatar[i].name + ',';
     }
     user.avatar = user.avatar.slice(0, -1);
-    console.log(user);
+    let e =  $( "#role option:selected" ).text();
+
     if (user.name==''||user.name==null||!nameRe.test(user.name)){
         alert("Tên không hợp lệ");
         return;
@@ -85,9 +95,56 @@ function submitUser(){
 
     fire_ajax_submit();
 
-    document.getElementById('name').value = '';
-    document.getElementById('email').value = '';
-    document.getElementById('phoneNumber').value = '';
+    $("#name").val("");
+    $("#email").val("");
+    $("#phoneNumber").val("");
+    $("#imgfile").val("");
+
+}
+
+function deleteUser(userId){
+    $.ajax({
+        type: "DELETE",
+        url: "/deleteUser/"+userId,
+        dataType: "json"
+    }).done(function (response) {
+        alert("Job done!!!!");
+    }).fail(function (xhr, status, error) {
+        alert(xhr.responseText);
+        window.location.reload(true);
+    });
+
+}
+
+function selectUser(userId, isChecked){
+    if(isChecked) checkedUser.push(userId);
+    else{
+        checkedUser = checkedUser.filter(elem => elem != userId);
+    }
+    enableDeleteButton(checkedUser.length==0);
+}
+
+function enableDeleteButton(haveMoreThan0){
+    $("#deleteUsers")[0].disabled = haveMoreThan0;
+}
+
+function deleteUsers(){
+
+    $.ajax({
+        type: "DELETE",
+        url: "/deleteUsers",
+        dataType: "json",
+        data: JSON.stringify({"items":checkedUser}),
+        contentType: 'application/json'
+
+    }).done(function (response) {
+        alert("Job done!!!!");
+    }).fail(function (xhr, status, error) {
+        alert(xhr.responseText);
+        checkedUser = [];
+        enableDeleteButton(checkedUser.length==0);
+        window.location.reload(true);
+    });
 
 }
 

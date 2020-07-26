@@ -25,19 +25,20 @@
                 <div class="container">
                     <div class="form-group">
                         <label for="name">Tên người dùng:</label>
-                        <input type="text" class="form-control" id="name" required>
+                        <input type="text" class="form-control form-control-sm" id="name" required>
                     </div>
                     <div class="form-group">
                         <label for="email">Email:</label>
-                        <input type="text" class="form-control" id="email" required>
+                        <input type="text" class="form-control form-control-sm" id="email" required>
                     </div>
                     <div class="form-group">
                         <label for="phoneNumber">Số điện thoại:</label>
-                        <input type="text" class="form-control" id="phoneNumber" required>
+                        <input type="text" class="form-control form-control-sm" id="phoneNumber" required>
                     </div>
-                    <div class="form-group">
+                    <div>
                         <label for="role">Vai trò</label>
-                        <select class="form-control" id="role">
+                        <select class="form-control form-control-sm"
+                                data-textxml="${roles}" id="role">
                             <c:forEach var="role" items="${roles}">
                                 <option>${role.code}</option>
                             </c:forEach>
@@ -46,9 +47,7 @@
 
                     <div class="form-group">
                         <form method = "POST" enctype="multipart/form-data" id="fileUploadForm">
-<%--                        <input type="text" name="extraField"/><br/><br/>--%>
-                        <input id="imgfile" type="file" name="files" accept="image/png, image/jpeg" multiple/><br/><br/>
-
+                            <input id="imgfile" type="file" name="files" accept="image/png, image/jpeg" multiple/><br/><br/>
                         </form>
                     </div>
 
