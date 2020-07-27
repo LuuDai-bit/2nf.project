@@ -2,6 +2,8 @@ $(document).ready(function () {
 
 });
 let checkedUser = [];
+let isAdd = true;
+let editId = -1;
 function fire_ajax_submit() {
 
     let form = $('#fileUploadForm')[0];
@@ -59,12 +61,11 @@ function submitUser(){
             break;
         }
     }
-
+    user.avatar = "";
     for(let i = 0; i < avatar.length; i++){
-        if(i==0) user.avatar = avatar[i].name + ',';
-        else user.avatar += avatar[i].name + ',';
+        user.avatar += avatar[i].name + ',';
     }
-    user.avatar = user.avatar.slice(0, -1);
+    if(user.avatar.length>1) user.avatar = user.avatar.slice(0, -1);
     let e =  $( "#role option:selected" ).text();
 
     if (user.name==''||user.name==null||!nameRe.test(user.name)){
@@ -81,7 +82,23 @@ function submitUser(){
         alert("Số điện thoại không hợp lệ");
         return;
     }
+    getIdFromURL();
+    if(isAdd){
+        submitNewUser(user);
+    }
+    else{
+        user.id = editId;
+        submitEditUser(user);
+    }
 
+    $("#name").val("");
+    $("#email").val("");
+    $("#phoneNumber").val("");
+    $("#imgfile").val("");
+
+}
+
+function submitNewUser(user) {
     $.ajax({
         type: "POST",
         url: "/addUser",
@@ -94,12 +111,19 @@ function submitUser(){
     });
 
     fire_ajax_submit();
+}
 
-    $("#name").val("");
-    $("#email").val("");
-    $("#phoneNumber").val("");
-    $("#imgfile").val("");
-
+function submitEditUser(user){
+    $.ajax({
+        type: "POST",
+        url: "/editUser/"+editId,
+        data: user,
+        dataType: "json"
+    }).done(function (response) {
+        alert("Job done!!!!");
+    }).fail(function (xhr, status, error) {
+        alert(xhr.responseText);
+    });
 }
 
 function deleteUser(userId){
@@ -148,11 +172,29 @@ function deleteUsers(){
 
 }
 
+function editUser() {
+
+}
+
 function cancelAddUser(){
     window.close();
 }
 
 function addUser(){
     window.open("/adduserpage");
+}
+
+function editUser (id) {
+    editId = id;
+    window.open("/adduserpage?id="+id);
+    isAdd = false;
+}
+
+function getIdFromURL(){
+    let queryString = window.location.search;
+    // console.log(queryString);
+    let urlParams = new URLSearchParams(queryString);
+    if(urlParams.get('id')!=null) editId = urlParams.get('id');
+    if(editId!=null && editId != -1) isAdd = false;
 }
 

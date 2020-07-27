@@ -53,13 +53,18 @@ public class UserService implements IUserService {
 
     @Override
     public void saveUser(UserDTO userDto){
-//        UserEntity userEntity = new UserEntity();
-//        userEntity.setName(userDto.getName());
-//        userEntity.setEmail(userDto.getEmail());
-//        userEntity.setAvatar(userDto.getAvatar());
-//        userEntity.setPhone(userDto.getPhone());
-        UserEntity userEntity = userConverter.convertToEntity(userDto);
-        userRepository.save(userEntity);
+        if(userDto.getId() !=null && userRepository.findOne(userDto.getId()) != null){
+            UserEntity userEntity = userRepository.findOne(userDto.getId());
+            userEntity.setName(userDto.getName());
+            userEntity.setPhone(userDto.getPhone());
+            userEntity.setEmail(userDto.getEmail());
+            userRepository.save(userEntity);
+        }
+        else {
+            UserEntity userEntity = userConverter.convertToEntity(userDto);
+            userRepository.save(userEntity);
+        }
+
     }
 
     @Override

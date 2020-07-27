@@ -2,6 +2,7 @@ package com.example.controller.web;
 
 import com.example.constant.SystemConstant;
 import com.example.dto.UserDTO;
+import com.example.entity.UserEntity;
 import com.example.entity.other.ListDTO;
 import com.example.service.IUserService;
 import com.example.utils.DisplayTagUtils;
@@ -10,6 +11,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
@@ -55,5 +57,13 @@ public class UserController {
         boolean isDelete = userService.deleteUser(id);
         if(!isDelete) return new ResponseEntity("not found", HttpStatus.BAD_REQUEST);
         return new ResponseEntity("success", HttpStatus.OK);
+    }
+
+    @RequestMapping(value="/editUser/{id}", method = RequestMethod.POST)
+    @ResponseBody
+    public String updateUser(UserDTO userDTO,@PathVariable Long id) {
+        userDTO.setId(id);
+        userService.saveUser(userDTO);
+        return "success";
     }
 }

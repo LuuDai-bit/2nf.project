@@ -16,37 +16,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="51b463de-13b6-4cb1-97fe-e0f2aa9f62ad" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/crm-core/src/main/java/com/example/constant/SystemConstant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crm-core/src/main/java/com/example/converter/UserConverter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crm-core/src/main/java/com/example/entity/other/ListDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crm-core/src/main/java/com/example/utils/DisplayTagUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-core/src/main/java/com/example/config/ApplicationConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-core/src/main/java/com/example/config/ApplicationConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crm-core/src/main/java/com/example/controller/web/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-core/src/main/java/com/example/controller/web/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-core/src/main/java/com/example/controller/web/WebController.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-core/src/main/java/com/example/controller/web/WebController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-core/src/main/java/com/example/dto/BaseDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-core/src/main/java/com/example/dto/BaseDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-core/src/main/java/com/example/dto/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-core/src/main/java/com/example/dto/UserDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-core/src/main/java/com/example/entity/BaseEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-core/src/main/java/com/example/entity/BaseEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-core/src/main/java/com/example/repository/IUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-core/src/main/java/com/example/repository/IUserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-core/src/main/java/com/example/service/IUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-core/src/main/java/com/example/service/IUserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crm-core/src/main/java/com/example/service/impl/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-core/src/main/java/com/example/service/impl/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-core/target/classes/com/example/config/ApplicationConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/crm-core/target/classes/com/example/config/ApplicationConfig.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crm-core/target/classes/com/example/controller/web/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/crm-core/target/classes/com/example/controller/web/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-core/target/classes/com/example/controller/web/WebController.class" beforeDir="false" afterPath="$PROJECT_DIR$/crm-core/target/classes/com/example/controller/web/WebController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-core/target/classes/com/example/dto/BaseDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/crm-core/target/classes/com/example/dto/BaseDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-core/target/classes/com/example/dto/UserDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/crm-core/target/classes/com/example/dto/UserDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-core/target/classes/com/example/entity/BaseEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/crm-core/target/classes/com/example/entity/BaseEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-core/target/classes/com/example/service/IUserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/crm-core/target/classes/com/example/service/IUserService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crm-core/target/classes/com/example/service/impl/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/crm-core/target/classes/com/example/service/impl/UserService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crm-web/src/main/webapp/WEB-INF/views/web/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/WEB-INF/views/web/home.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-web/src/main/webapp/WEB-INF/views/web/user_add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/WEB-INF/views/web/user_add.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-web/src/main/webapp/decorators/web.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/decorators/web.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crm-web/src/main/webapp/template/js/user_controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/js/user_controller.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/WEB-INF/lib/crm-core-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/WEB-INF/lib/crm-core-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/WEB-INF/views/web/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/WEB-INF/views/web/home.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/WEB-INF/views/web/user_add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/WEB-INF/views/web/user_add.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/decorators/web.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/decorators/web.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/template/js/user_controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/template/js/user_controller.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../news-platform/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../news-platform/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../news-platform/applicationfile/database/insert_data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../news-platform/applicationfile/database/insert_data.sql" afterDir="false" />
@@ -257,7 +235,8 @@
       <workItem from="1595664810840" duration="7196000" />
       <workItem from="1595689552537" duration="2552000" />
       <workItem from="1595719554415" duration="13934000" />
-      <workItem from="1595746446877" duration="15320000" />
+      <workItem from="1595746446877" duration="22224000" />
+      <workItem from="1595813573266" duration="1824000" />
     </task>
     <servers />
   </component>
@@ -307,70 +286,70 @@
     </state>
     <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1595668764715" />
     <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1595566283413" />
-    <state width="1114" height="235" key="GridCell.Tab.0.bottom" timestamp="1595763200774">
+    <state width="1114" height="235" key="GridCell.Tab.0.bottom" timestamp="1595815296734">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1114" height="235" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1595763200774" />
-    <state width="1114" height="235" key="GridCell.Tab.0.center" timestamp="1595763200774">
+    <state width="1114" height="235" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1595815296734" />
+    <state width="1114" height="235" key="GridCell.Tab.0.center" timestamp="1595815296734">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1114" height="235" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1595763200774" />
-    <state width="1114" height="235" key="GridCell.Tab.0.left" timestamp="1595763200774">
+    <state width="1114" height="235" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1595815296734" />
+    <state width="1114" height="235" key="GridCell.Tab.0.left" timestamp="1595815296734">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1114" height="235" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1595763200774" />
-    <state width="1114" height="235" key="GridCell.Tab.0.right" timestamp="1595763200774">
+    <state width="1114" height="235" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1595815296734" />
+    <state width="1114" height="235" key="GridCell.Tab.0.right" timestamp="1595815296734">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1114" height="235" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1595763200774" />
-    <state width="1114" height="235" key="GridCell.Tab.1.bottom" timestamp="1595763200770">
+    <state width="1114" height="235" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1595815296734" />
+    <state width="1114" height="235" key="GridCell.Tab.1.bottom" timestamp="1595815296734">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1114" height="235" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1595763200770" />
-    <state width="1114" height="235" key="GridCell.Tab.1.center" timestamp="1595763200770">
+    <state width="1114" height="235" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1595815296734" />
+    <state width="1114" height="235" key="GridCell.Tab.1.center" timestamp="1595815296734">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1114" height="235" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1595763200770" />
-    <state width="1114" height="235" key="GridCell.Tab.1.left" timestamp="1595763200770">
+    <state width="1114" height="235" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1595815296734" />
+    <state width="1114" height="235" key="GridCell.Tab.1.left" timestamp="1595815296734">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1114" height="235" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1595763200770" />
-    <state width="1114" height="235" key="GridCell.Tab.1.right" timestamp="1595763200770">
+    <state width="1114" height="235" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1595815296734" />
+    <state width="1114" height="235" key="GridCell.Tab.1.right" timestamp="1595815296734">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1114" height="235" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1595763200770" />
-    <state width="1114" height="235" key="GridCell.Tab.2.bottom" timestamp="1595763200645">
+    <state width="1114" height="235" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1595815296734" />
+    <state width="1114" height="235" key="GridCell.Tab.2.bottom" timestamp="1595815296504">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1114" height="235" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1595763200645" />
-    <state width="1114" height="235" key="GridCell.Tab.2.center" timestamp="1595763200645">
+    <state width="1114" height="235" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1595815296504" />
+    <state width="1114" height="235" key="GridCell.Tab.2.center" timestamp="1595815296504">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1114" height="235" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1595763200645" />
-    <state width="1114" height="235" key="GridCell.Tab.2.left" timestamp="1595763200645">
+    <state width="1114" height="235" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1595815296504" />
+    <state width="1114" height="235" key="GridCell.Tab.2.left" timestamp="1595815296504">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1114" height="235" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1595763200645" />
-    <state width="1114" height="235" key="GridCell.Tab.2.right" timestamp="1595763200645">
+    <state width="1114" height="235" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1595815296504" />
+    <state width="1114" height="235" key="GridCell.Tab.2.right" timestamp="1595815296504">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1114" height="235" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1595763200645" />
-    <state width="1114" height="235" key="GridCell.Tab.3.bottom" timestamp="1595763200645">
+    <state width="1114" height="235" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1595815296504" />
+    <state width="1114" height="235" key="GridCell.Tab.3.bottom" timestamp="1595815296504">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1114" height="235" key="GridCell.Tab.3.bottom/0.0.1366.728@0.0.1366.728" timestamp="1595763200645" />
-    <state width="1114" height="235" key="GridCell.Tab.3.center" timestamp="1595763200645">
+    <state width="1114" height="235" key="GridCell.Tab.3.bottom/0.0.1366.728@0.0.1366.728" timestamp="1595815296504" />
+    <state width="1114" height="235" key="GridCell.Tab.3.center" timestamp="1595815296504">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1114" height="235" key="GridCell.Tab.3.center/0.0.1366.728@0.0.1366.728" timestamp="1595763200645" />
-    <state width="1114" height="235" key="GridCell.Tab.3.left" timestamp="1595763200645">
+    <state width="1114" height="235" key="GridCell.Tab.3.center/0.0.1366.728@0.0.1366.728" timestamp="1595815296504" />
+    <state width="1114" height="235" key="GridCell.Tab.3.left" timestamp="1595815296504">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1114" height="235" key="GridCell.Tab.3.left/0.0.1366.728@0.0.1366.728" timestamp="1595763200645" />
-    <state width="1114" height="235" key="GridCell.Tab.3.right" timestamp="1595763200645">
+    <state width="1114" height="235" key="GridCell.Tab.3.left/0.0.1366.728@0.0.1366.728" timestamp="1595815296504" />
+    <state width="1114" height="235" key="GridCell.Tab.3.right" timestamp="1595815296504">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1114" height="235" key="GridCell.Tab.3.right/0.0.1366.728@0.0.1366.728" timestamp="1595763200645" />
+    <state width="1114" height="235" key="GridCell.Tab.3.right/0.0.1366.728@0.0.1366.728" timestamp="1595815296504" />
     <state x="213" y="19" key="Maven.ArtifactSearchDialog" timestamp="1595463943015">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

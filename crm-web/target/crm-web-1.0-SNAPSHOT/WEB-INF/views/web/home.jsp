@@ -38,12 +38,14 @@
                         <tbody>
                             <c:forEach var="user" items="${users}">
                                 <tr>
-                                    <td><input type="checkbox" id="${user.id}" onclick="selectUser(${user.id}, this.checked)"></td>
+                                    <td><input type="checkbox" id="${user.id}"
+                                               onclick="selectUser(${user.id}, this.checked)"
+                                    ></td>
                                     <td>${user.name}</td>
                                     <td>${user.email}</td>
                                     <td>${user.phone}</td>
-                                    <td><button>Edit</button>
-                                        <button id="deleteUser", onclick="deleteUser(${user.id})">Delete</button></td>
+                                    <td><button id="editUser" onclick="editUser(${user.id})">Edit</button>
+                                        <button id="deleteUser" onclick="deleteUser(${user.id})">Delete</button></td>
                                 </tr>
                             </c:forEach>
                         </tbody>
