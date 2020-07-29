@@ -1,5 +1,6 @@
 package com.example.controller.web;
 
+import com.example.constant.SystemConstant;
 import com.example.entity.upload.UploadModel;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -83,7 +84,7 @@ public class RestUploadController {
 
     // 3.1.3 maps html form to a Model
     @PostMapping("/api/upload/multi/model")
-    public ResponseEntity<?> multiUploadFileModel(@ModelAttribute UploadModel model) {
+    public ResponseEntity<?> multiUploadFileModel(@ModelAttribute(SystemConstant.MODEL) UploadModel model) {
 
         logger.debug("Multiple file upload! With UploadModel");
 

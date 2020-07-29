@@ -198,3 +198,28 @@ function getIdFromURL(){
     if(editId!=null && editId != -1) isAdd = false;
 }
 
+function searchUser(){
+    let name = $("#searchName").val();
+    let email = $("#searchEmail").val();
+    let phone = $("#searchPhone").val();
+
+    let user = {
+        'name':name,
+        'email': email,
+        'phone': phone
+    }
+
+    $.ajax({
+        type: "GET",
+        url: "/search/user",
+        data: user,
+        dataType: "json",
+        contentType: "application/json",
+        complete : function(){
+            window.location = this.url;
+        },
+    });
+    $("#searchName").val("");
+    $("#searchEmail").val("");
+    $("#searchPhone").val("");
+}

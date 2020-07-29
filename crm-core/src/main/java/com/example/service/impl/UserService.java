@@ -23,6 +23,27 @@ public class UserService implements IUserService {
     private UserConverter userConverter;
 
     @Override
+    public List<UserDTO> searchUsers(UserDTO modelSearch) {
+        List<?> userEntities = null;
+        List<UserDTO> result = new ArrayList<>();
+
+        userEntities = userRepository.findAll(modelSearch);
+        for (Object item : userEntities) {
+            UserEntity userEntity = new UserEntity();
+            try {
+                userEntity = (UserEntity) item;
+            } catch (Exception e) {
+                userEntity = (UserEntity) ((Object[]) item)[0];
+            }
+            UserDTO userDTO = userConverter.convertToDto(userEntity);
+
+            result.add(userDTO);
+        }
+
+        return result;
+    }
+
+    @Override
     public List<UserDTO> getAllUsers(){
         List<UserDTO> userDTOs = new ArrayList<UserDTO>();
         List<UserEntity> newsEntities = userRepository.findAll();

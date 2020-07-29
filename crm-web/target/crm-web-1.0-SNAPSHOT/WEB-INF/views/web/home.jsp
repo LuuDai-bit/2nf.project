@@ -19,37 +19,67 @@
                 </h4>
                 <div class="container">
                     <h1>Người dùng</h1>
+                    <div class="container-fluid">
+                        <div>
+                            <div class="col-md-4">
+                                <label>Tên</label>
+                            </div>
+                            <div class="col-md-4">
+                                <label>Email</label>
+                            </div>
+                            <div class="col-md-4">
+                                <label>Số diện thoại</label>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="col-md-4">
+                                <input id="searchName" type="text"/><br/><br/>
+                            </div>
+                            <div class="col-md-4">
+                                <input id="searchEmail" type="text"/><br/><br/>
+                            </div>
+                            <div class="col-md-4">
+                                <input id="searchPhone" type="text"/><br/><br/>
+                            </div>
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-primary" onclick="searchUser()">Tìm kiếm</button>
+                        </div>
+                    </div>
+
                     <div>
                         <button type="button" class="btn btn-primary" onclick="addUser()">Thêm mới</button>
                         <button id="deleteUsers" type="button"
                                 class="btn btn-danger" onclick="deleteUsers()" disabled>Xóa</button>
                     </div>
-                    <table class="table table-bordered">
-                        <thead>
-                        <tr>
-                            <th></th>
-                            <th>Name</th>
-                            <th>Email</th>
-                            <th>Phone</th>
-                            <th></th>
-                        </tr>
-                        </thead>
+                    <div id="userTable">
+                        <table class="table table-bordered">
+                            <thead>
+                            <tr>
+                                <th></th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                                <th></th>
+                            </tr>
+                            </thead>
 
-                        <tbody>
-                            <c:forEach var="user" items="${users}">
-                                <tr>
-                                    <td><input type="checkbox" id="${user.id}"
-                                               onclick="selectUser(${user.id}, this.checked)"
-                                    ></td>
-                                    <td>${user.name}</td>
-                                    <td>${user.email}</td>
-                                    <td>${user.phone}</td>
-                                    <td><button id="editUser" onclick="editUser(${user.id})">Edit</button>
-                                        <button id="deleteUser" onclick="deleteUser(${user.id})">Delete</button></td>
-                                </tr>
-                            </c:forEach>
-                        </tbody>
-                    </table>
+                            <tbody>
+                                <c:forEach var="user" items="${users}">
+                                    <tr>
+                                        <td><input type="checkbox" id="${user.id}"
+                                                   onclick="selectUser(${user.id}, this.checked)"
+                                        ></td>
+                                        <td>${user.name}</td>
+                                        <td>${user.email}</td>
+                                        <td>${user.phone}</td>
+                                        <td><button id="editUser" onclick="editUser(${user.id})">Edit</button>
+                                            <button id="deleteUser" onclick="deleteUser(${user.id})">Delete</button></td>
+                                    </tr>
+                                </c:forEach>
+                            </tbody>
+                        </table>
+                    </div>
 
 <%--                    <div class="table-responsive">--%>
 <%--                        <display:table name="model.listResult" cellspacing="0" cellpadding="0" requestURI="$formUrl"--%>

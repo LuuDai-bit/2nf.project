@@ -1,5 +1,6 @@
 package com.example.controller.web;
 
+import com.example.constant.SystemConstant;
 import com.example.service.IRoleService;
 import com.example.service.IUserService;
 import org.slf4j.Logger;
@@ -23,7 +24,7 @@ public class WebController {
     public ModelAndView homePage(){
         ModelAndView mav = new ModelAndView("web/home");
 
-        mav.addObject("users", userService.getAllUsers());
+        mav.addObject(SystemConstant.MODEL, userService.getAllUsers());
         return mav;
     }
 

@@ -6,19 +6,20 @@ import com.example.entity.UserEntity;
 import com.example.entity.other.ListDTO;
 import com.example.service.IUserService;
 import com.example.utils.DisplayTagUtils;
+import com.example.utils.MessageUtil;
+import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 @Controller
 public class UserController {
@@ -65,5 +66,27 @@ public class UserController {
         userDTO.setId(id);
         userService.saveUser(userDTO);
         return "success";
+    }
+
+    @RequestMapping(value = "search/user", method = RequestMethod.GET)
+    public ModelAndView searchUser(@ModelAttribute(SystemConstant.MODEL) UserDTO model,
+                                 HttpServletRequest request) {
+        ModelAndView mav = new ModelAndView("web/home");
+        DisplayTagUtils.initSearchBean(request,model);
+//        List<UserDTO> userDTOS = userService.searchUsers(model);
+//        model.setListResult(userDTOS);
+
+//        initMessageResponse(mav, request);
+        mav.addObject(SystemConstant.MODEL, userService.searchUsers(model));
+        return mav;
+    }
+
+    private void initMessageResponse(ModelAndView mav, HttpServletRequest request) {
+        String message = request.getParameter("message");
+        if (message != null && StringUtils.isNotEmpty(message)) {
+            Map<String, String> messageMap = MessageUtil.getMessageResponse(message);
+            mav.addObject(SystemConstant.ALERT, messageMap.get(SystemConstant.ALERT));
+            mav.addObject(SystemConstant.MESSAGE_RESPONSE, messageMap.get(SystemConstant.MESSAGE_RESPONSE));
+        }
     }
 }

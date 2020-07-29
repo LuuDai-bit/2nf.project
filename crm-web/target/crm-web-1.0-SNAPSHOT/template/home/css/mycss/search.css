@@ -1,0 +1,14 @@
+.inlineInput{
+    display:inline;
+}
+
+.searchContainer{
+    margin-bottom: 1.5em;
+    border: #888 solid 1px;
+    background-color:#03f4fc ;
+}
+
+.searchInput{
+    border:#888 solid 1px;
+    margin-bottom: 1em;
+}
