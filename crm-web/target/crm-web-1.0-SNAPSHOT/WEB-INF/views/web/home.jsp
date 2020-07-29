@@ -19,7 +19,7 @@
                 </h4>
                 <div class="container">
                     <h1>Người dùng</h1>
-                    <div class="container-fluid">
+                    <div class="container-fluid" style="margin-bottom: 2em">
                         <div>
                             <div class="col-md-4">
                                 <label>Tên</label>
@@ -43,7 +43,15 @@
                             </div>
                         </div>
                         <div>
-                            <button type="button" class="btn btn-primary" onclick="searchUser()">Tìm kiếm</button>
+                            <button type="button" class="btn btn-primary" onclick="searchUser()" >Tìm kiếm</button>
+<%--                            <div class="col-md-4"></div>--%>
+<%--                            <div class="col-md-4">--%>
+
+<%--                            </div>--%>
+<%--                            <div class="col-md-4">--%>
+<%--                               --%>
+<%--                            </div>--%>
+
                         </div>
                     </div>
 
