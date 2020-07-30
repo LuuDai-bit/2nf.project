@@ -4,8 +4,6 @@ $(document).ready(function () {
 let checkedUser = [];
 let isAdd = true;
 let editId = -1;
-let pageNum = 1;
-let maxPageItems = 5;
 function fire_ajax_submit() {
 
     let form = $('#fileUploadForm')[0];
@@ -200,28 +198,6 @@ function getIdFromURL(){
     if(editId!=null && editId != -1) isAdd = false;
 }
 
-function searchUser(){
-    let name = $("#searchName").val();
-    let email = $("#searchEmail").val();
-    let phone = $("#searchPhone").val();
-
-    let user = {
-        'name':name,
-        'email': email,
-        'phone': phone
-    }
-
-    $.ajax({
-        type: "GET",
-        url: "/user/list/"+pageNum+"/"+maxPageItems,
-        data: user,
-        dataType: "json",
-        contentType: "application/json",
-        complete : function(){
-            window.location = this.url;
-        },
-    });
-    $("#searchName").val("");
-    $("#searchEmail").val("");
-    $("#searchPhone").val("");
-}
+$("#searchUser").click(function(){
+    $('#userForm').submit();
+})

@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 public interface IUserService {
-    List<UserDTO> searchUsers(UserDTO model, int pageNum, int maxPageItems);
+    List<UserDTO> searchUsers(UserDTO model);
     List<UserDTO> getAllUsers();
     List<UserDTO> getUsers(Pageable pageable);
     void saveUser(UserDTO user);

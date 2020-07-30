@@ -2,15 +2,12 @@ package com.example.controller.web;
 
 import com.example.constant.SystemConstant;
 import com.example.dto.UserDTO;
-import com.example.entity.UserEntity;
 import com.example.entity.other.ListDTO;
 import com.example.service.IUserService;
 import com.example.utils.DisplayTagUtils;
 import com.example.utils.MessageUtil;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -33,16 +30,15 @@ public class UserController {
         return "success";
     }
 
-    @RequestMapping(value="/user/list/{pageNum}/{maxPageItems}", method = RequestMethod.GET)
-    public ModelAndView getUsers(@ModelAttribute(SystemConstant.MODEL) UserDTO model,
-            @PathVariable int pageNum, @PathVariable int maxPageItems, HttpServletRequest request){
+    @RequestMapping(value="/user/list", method = RequestMethod.GET)
+    public ModelAndView getUsers(@ModelAttribute(SystemConstant.MODEL) UserDTO model, HttpServletRequest request){
         ModelAndView mav = new ModelAndView("web/home");
         DisplayTagUtils.initSearchBean(request, model);
-        List<UserDTO> users = userService.searchUsers(model, pageNum, maxPageItems);
+        List<UserDTO> users = userService.searchUsers(model);
         int totalUsers = userService.getTotalItems(model);
-
-        mav.addObject(SystemConstant.MODEL, users);
-        mav.addObject(SystemConstant.TOTALUSERS, totalUsers);
+        model.setListResult(users);
+        model.setTotalItems(totalUsers);
+        mav.addObject(SystemConstant.MODEL, model);
         return mav;
     }
 
@@ -68,15 +64,6 @@ public class UserController {
         userDTO.setId(id);
         userService.saveUser(userDTO);
         return "success";
-    }
-
-    @RequestMapping(value = "search/user", method = RequestMethod.GET)
-    public ModelAndView searchUser(@ModelAttribute(SystemConstant.MODEL) UserDTO model,
-                                 HttpServletRequest request) {
-        ModelAndView mav = new ModelAndView("web/home");
-        DisplayTagUtils.initSearchBean(request,model);
-        mav.addObject(SystemConstant.MODEL, userService.searchUsers(model, 0, 5));
-        return mav;
     }
 
     private void initMessageResponse(ModelAndView mav, HttpServletRequest request) {

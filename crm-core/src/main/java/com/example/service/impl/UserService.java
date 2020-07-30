@@ -25,12 +25,12 @@ public class UserService implements IUserService {
     private UserConverter userConverter;
 
     @Override
-    public List<UserDTO> searchUsers(UserDTO modelSearch, int pageNum, int maxPageItems) {
+    public List<UserDTO> searchUsers(UserDTO modelSearch) {
 
         List<?> userEntities = null;
         List<UserDTO> result = new ArrayList<>();
 
-        userEntities = userRepository.findAll(modelSearch, pageNum, maxPageItems);
+        userEntities = userRepository.findAll(modelSearch);
         for (Object item : userEntities) {
             UserEntity userEntity = new UserEntity();
             try {

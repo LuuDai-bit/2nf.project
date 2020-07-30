@@ -45,7 +45,7 @@
                         </select>
                     </div>
 
-                    <div class="form-group">
+                    <div style="margin-top: 1em" class="form-group">
                         <form method = "POST" enctype="multipart/form-data" id="fileUploadForm">
                             <input id="imgfile" type="file" name="files" accept="image/png, image/jpeg" multiple/><br/><br/>
                         </form>

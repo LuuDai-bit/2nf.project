@@ -16,7 +16,7 @@ public class IUserRepositoryImpl implements UserRepositoryCustom {
     @PersistenceContext
     private EntityManager entityManager;
 
-    public List<?> findAll(UserDTO userDTO, int pageNum, int maxPageItems) {
+    public List<?> findAll(UserDTO userDTO) {
         StringBuilder sql = new StringBuilder("FROM UserEntity AS u");
         sql.append(" WHERE 1=1 ");
         if (StringUtils.isNotBlank(userDTO.getName())) {
@@ -30,8 +30,8 @@ public class IUserRepositoryImpl implements UserRepositoryCustom {
         }
 
         Query query = entityManager.createQuery(sql.toString());
-        query.setFirstResult(pageNum-1);
-        query.setMaxResults(maxPageItems);
+        query.setFirstResult(userDTO.getPage()-1);
+        query.setMaxResults(userDTO.getMaxPageItems());
         return query.getResultList();
     }
 
@@ -46,7 +46,7 @@ public class IUserRepositoryImpl implements UserRepositoryCustom {
             sql.append("AND LOWER(ue.name) LIKE LOWER('%" + userDTO.getName() + "%')");
         }
         if (StringUtils.isNotBlank(userDTO.getPhone())) {
-            sql.append("AND LOWER(ue.phoneNumber) LIKE LOWER('%" + userDTO.getPhone() + "%')");
+            sql.append("AND LOWER(ue.phone) LIKE LOWER('%" + userDTO.getPhone() + "%')");
         }
         if (StringUtils.isNotBlank(userDTO.getEmail())) {
             sql.append("AND LOWER(ue.email) LIKE LOWER('%" + userDTO.getEmail() + "%')");

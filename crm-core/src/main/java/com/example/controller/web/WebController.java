@@ -20,13 +20,13 @@ public class WebController {
     @Autowired
     private IRoleService roleService;
 
-    @RequestMapping(value="/homepage", method = RequestMethod.GET)
-    public ModelAndView homePage(){
-        ModelAndView mav = new ModelAndView("web/home");
-
-        mav.addObject(SystemConstant.MODEL, userService.getAllUsers());
-        return mav;
-    }
+//    @RequestMapping(value="/homepage", method = RequestMethod.GET)
+//    public ModelAndView homePage(){
+//        ModelAndView mav = new ModelAndView("web/home");
+//
+//        mav.addObject(SystemConstant.MODEL, userService.getAllUsers());
+//        return mav;
+//    }
 
     @RequestMapping(value="/adduserpage", method = RequestMethod.GET)
     public ModelAndView addUserPage(){
