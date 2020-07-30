@@ -37,7 +37,9 @@
     <link rel="stylesheet" href="<c:url value='/template/admin/assets/css/bootstrap.min.css' />" />
 
     <%--<script src="<c:url value="/template/web/js/paging/jquery.twbsPagination.js"/>" type="text/javascript"></script>--%>
+    <!-- js -->
     <script type="text/javascript" src="<c:url value='/template/js/user_controller.js' />"></script>
+    <script type="text/javascript" src="<c:url value='/template/js/paging/paging.js' />"></script>
 </head>
 <style type="text/css">
     option {

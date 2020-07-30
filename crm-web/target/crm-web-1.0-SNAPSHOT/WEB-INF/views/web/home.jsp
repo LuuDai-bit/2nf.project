@@ -70,12 +70,12 @@
                             <i class="fa fa-trash" aria-hidden="true"></i>
                             Xóa</button>
                         <div style="float:right; display:inline">
-                            <select id="maxPageItems" onchange="updateMaxPageItems()">
-                                <option>5</option>
-                                <option>10</option>
-                                <option>20</option>
-                                <option>50</option>
-                            </select>
+                            <form:select path="maxPageItems" onchange="updateMaxPageItems()">
+                                <form:option value="5">5</form:option>
+                                <form:option value="10">10</form:option>
+                                <form:option value="20">20</form:option>
+                                <form:option value="50">50</form:option>
+                            </form:select>
                         </div>
 
                     </div>
