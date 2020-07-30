@@ -18,7 +18,7 @@ public class BaseDTO<T> implements Serializable {
     private List<T> listResult;
     private String tableId = "tableList";
     private int totalItems = 0;
-    private int maxPageItems = 10;
+    private int maxPageItems = 5;
     private String searchValue;
     private int page = 1;
     private String sortExpression;

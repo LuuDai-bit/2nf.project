@@ -1,6 +1,7 @@
 package com.example.repository.custom.impl;
 
 import com.example.dto.UserDTO;
+import com.example.paging.Pageable;
 import com.example.repository.custom.UserRepositoryCustom;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.stereotype.Repository;
@@ -15,7 +16,7 @@ public class IUserRepositoryImpl implements UserRepositoryCustom {
     @PersistenceContext
     private EntityManager entityManager;
 
-    public List<?> findAll(UserDTO userDTO) {
+    public List<?> findAll(UserDTO userDTO, int pageNum, int maxPageItems) {
         StringBuilder sql = new StringBuilder("FROM UserEntity AS u");
         sql.append(" WHERE 1=1 ");
         if (StringUtils.isNotBlank(userDTO.getName())) {
@@ -29,6 +30,28 @@ public class IUserRepositoryImpl implements UserRepositoryCustom {
         }
 
         Query query = entityManager.createQuery(sql.toString());
+        query.setFirstResult(pageNum-1);
+        query.setMaxResults(maxPageItems);
         return query.getResultList();
+    }
+
+    @Override
+    public Long getTotalItems(UserDTO userDTO) {
+        StringBuilder sql = new StringBuilder("SELECT COUNT(*) FROM UserEntity AS ue");
+//        if (StringUtils.isNotBlank(customerDTO.getStaffName())) {
+//            sql.append(" JOIN ce.users u ");
+//        }
+        sql.append(" WHERE 1=1 ");
+        if (StringUtils.isNotBlank(userDTO.getName())) {
+            sql.append("AND LOWER(ue.name) LIKE LOWER('%" + userDTO.getName() + "%')");
+        }
+        if (StringUtils.isNotBlank(userDTO.getPhone())) {
+            sql.append("AND LOWER(ue.phoneNumber) LIKE LOWER('%" + userDTO.getPhone() + "%')");
+        }
+        if (StringUtils.isNotBlank(userDTO.getEmail())) {
+            sql.append("AND LOWER(ue.email) LIKE LOWER('%" + userDTO.getEmail() + "%')");
+        }
+        Query query = entityManager.createQuery(sql.toString());
+        return (Long) query.getSingleResult();
     }
 }

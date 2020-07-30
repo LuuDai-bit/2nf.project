@@ -1,0 +1,11 @@
+.table>tbody>tr:hover{
+    background-color: #DCDCDC;
+}
+
+#maxPageItems>option{
+    background-color: whitesmoke;
+}
+#maxPageItems>option:hover{
+    background-color: #DCDCDC;
+}
+

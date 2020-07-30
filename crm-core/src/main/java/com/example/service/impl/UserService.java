@@ -3,10 +3,12 @@ package com.example.service.impl;
 import com.example.converter.UserConverter;
 import com.example.dto.UserDTO;
 import com.example.entity.UserEntity;
+
 import com.example.repository.IUserRepository;
 import com.example.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Service;
@@ -23,11 +25,12 @@ public class UserService implements IUserService {
     private UserConverter userConverter;
 
     @Override
-    public List<UserDTO> searchUsers(UserDTO modelSearch) {
+    public List<UserDTO> searchUsers(UserDTO modelSearch, int pageNum, int maxPageItems) {
+
         List<?> userEntities = null;
         List<UserDTO> result = new ArrayList<>();
 
-        userEntities = userRepository.findAll(modelSearch);
+        userEntities = userRepository.findAll(modelSearch, pageNum, maxPageItems);
         for (Object item : userEntities) {
             UserEntity userEntity = new UserEntity();
             try {
@@ -45,14 +48,11 @@ public class UserService implements IUserService {
 
     @Override
     public List<UserDTO> getAllUsers(){
+        Pageable pageable =new PageRequest(0,5);
+
         List<UserDTO> userDTOs = new ArrayList<UserDTO>();
-        List<UserEntity> newsEntities = userRepository.findAll();
-        for(UserEntity item: newsEntities){
-//            UserDTO userDTO = new UserDTO();
-//            userDTO.setName(item.getName());
-//            userDTO.setAvatar(item.getAvatar());
-//            userDTO.setEmail(item.getEmail());
-//            userDTO.setPhone(item.getPhone());
+        Page<UserEntity> userEntities = userRepository.findAll(pageable);
+        for(UserEntity item: userEntities){
             UserDTO userDTO = userConverter.convertToDto(item);
 
             userDTOs.add(userDTO);
@@ -106,5 +106,12 @@ public class UserService implements IUserService {
                 userRepository.delete(userId);
             }
         }
+    }
+
+    @Override
+    public int getTotalItems(UserDTO modelSearch) {
+        int totalItem = 0;
+        totalItem = userRepository.getTotalItems(modelSearch).intValue();
+        return totalItem;
     }
 }

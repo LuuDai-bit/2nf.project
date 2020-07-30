@@ -1,5 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="display" uri="http://displaytag.sf.net" %>
+<%@ taglib prefix="tag" uri="/WEB-INF/taglibs/customTaglib.tld"%>
+
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -44,21 +45,26 @@
                         </div>
                         <div>
                             <button type="button" class="btn btn-primary" onclick="searchUser()" >Tìm kiếm</button>
-<%--                            <div class="col-md-4"></div>--%>
-<%--                            <div class="col-md-4">--%>
-
-<%--                            </div>--%>
-<%--                            <div class="col-md-4">--%>
-<%--                               --%>
-<%--                            </div>--%>
-
                         </div>
                     </div>
 
                     <div>
-                        <button type="button" class="btn btn-primary" onclick="addUser()">Thêm mới</button>
+                        <button type="button" class="btn btn-primary" onclick="addUser()">
+                            <i class="flaticon-plus"></i>
+                            Thêm mới</button>
                         <button id="deleteUsers" type="button"
-                                class="btn btn-danger" onclick="deleteUsers()" disabled>Xóa</button>
+                                class="btn btn-danger" onclick="deleteUsers()" disabled>
+                            <i class="fa fa-trash" aria-hidden="true"></i>
+                            Xóa</button>
+                        <div style="float:right; display:inline">
+                            <select id="maxPageItems" onchange="updateMaxPageItems()">
+                                <option>5</option>
+                                <option>10</option>
+                                <option>20</option>
+                                <option>50</option>
+                            </select>
+                        </div>
+
                     </div>
                     <div id="userTable">
                         <table class="table table-bordered">
@@ -87,6 +93,15 @@
                                 </c:forEach>
                             </tbody>
                         </table>
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination">
+                                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                                <li class="page-item"><a class="page-link" href="/user/list/${pageNum}/${maxPageItems}">1</a></li>
+                                <li class="page-item"><a class="page-link" href="/user/list/2/5">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                            </ul>
+                        </nav>
                     </div>
 
 <%--                    <div class="table-responsive">--%>

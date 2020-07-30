@@ -4,6 +4,8 @@ $(document).ready(function () {
 let checkedUser = [];
 let isAdd = true;
 let editId = -1;
+let pageNum = 1;
+let maxPageItems = 5;
 function fire_ajax_submit() {
 
     let form = $('#fileUploadForm')[0];
@@ -211,7 +213,7 @@ function searchUser(){
 
     $.ajax({
         type: "GET",
-        url: "/search/user",
+        url: "/user/list/"+pageNum+"/"+maxPageItems,
         data: user,
         dataType: "json",
         contentType: "application/json",

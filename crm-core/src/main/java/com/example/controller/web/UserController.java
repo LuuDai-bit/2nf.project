@@ -33,14 +33,16 @@ public class UserController {
         return "success";
     }
 
-    @RequestMapping(value="/user/list", method = RequestMethod.GET)
-    public ModelAndView getUsers(@ModelAttribute(SystemConstant.MODEL) UserDTO model, HttpServletRequest request){
+    @RequestMapping(value="/user/list/{pageNum}/{maxPageItems}", method = RequestMethod.GET)
+    public ModelAndView getUsers(@ModelAttribute(SystemConstant.MODEL) UserDTO model,
+            @PathVariable int pageNum, @PathVariable int maxPageItems, HttpServletRequest request){
         ModelAndView mav = new ModelAndView("web/home");
         DisplayTagUtils.initSearchBean(request, model);
-        Pageable pageable = new PageRequest(model.getPage()-1, model.getMaxPageItems());
-        List<UserDTO> users = userService.getUsers(pageable);
-        model.setListResult(users);
-        mav.addObject(SystemConstant.MODEL, model);
+        List<UserDTO> users = userService.searchUsers(model, pageNum, maxPageItems);
+        int totalUsers = userService.getTotalItems(model);
+
+        mav.addObject(SystemConstant.MODEL, users);
+        mav.addObject(SystemConstant.TOTALUSERS, totalUsers);
         return mav;
     }
 
@@ -73,11 +75,7 @@ public class UserController {
                                  HttpServletRequest request) {
         ModelAndView mav = new ModelAndView("web/home");
         DisplayTagUtils.initSearchBean(request,model);
-//        List<UserDTO> userDTOS = userService.searchUsers(model);
-//        model.setListResult(userDTOS);
-
-//        initMessageResponse(mav, request);
-        mav.addObject(SystemConstant.MODEL, userService.searchUsers(model));
+        mav.addObject(SystemConstant.MODEL, userService.searchUsers(model, 0, 5));
         return mav;
     }
 
