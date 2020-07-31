@@ -6,4 +6,5 @@ import java.util.List;
 
 public interface IRoleService {
     List<RoleDTO> getAllRoles();
+    RoleDTO getOneRoleById(Long id);
 }

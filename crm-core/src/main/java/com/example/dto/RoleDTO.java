@@ -2,13 +2,15 @@ package com.example.dto;
 
 import com.example.entity.UserEntity;
 
+import java.util.List;
+
 public class RoleDTO extends BaseDTO{
 
     private String name;
 
     private String code;
 
-    private UserEntity user;
+    private List<UserEntity> users;
 
     public String getName() {
         return name;
@@ -26,11 +28,13 @@ public class RoleDTO extends BaseDTO{
         this.code = code;
     }
 
-    public UserEntity getUser() {
-        return user;
-    }
-
-    public void setUser(UserEntity user) {
-        this.user = user;
-    }
+//    public List<UserEntity> getUsers() {
+//        return users;
+//    }
+//
+//    public void setUsers(List<UserEntity> users) {
+//        for(UserEntity item: users){
+//
+//        }
+//    }
 }

@@ -1,5 +1,8 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@include file="/common/taglib.jsp" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<c:url var="formURL" value="/addUser" />
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -21,28 +24,39 @@
                 </div>
                 <div class="space-6"></div>
 
-
+                <form:form id="addUserForm" commandName="users">
                 <div class="container">
                     <div class="form-group">
                         <label for="name">Tên người dùng:</label>
-                        <input type="text" class="form-control form-control-sm" id="name" required>
+                        <form:input path="name" id="name"
+                                    cssClass="form-control input-sm"
+                                    placeholder="Tên"/>
                     </div>
                     <div class="form-group">
                         <label for="email">Email:</label>
-                        <input type="text" class="form-control form-control-sm" id="email" required>
+                        <form:input path="email" id="email"
+                                    cssClass="form-control input-sm"
+                                    placeholder="Email"/>
                     </div>
                     <div class="form-group">
                         <label for="phoneNumber">Số điện thoại:</label>
-                        <input type="text" class="form-control form-control-sm" id="phoneNumber" required>
+                        <form:input path="phone" id="phoneNumber"
+                                    cssClass="form-control input-sm"
+                                    placeholder="Số điện thoại"/>
                     </div>
                     <div>
                         <label for="role">Vai trò</label>
-                        <select class="form-control form-control-sm"
-                                data-textxml="${roles}" id="role">
-                            <c:forEach var="role" items="${roles}">
-                                <option>${role.code}</option>
+<%--                        <select class="form-control form-control-sm"--%>
+<%--                                data-textxml="${roles}" id="role">--%>
+<%--                            <c:forEach var="role" items="${roles}">--%>
+<%--                                <option value=${role.id}>${role.code}</option>--%>
+<%--                            </c:forEach>--%>
+<%--                        </select>--%>
+                        <form:select path="role.id" id="role">
+                            <c:forEach items="${roles}" var="role">
+                                <form:option value="${role.id}" label="${role.code}"></form:option>
                             </c:forEach>
-                        </select>
+                        </form:select>
                     </div>
 
                     <div style="margin-top: 1em" class="form-group">
@@ -56,11 +70,13 @@
                         <button type="button" class="btn btn-primary" onclick="submitUser()">Thêm</button>
                     </div>
                 </div>
-
+                </form:form>
                 <div class="space-6"></div>
             </div><!-- /.widget-main -->
         </div><!-- /.widget-body -->
     </div><!-- /.login-box -->
 </div><!-- /.position-relative -->
+
 </body>
+
 </html>

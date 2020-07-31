@@ -1,6 +1,7 @@
 package com.example.entity;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name="role")
@@ -10,16 +11,15 @@ public class RoleEntity extends BaseEntity{
     @Column
     private String code;
 
-    @ManyToOne
-    @JoinColumn(name="user_id")
-    private UserEntity user;
+    @OneToMany(mappedBy = "role", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private List<UserEntity> users;
 
-    public UserEntity getUser() {
-        return user;
+    public List<UserEntity> getUsers() {
+        return users;
     }
 
-    public void setUser(UserEntity user) {
-        this.user = user;
+    public void setUsers(List<UserEntity> users) {
+        this.users = users;
     }
 
     public String getName() {

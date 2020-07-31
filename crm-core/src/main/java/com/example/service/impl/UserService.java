@@ -10,7 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
-import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -27,7 +26,7 @@ public class UserService implements IUserService {
     @Override
     public List<UserDTO> searchUsers(UserDTO modelSearch) {
 
-        List<?> userEntities = null;
+        List<?> userEntities = new ArrayList<>();
         List<UserDTO> result = new ArrayList<>();
 
         userEntities = userRepository.findAll(modelSearch);

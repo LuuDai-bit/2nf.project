@@ -1,7 +1,6 @@
 package com.example.repository.custom.impl;
 
 import com.example.dto.UserDTO;
-import com.example.paging.Pageable;
 import com.example.repository.custom.UserRepositoryCustom;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.stereotype.Repository;
@@ -17,7 +16,11 @@ public class IUserRepositoryImpl implements UserRepositoryCustom {
     private EntityManager entityManager;
 
     public List<?> findAll(UserDTO userDTO) {
-        StringBuilder sql = new StringBuilder("FROM UserEntity AS u");
+        StringBuilder sql = new StringBuilder("SELECT u FROM UserEntity u");
+        if (StringUtils.isNotBlank(userDTO.getSearchValue())){
+            sql.append(" INNER JOIN  u.role ");
+        }
+
         sql.append(" WHERE 1=1 ");
         if (StringUtils.isNotBlank(userDTO.getName())) {
             sql.append("AND LOWER(u.name) LIKE LOWER('%"+ userDTO.getName()+"%') ");
@@ -27,6 +30,10 @@ public class IUserRepositoryImpl implements UserRepositoryCustom {
         }
         if (StringUtils.isNotBlank(userDTO.getPhone())) {
             sql.append("AND LOWER(u.phone) LIKE LOWER('%"+ userDTO.getPhone()+"%')");
+        }
+        if (StringUtils.isNotBlank(userDTO.getSearchValue())) {
+            sql.append("AND LOWER(u.role.code) LIKE LOWER('%"+ userDTO.getSearchValue()+"%')");
+
         }
 
         Query query = entityManager.createQuery(sql.toString());

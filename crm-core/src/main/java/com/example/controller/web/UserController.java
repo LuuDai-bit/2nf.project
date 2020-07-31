@@ -1,8 +1,10 @@
 package com.example.controller.web;
 
 import com.example.constant.SystemConstant;
+import com.example.dto.RoleDTO;
 import com.example.dto.UserDTO;
 import com.example.entity.other.ListDTO;
+import com.example.service.IRoleService;
 import com.example.service.IUserService;
 import com.example.utils.DisplayTagUtils;
 import com.example.utils.MessageUtil;
@@ -18,20 +20,25 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 import java.util.Map;
 
-@Controller
+@RestController
 public class UserController {
     @Autowired
     private IUserService userService;
 
-    @RequestMapping(value="/addUser", method= RequestMethod.POST)
-    @ResponseBody
-    public String submit(UserDTO userDTO) {
+    @Autowired
+    private IRoleService roleService;
+
+//    @RequestMapping(value="/addUser", method= RequestMethod.POST)
+//    @ResponseBody
+    @PostMapping(value = "/addUser")
+    public String submit(@ModelAttribute UserDTO userDTO) {
         userService.saveUser(userDTO);
         return "success";
     }
 
     @RequestMapping(value="/user/list", method = RequestMethod.GET)
-    public ModelAndView getUsers(@ModelAttribute(SystemConstant.MODEL) UserDTO model, HttpServletRequest request){
+    public ModelAndView getUsers(@ModelAttribute(SystemConstant.MODEL) UserDTO model,
+                                 HttpServletRequest request){
         ModelAndView mav = new ModelAndView("web/home");
         DisplayTagUtils.initSearchBean(request, model);
         List<UserDTO> users = userService.searchUsers(model);
@@ -39,6 +46,7 @@ public class UserController {
         model.setListResult(users);
         model.setTotalItems(totalUsers);
         mav.addObject(SystemConstant.MODEL, model);
+        mav.addObject(SystemConstant.MODEL2, roleService.getAllRoles());
         return mav;
     }
 

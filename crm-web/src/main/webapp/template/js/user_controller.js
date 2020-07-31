@@ -50,17 +50,12 @@ function submitUser(){
     user.name = $("#name").val().trim();
     user.email = $("#email").val().trim();
     user.phone = $("#phoneNumber").val().trim();
-    user.roles = [];
     let avatar = $("#imgfile")[0].files;
-    let role = $("#role option:selected")[0];
-    let roles = $("#role").data("textxml");
 
-    for(let i = 0; i < roles.length; i++){
-        if(roles[i].code == role){
-            user.roles.push(roles[i]);
-            break;
-        }
-    }
+    let role_id = $( "#role option:selected" ).val();
+    user.role = {};
+    user.role.id = role_id;
+
     user.avatar = "";
     for(let i = 0; i < avatar.length; i++){
         user.avatar += avatar[i].name + ',';
@@ -82,27 +77,30 @@ function submitUser(){
         alert("Số điện thoại không hợp lệ");
         return;
     }
+    console.log(user);
     getIdFromURL();
     if(isAdd){
-        submitNewUser(user);
+        submitNewUser(user)
     }
     else{
         user.id = editId;
         submitEditUser(user);
     }
 
-    $("#name").val("");
-    $("#email").val("");
-    $("#phoneNumber").val("");
-    $("#imgfile").val("");
+    // $("#name").val("");
+    // $("#email").val("");
+    // $("#phoneNumber").val("");
+    // $("#imgfile").val("");
 
 }
 
-function submitNewUser(user) {
+function submitNewUser(data) {
+    console.log(data);
+    // $('#addUserForm').submit();
     $.ajax({
         type: "POST",
         url: "/addUser",
-        data: user,
+        data: data,
         dataType: "json"
     }).done(function (response) {
         alert("Job done!!!!");

@@ -11,8 +11,18 @@ public class UserEntity extends BaseEntity{
     private String name;
     @Column
     private String email;
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
-    private Set<RoleEntity> roles;
+    @ManyToOne
+    @JoinColumn(name="role_id", nullable = false)
+    private RoleEntity role;
+
+    public RoleEntity getRole() {
+        return role;
+    }
+
+    public void setRole(RoleEntity role) {
+        this.role = role;
+    }
+
     @Column
     private String phone;
     @Column

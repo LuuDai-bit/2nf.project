@@ -7,14 +7,14 @@ public class UserDTO extends BaseDTO{
     private String email;
     private String phone;
     private String avatar;
-    private List<RoleDTO> roles;
+    private RoleDTO role;
 
-    public List<RoleDTO> getRoles() {
-        return roles;
+    public RoleDTO getRole() {
+        return role;
     }
 
-    public void setRoles(List<RoleDTO> roles) {
-        this.roles = roles;
+    public void setRole(RoleDTO role) {
+        this.role = role;
     }
 
     public String getName() {

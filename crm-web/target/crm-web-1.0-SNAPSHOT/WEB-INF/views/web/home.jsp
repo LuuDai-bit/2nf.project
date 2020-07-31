@@ -23,6 +23,7 @@
                     <i class="ace-icon fa fa-coffee green"></i>
 
                 </h4>
+
                 <form:form id="userForm" method="GET" action="${formURL}" modelAttribute="users">
                 <div class="container">
                     <h1>Người dùng</h1>
@@ -40,21 +41,30 @@
                             </div>
                         </div>
                         <div>
-                            <div class="col-md-4">
+                            <div style="margin-bottom: 1em" class="col-md-4">
                                 <form:input path="name" id="searchName"
                                             cssClass="form-control input-sm"
                                             placeholder="Tên"/>
                             </div>
-                            <div class="col-md-4">
+                            <div style="margin-bottom: 1em" class="col-md-4">
                                 <form:input path="email" id="searchEmail"
                                             cssClass="form-control input-sm"
                                             placeholder="Email"/>
                             </div>
-                            <div class="col-md-4">
+                            <div style="margin-bottom: 1em" class="col-md-4">
                                 <form:input path="phone" id="searchPhone"
                                             cssClass="form-control input-sm"
                                             placeholder="Số điện thoại"/>
                             </div>
+                            <div style="margin-bottom: 1em" class="col-md-4">
+                                <form:select path="searchValue" id="searchRoles" cssClass="form-control custom-select my-select" multiple="false">
+                                    <form:option value="" label="Vai trò"></form:option>
+                                    <c:forEach items="${roles}" var="r">
+                                        <form:option value="${r.code}" label="${r.code}"></form:option>
+                                    </c:forEach>
+                                </form:select>
+                            </div>
+
                         </div>
                         <div>
                             <button style="margin:1em 0 0 1em" id="searchUser" type="submit" class="btn btn-primary" >Tìm kiếm</button>
@@ -70,7 +80,7 @@
                             <i class="fa fa-trash" aria-hidden="true"></i>
                             Xóa</button>
                         <div style="float:right; display:inline">
-                            <form:select path="maxPageItems" onchange="updateMaxPageItems()">
+                            <form:select path="maxPageItems" cssClass="my-select" onchange="updateMaxPageItems()">
                                 <form:option value="5">5</form:option>
                                 <form:option value="10">10</form:option>
                                 <form:option value="20">20</form:option>
@@ -80,51 +90,33 @@
 
                     </div>
                     <div>
-<%--                        <table class="table table-bordered">--%>
-<%--                            <thead>--%>
-<%--                            <tr>--%>
-<%--                                <th></th>--%>
-<%--                                <th>Name</th>--%>
-<%--                                <th>Email</th>--%>
-<%--                                <th>Phone</th>--%>
-<%--                                <th></th>--%>
-<%--                            </tr>--%>
-<%--                            </thead>--%>
+                        <table class="table table-bordered my-table">
+                            <thead>
+                            <tr>
+                                <th></th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                                <th></th>
+                            </tr>
+                            </thead>
 
-<%--                            <tbody>--%>
-<%--                                <c:forEach var="user" items="${users.listResult}">--%>
-<%--                                    <tr>--%>
-<%--                                        <td><input type="checkbox" id="${user.id}"--%>
-<%--                                                   onclick="selectUser(${user.id}, this.checked)"--%>
-<%--                                        ></td>--%>
-<%--                                        <td>${user.name}</td>--%>
-<%--                                        <td>${user.email}</td>--%>
-<%--                                        <td>${user.phone}</td>--%>
-<%--                                        <td><button id="editUser" onclick="editUser(${user.id})">Edit</button>--%>
-<%--                                            <button id="deleteUser" onclick="deleteUser(${user.id})">Delete</button></td>--%>
-<%--                                    </tr>--%>
-<%--                                </c:forEach>--%>
-<%--                            </tbody>--%>
-<%--                        </table>--%>
-                        <div class="table-responsive my-table">
-                            <display:table name="users.listResult" cellspacing="0" cellpadding="0" requestURI="${formURL}"
-                                           partialList="true" size="${users.totalItems}" id="tableList" pagesize="${users.maxPageItems}"
-                                           export="false"
-                                           class="table table-fcvace table-striped table-bordered table-hover dataTable no-footer "
-                                           style="margin: 3em 0 1.5em;">
-                                <display:column title="<fieldset class='form-group'>
-												        <input type='checkbox' id='checkAll' class='check-box-element'>
-												        </fieldset>" class="center select-cell"
-                                                headerClass="center select-cell">
-                                    <fieldset>
-                                        <input onclick="selectUser(${tableList.id}, this.checked)" type="checkbox" name="checkList" value="${tableList.id}" id="checkbox_${tableList.id}" class="check-box-element"/>
-                                    </fieldset>
-                                </display:column>
-                                <display:column headerClass="text-left" property="name" title="Họ và tên"/>
-                                <display:column headerClass="text-left" property="email" title="Email"/>
-                                <display:column headerClass="text-left" property="phone" title="Số diện thoại"/>
-                            </display:table>
-                        </div>
+                            <tbody>
+                                <c:forEach var="user" items="${users.listResult}">
+                                    <tr>
+                                        <td><input type="checkbox" id="${user.id}"
+                                                   onclick="selectUser(${user.id}, this.checked)"
+                                        ></td>
+                                        <td>${user.name}</td>
+                                        <td>${user.email}</td>
+                                        <td>${user.phone}</td>
+                                        <td><button id="editUser" onclick="editUser(${user.id})">Edit</button>
+                                            <button id="deleteUser" onclick="deleteUser(${user.id})">Delete</button></td>
+                                    </tr>
+                                </c:forEach>
+                            </tbody>
+                        </table>
+
                     </div>
 
 
