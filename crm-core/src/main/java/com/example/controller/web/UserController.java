@@ -20,7 +20,7 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 import java.util.Map;
 
-@RestController
+@Controller
 public class UserController {
     @Autowired
     private IUserService userService;
@@ -28,10 +28,10 @@ public class UserController {
     @Autowired
     private IRoleService roleService;
 
-//    @RequestMapping(value="/addUser", method= RequestMethod.POST)
-//    @ResponseBody
-    @PostMapping(value = "/addUser")
-    public String submit(@ModelAttribute UserDTO userDTO) {
+    @RequestMapping(value="/addUser", method= RequestMethod.POST)
+    @ResponseBody
+//    @PostMapping(value = "/addUser")
+    public String submit(@RequestBody UserDTO userDTO) {
         userService.saveUser(userDTO);
         return "success";
     }

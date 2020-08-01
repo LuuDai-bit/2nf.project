@@ -94,14 +94,15 @@ function submitUser(){
 
 }
 
-function submitNewUser(data) {
-    console.log(data);
+function submitNewUser(user) {
+    // console.log(data);
     // $('#addUserForm').submit();
     $.ajax({
         type: "POST",
         url: "/addUser",
-        data: data,
-        dataType: "json"
+        data: JSON.stringify(user),
+        dataType: "json",
+        contentType: "application/json"
     }).done(function (response) {
         alert("Job done!!!!");
     }).fail(function (xhr, status, error) {

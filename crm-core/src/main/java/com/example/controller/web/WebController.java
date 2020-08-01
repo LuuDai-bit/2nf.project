@@ -33,7 +33,7 @@ public class WebController {
     @RequestMapping(value="/adduserpage", method = RequestMethod.GET)
     public ModelAndView addUserPage(){
         ModelAndView mav = new ModelAndView("web/user_add");
-        mav.addObject(SystemConstant.MODEL , new UserDTO());
+//        mav.addObject(SystemConstant.MODEL , new UserDTO());
         mav.addObject("roles", roleService.getAllRoles());
         return mav;
     }
