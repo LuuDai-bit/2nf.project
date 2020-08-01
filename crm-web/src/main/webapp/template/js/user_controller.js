@@ -87,16 +87,14 @@ function submitUser(){
         submitEditUser(user);
     }
 
-    // $("#name").val("");
-    // $("#email").val("");
-    // $("#phoneNumber").val("");
-    // $("#imgfile").val("");
+    $("#name").val("");
+    $("#email").val("");
+    $("#phoneNumber").val("");
+    $("#imgfile").val("");
 
 }
 
 function submitNewUser(user) {
-    // console.log(data);
-    // $('#addUserForm').submit();
     $.ajax({
         type: "POST",
         url: "/addUser",

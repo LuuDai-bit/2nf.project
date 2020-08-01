@@ -40,7 +40,7 @@ public class UserController {
     public ModelAndView getUsers(@ModelAttribute(SystemConstant.MODEL) UserDTO model,
                                  HttpServletRequest request){
         ModelAndView mav = new ModelAndView("web/home");
-        DisplayTagUtils.initSearchBean(request, model);
+
         List<UserDTO> users = userService.searchUsers(model);
         int totalUsers = userService.getTotalItems(model);
         model.setListResult(users);

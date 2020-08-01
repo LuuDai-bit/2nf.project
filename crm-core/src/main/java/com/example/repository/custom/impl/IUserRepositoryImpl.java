@@ -37,7 +37,7 @@ public class IUserRepositoryImpl implements UserRepositoryCustom {
         }
 
         Query query = entityManager.createQuery(sql.toString());
-        query.setFirstResult(userDTO.getPage()-1);
+        query.setFirstResult((userDTO.getPage()-1)*userDTO.getMaxPageItems());
         query.setMaxResults(userDTO.getMaxPageItems());
         return query.getResultList();
     }

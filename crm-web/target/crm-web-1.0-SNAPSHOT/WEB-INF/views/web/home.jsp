@@ -119,6 +119,19 @@
 
                     </div>
 
+                    <div>
+                        <div>
+                            <span>Có tất cả <span id="totalItem">${users.totalItems}</span> bản ghi</span>
+                            <span>Bản ghi x - y</span>
+                        </div>
+                        <div>
+                            <nav aria-label="...">
+                                <ul class="pagination" id="pageUL">
+                                </ul>
+                            </nav>
+                        </div>
+                        <form:hidden path="page" value="${page}" id="page"></form:hidden>
+                    </div>
 
                 </div>
                 </form:form>
