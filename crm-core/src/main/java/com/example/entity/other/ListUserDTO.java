@@ -5,6 +5,7 @@ import com.example.dto.UserDTO;
 import java.util.List;
 
 public class ListUserDTO {
+    private List<UserDTO> items;
     public List<UserDTO> getItems() {
         return items;
     }
@@ -12,6 +13,4 @@ public class ListUserDTO {
     public void setItems(List<UserDTO> items) {
         this.items = items;
     }
-
-    private List<UserDTO> items;
 }

@@ -1,11 +1,14 @@
 package com.example.service.impl;
 
+import com.example.controller.web.RestUploadController;
 import com.example.converter.UserConverter;
 import com.example.dto.UserDTO;
 import com.example.entity.UserEntity;
 
 import com.example.repository.IUserRepository;
 import com.example.service.IUserService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -17,6 +20,8 @@ import java.util.List;
 
 @Service
 public class UserService implements IUserService {
+    private final Logger logger = LoggerFactory.getLogger(RestUploadController.class);
+
     @Autowired
     private IUserRepository userRepository;
 
@@ -91,7 +96,8 @@ public class UserService implements IUserService {
     public boolean deleteUser(Long id){
         UserEntity userEntity = userRepository.findOne(id);
         if(userEntity!=null){
-            userRepository.delete(id);
+            logger.debug("user's deleted (Y)");
+            userRepository.deleteUserById(id);
             return true;
         }
         return false;
@@ -100,10 +106,7 @@ public class UserService implements IUserService {
     @Override
     public void deleteUsers(List<Long> users) {
         for(Long userId : users){
-            UserEntity userEntity = userRepository.findOne(userId);
-            if(userEntity!=null){
                 userRepository.delete(userId);
-            }
         }
     }
 

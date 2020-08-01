@@ -123,25 +123,25 @@ function submitEditUser(user){
     });
 }
 
-function deleteUser(userId){
-    $.ajax({
-        type: "DELETE",
-        url: "/deleteUser/"+userId,
-        dataType: "json"
-    }).done(function (response) {
-        alert("Job done!!!!");
-    }).fail(function (xhr, status, error) {
-        alert(xhr.responseText);
-        window.location.reload(true);
-    });
-
-}
+$("#deleteUser").click(function () {
+    console.log("hahaha");
+    window.open("facebook.com");
+    // $.ajax({
+    //     type: "DELETE",
+    //     url: "/deleteUser/"+userId,
+    //     dataType: "json"
+    // }).done(function (response) {
+    //     alert("Job done!!!!");
+    // }).fail(function (xhr, status, error) {
+    // });
+});
 
 function selectUser(userId, isChecked){
     if(isChecked) checkedUser.push(userId);
     else{
         checkedUser = checkedUser.filter(elem => elem != userId);
     }
+    console.log(checkedUser);
     enableDeleteButton(checkedUser.length==0);
 }
 
@@ -149,26 +149,27 @@ function enableDeleteButton(haveMoreThan0){
     $("#deleteUsers")[0].disabled = haveMoreThan0;
 }
 
-function deleteUsers(){
+$("#deleteUsers").click(function (event) {
+    event.preventDefault();
+    console.log("balasat");
 
+})
+
+function deleteUsers1() {
     $.ajax({
         type: "DELETE",
         url: "/deleteUsers",
         dataType: "json",
         data: JSON.stringify({"items":checkedUser}),
         contentType: 'application/json'
-
     }).done(function (response) {
         alert("Job done!!!!");
     }).fail(function (xhr, status, error) {
         alert(xhr.responseText);
         checkedUser = [];
         enableDeleteButton(checkedUser.length==0);
-        window.location.reload(true);
     });
-
 }
-
 function editUser() {
 
 }

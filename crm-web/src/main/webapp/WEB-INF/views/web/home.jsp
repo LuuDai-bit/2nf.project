@@ -23,7 +23,6 @@
                     <i class="ace-icon fa fa-coffee green"></i>
 
                 </h4>
-
                 <form:form id="userForm" method="GET" action="${formURL}" modelAttribute="users">
                 <div class="container">
                     <h1>Người dùng</h1>
@@ -75,8 +74,8 @@
                         <button type="button" class="btn btn-primary" onclick="addUser()">
                             <i class="flaticon-plus"></i>
                             Thêm mới</button>
-                        <button id="deleteUsers" type="button"
-                                class="btn btn-danger" onclick="deleteUsers()" disabled>
+                        <button id="deleteUsers" type="button" onclick="deleteUsers1()"
+                                class="btn btn-danger" disabled>
                             <i class="fa fa-trash" aria-hidden="true"></i>
                             Xóa</button>
                         <div style="float:right; display:inline">
@@ -111,7 +110,7 @@
                                         <td>${user.email}</td>
                                         <td>${user.phone}</td>
                                         <td><button id="editUser" onclick="editUser(${user.id})">Edit</button>
-                                            <button id="deleteUser" onclick="deleteUser(${user.id})">Delete</button></td>
+                                            <button id="deleteUser">Delete</button></td>
                                     </tr>
                                 </c:forEach>
                             </tbody>
