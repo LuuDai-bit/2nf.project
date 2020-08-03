@@ -3,6 +3,7 @@ package com.example.constant;
 public class SystemConstant {
 	public static final String MODEL = "users";
 	public static final String ROLE = "role";
+	public static final String BUILDING = "building";
 	public static final String TOTALUSERS = "totalUsers";
 	public static final String MODEL2 = "roles";
 	public static final String INSERT_SUCCESS = "insert_success";

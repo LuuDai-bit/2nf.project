@@ -1,16 +1,18 @@
 $("document").ready(function(){
-    autoGeneratePagingBar();
+    let totalItems = parseInt($("#totalItem").text());
+    let maxPageItems = parseInt($('#maxPageItems').find(":selected").text());
+    let numberOfPage = totalItems/maxPageItems;
+    autoGeneratePagingBar(numberOfPage);
 })
+let nop ;
 
 function updateMaxPageItems(){
     $('#userForm').submit();
     $('#roleForm').submit();
 }
 
-function autoGeneratePagingBar(){
-    let totalItems = parseInt($("#totalItem").text());
-    let maxPageItems = parseInt($('#maxPageItems').find(":selected").text());
-    let numberOfPage = totalItems/maxPageItems;
+function autoGeneratePagingBar(numberOfPage){
+
     let res = `<li class="page-item disabled" onclick="previousPage()"><a class="page-link">Previous</a> </li>`;
 
 
@@ -22,6 +24,8 @@ function autoGeneratePagingBar(){
     res += `<li class="page-item disabled" onclick="nextPage()"><a class="page-link">Next</a> </li>`;
 
     $("#pageUL").append(res);
+
+    nop = numberOfPage;
 }
 
 function changePage(_page){
@@ -37,10 +41,7 @@ function previousPage() {
 }
 
 function nextPage() {
-    let totalItems = parseInt($("#totalItem").text());
-    let maxPageItems = parseInt($('#maxPageItems').find(":selected").text());
-    let numberOfPage = Math.ceil(totalItems/maxPageItems);
-    if ($("#page").val()+1 <= numberOfPage)
+    if ($("#page").val()+1 <= nop)
         $("#page").val($("#page").val()-1);
     updateMaxPageItems();
 }

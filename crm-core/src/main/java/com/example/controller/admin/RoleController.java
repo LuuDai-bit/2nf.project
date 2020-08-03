@@ -2,8 +2,9 @@ package com.example.controller.admin;
 
 import com.example.constant.SystemConstant;
 import com.example.dto.RoleDTO;
-import com.example.dto.RoleDTO;
 import com.example.entity.other.ListDTO;
+import com.example.paging.PageRequest;
+import com.example.paging.Pageable;
 import com.example.service.IRoleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -28,7 +29,6 @@ public class RoleController {
 
     @RequestMapping(value="/addRole", method= RequestMethod.POST)
     @ResponseBody
-//    @PostMapping(value = "/addRole")
     public String submit(@RequestBody RoleDTO roleDTO) {
         roleService.saveRole(roleDTO);
         return "success";
@@ -38,8 +38,9 @@ public class RoleController {
     public ModelAndView getRoles(@ModelAttribute(SystemConstant.MODEL) RoleDTO model,
                                  HttpServletRequest request){
         ModelAndView mav = new ModelAndView("admin/role/list");
+        Pageable pageable = new PageRequest(model.getPage(), model.getMaxPageItems());
 
-        List<RoleDTO> roles = roleService.searchRoles(model);
+        List<RoleDTO> roles = roleService.searchRoles(model, pageable);
         int totalRoles = roleService.getTotalItems(model);
         model.setListResult(roles);
         model.setTotalItems(totalRoles);

@@ -3,6 +3,8 @@ package com.example.controller.admin;
 import com.example.constant.SystemConstant;
 import com.example.dto.UserDTO;
 import com.example.entity.other.ListDTO;
+import com.example.paging.PageRequest;
+import com.example.paging.Pageable;
 import com.example.service.IRoleService;
 import com.example.service.IUserService;
 import com.example.utils.MessageUtil;
@@ -38,8 +40,9 @@ public class UserController {
     public ModelAndView getUsers(@ModelAttribute(SystemConstant.MODEL) UserDTO model,
                                  HttpServletRequest request){
         ModelAndView mav = new ModelAndView("admin/user/list");
+        Pageable pageable = new PageRequest(model.getPage(), model.getMaxPageItems());
 
-        List<UserDTO> users = userService.searchUsers(model);
+        List<UserDTO> users = userService.searchUsers(model, pageable);
         int totalUsers = userService.getTotalItems(model);
         model.setListResult(users);
         model.setTotalItems(totalUsers);

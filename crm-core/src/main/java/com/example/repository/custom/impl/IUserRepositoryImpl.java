@@ -2,6 +2,7 @@ package com.example.repository.custom.impl;
 
 import com.example.dto.UserDTO;
 import com.example.entity.UserEntity;
+import com.example.paging.Pageable;
 import com.example.repository.custom.UserRepositoryCustom;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.stereotype.Repository;
@@ -16,7 +17,7 @@ public class IUserRepositoryImpl implements UserRepositoryCustom {
     @PersistenceContext
     private EntityManager entityManager;
 
-    public List<?> findAll(UserDTO userDTO) {
+    public List<?> findAll(UserDTO userDTO, Pageable pageable) {
         StringBuilder sql = new StringBuilder("SELECT u FROM UserEntity u");
         sql.append(" WHERE 1=1 ");
         if (StringUtils.isNotBlank(userDTO.getName())) {
@@ -33,8 +34,8 @@ public class IUserRepositoryImpl implements UserRepositoryCustom {
         }
 
         Query query = entityManager.createQuery(sql.toString());
-        query.setFirstResult((userDTO.getPage()-1)*userDTO.getMaxPageItems());
-        query.setMaxResults(userDTO.getMaxPageItems());
+        query.setFirstResult(pageable.getOffset());
+        query.setMaxResults(pageable.getLimit());
         return query.getResultList();
     }
 

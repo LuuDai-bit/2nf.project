@@ -29,12 +29,12 @@ public class UserService implements IUserService {
     private UserConverter userConverter;
 
     @Override
-    public List<UserDTO> searchUsers(UserDTO modelSearch) {
+    public List<UserDTO> searchUsers(UserDTO modelSearch, com.example.paging.Pageable pageable) {
 
         List<?> userEntities = new ArrayList<>();
         List<UserDTO> result = new ArrayList<>();
 
-        userEntities = userRepository.findAll(modelSearch);
+        userEntities = userRepository.findAll(modelSearch, pageable);
         for (Object item : userEntities) {
             UserEntity userEntity = new UserEntity();
             try {
@@ -48,20 +48,6 @@ public class UserService implements IUserService {
         }
 
         return result;
-    }
-
-    @Override
-    public List<UserDTO> getAllUsers(){
-        Pageable pageable =new PageRequest(0,5);
-
-        List<UserDTO> userDTOs = new ArrayList<UserDTO>();
-        Page<UserEntity> userEntities = userRepository.findAll(pageable);
-        for(UserEntity item: userEntities){
-            UserDTO userDTO = userConverter.convertToDto(item);
-
-            userDTOs.add(userDTO);
-        }
-        return userDTOs;
     }
 
     @Override

@@ -3,6 +3,7 @@ package com.example.repository.custom.impl;
 import com.example.dto.RoleDTO;
 import com.example.dto.UserDTO;
 import com.example.entity.UserEntity;
+import com.example.paging.Pageable;
 import com.example.repository.custom.RoleRepositoryCustom;
 import com.example.repository.custom.UserRepositoryCustom;
 import org.apache.commons.lang.StringUtils;
@@ -18,7 +19,7 @@ public class IRoleRepositoryImpl implements RoleRepositoryCustom {
     @PersistenceContext
     private EntityManager entityManager;
 
-    public List<?> findAll(RoleDTO roleDTO) {
+    public List<?> findAll(RoleDTO roleDTO, Pageable pageable) {
         StringBuilder sql = new StringBuilder("SELECT ue FROM RoleEntity ue");
         sql.append(" WHERE 1=1 ");
         if (StringUtils.isNotBlank(roleDTO.getName())) {

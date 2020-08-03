@@ -2,14 +2,14 @@ package com.example.service;
 
 import com.example.dto.UserDTO;
 
-import org.springframework.data.domain.Pageable;
+import com.example.paging.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 public interface IUserService {
-    List<UserDTO> searchUsers(UserDTO model);
-    List<UserDTO> getAllUsers();
+    List<UserDTO> searchUsers(UserDTO model, Pageable pageable);
+
     void saveUser(UserDTO user);
     void deleteUsers(List<Long> users);
     int getTotalItems(UserDTO modelSearch);
