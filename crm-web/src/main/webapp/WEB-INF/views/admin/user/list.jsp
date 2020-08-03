@@ -56,10 +56,10 @@
                                                 placeholder="Số điện thoại"/>
                                 </div>
                                 <div style="margin-bottom: 1em" class="col-md-4">
-                                    <form:select path="searchValue" id="searchRoles" cssClass="form-control custom-select my-select" multiple="false">
+                                    <form:select path="role_id" id="searchRoles" cssClass="form-control custom-select my-select" multiple="false">
                                         <form:option value="" label="Vai trò"></form:option>
                                         <c:forEach items="${roles}" var="r">
-                                            <form:option value="${r.code}" label="${r.code}"></form:option>
+                                            <form:option value="${r.id}" label="${r.code}"></form:option>
                                         </c:forEach>
                                     </form:select>
                                 </div>

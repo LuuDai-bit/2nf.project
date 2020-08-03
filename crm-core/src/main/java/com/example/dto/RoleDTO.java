@@ -10,8 +10,6 @@ public class RoleDTO extends BaseDTO{
 
     private String code;
 
-    private List<UserEntity> users;
-
     public String getName() {
         return name;
     }
@@ -28,13 +26,4 @@ public class RoleDTO extends BaseDTO{
         this.code = code;
     }
 
-//    public List<UserEntity> getUsers() {
-//        return users;
-//    }
-//
-//    public void setUsers(List<UserEntity> users) {
-//        for(UserEntity item: users){
-//
-//        }
-//    }
 }

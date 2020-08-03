@@ -53,8 +53,8 @@ function submitUser(){
     let avatar = $("#imgfile")[0].files;
 
     let role_id = $( "#role option:selected" ).val();
-    user.role = {};
-    user.role.id = role_id;
+
+    user.role_id = role_id;
 
     user.avatar = "";
     for(let i = 0; i < avatar.length; i++){
@@ -179,7 +179,6 @@ function getIdFromURL(){
         isAdd = false;
         $("#submitBtn").html('Sửa');
     }
-
 }
 
 $("#searchUser").click(function(){

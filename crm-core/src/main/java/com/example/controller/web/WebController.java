@@ -1,6 +1,7 @@
 package com.example.controller.web;
 
 import com.example.constant.SystemConstant;
+import com.example.dto.RoleDTO;
 import com.example.dto.UserDTO;
 import com.example.entity.UserEntity;
 import com.example.service.IRoleService;
@@ -36,6 +37,15 @@ public class WebController {
         if(id<0) return mav;
         UserDTO userDTO = userService.getUserById(id);
         mav.addObject(SystemConstant.MODEL , userDTO);
+        return mav;
+    }
+
+    @RequestMapping(value="/role/add/page", method = RequestMethod.GET)
+    public ModelAndView addRolePage(@RequestParam Long id){
+        ModelAndView mav = new ModelAndView("admin/role/add");
+        if(id<0) return mav;
+        RoleDTO roleDTO = roleService.getOneRoleById(id);
+        mav.addObject(SystemConstant.ROLE , roleDTO);
         return mav;
     }
 }

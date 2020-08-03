@@ -41,6 +41,7 @@
     <!-- js -->
     <script type="text/javascript" src="<c:url value='/template/js/user_controller.js' />"></script>
     <script type="text/javascript" src="<c:url value='/template/js/paging/paging.js' />"></script>
+    <script type="text/javascript" src="<c:url value='/template/js/role/role_controller.js' />"></script>
 </head>
 <style type="text/css">
     option {

@@ -1,4 +1,4 @@
-package com.example.controller.web.api;
+package com.example.controller.admin;
 
 import com.example.constant.SystemConstant;
 import com.example.dto.UserDTO;

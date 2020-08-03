@@ -11,17 +11,6 @@ public class RoleEntity extends BaseEntity{
     @Column(nullable = false, unique = true)
     private String code;
 
-    @OneToMany(mappedBy = "role", fetch = FetchType.EAGER)
-    private List<UserEntity> users;
-
-    public List<UserEntity> getUsers() {
-        return users;
-    }
-
-    public void setUsers(List<UserEntity> users) {
-        this.users = users;
-    }
-
     public String getName() {
         return name;
     }

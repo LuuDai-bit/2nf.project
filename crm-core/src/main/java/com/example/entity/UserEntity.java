@@ -11,18 +11,8 @@ public class UserEntity extends BaseEntity{
     private String name;
     @Column
     private String email;
-    @ManyToOne
-    @JoinColumn(name="role_id", nullable = false)
-    private RoleEntity role;
-
-    public RoleEntity getRole() {
-        return role;
-    }
-
-    public void setRole(RoleEntity role) {
-        this.role = role;
-    }
-
+    @Column(nullable=false)
+    private Long role_id;
     @Column
     private String phone;
     @Column
@@ -59,5 +49,13 @@ public class UserEntity extends BaseEntity{
 
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+
+    public Long getRole_id() {
+        return role_id;
+    }
+
+    public void setRole_id(Long role_id) {
+        this.role_id = role_id;
     }
 }

@@ -18,10 +18,6 @@ public class IUserRepositoryImpl implements UserRepositoryCustom {
 
     public List<?> findAll(UserDTO userDTO) {
         StringBuilder sql = new StringBuilder("SELECT u FROM UserEntity u");
-        if (StringUtils.isNotBlank(userDTO.getSearchValue())){
-            sql.append(" INNER JOIN  u.role ");
-        }
-
         sql.append(" WHERE 1=1 ");
         if (StringUtils.isNotBlank(userDTO.getName())) {
             sql.append("AND LOWER(u.name) LIKE LOWER('%"+ userDTO.getName()+"%') ");
@@ -32,9 +28,8 @@ public class IUserRepositoryImpl implements UserRepositoryCustom {
         if (StringUtils.isNotBlank(userDTO.getPhone())) {
             sql.append("AND LOWER(u.phone) LIKE LOWER('%"+ userDTO.getPhone()+"%')");
         }
-        if (StringUtils.isNotBlank(userDTO.getSearchValue())) {
-            sql.append("AND LOWER(u.role.code) LIKE LOWER('%"+ userDTO.getSearchValue()+"%')");
-
+        if (userDTO.getRole_id() != null) {
+            sql.append("AND u.role_id = "+ userDTO.getRole_id() + "");
         }
 
         Query query = entityManager.createQuery(sql.toString());
@@ -46,9 +41,6 @@ public class IUserRepositoryImpl implements UserRepositoryCustom {
     @Override
     public Long getTotalItems(UserDTO userDTO) {
         StringBuilder sql = new StringBuilder("SELECT COUNT(*) FROM UserEntity AS ue");
-//        if (StringUtils.isNotBlank(customerDTO.getStaffName())) {
-//            sql.append(" JOIN ce.users u ");
-//        }
         sql.append(" WHERE 1=1 ");
         if (StringUtils.isNotBlank(userDTO.getName())) {
             sql.append("AND LOWER(ue.name) LIKE LOWER('%" + userDTO.getName() + "%')");
@@ -58,6 +50,9 @@ public class IUserRepositoryImpl implements UserRepositoryCustom {
         }
         if (StringUtils.isNotBlank(userDTO.getEmail())) {
             sql.append("AND LOWER(ue.email) LIKE LOWER('%" + userDTO.getEmail() + "%')");
+        }
+        if (userDTO.getRole_id() != null) {
+            sql.append("AND ue.role_id ="+ userDTO.getRole_id() + "");
         }
         Query query = entityManager.createQuery(sql.toString());
         return (Long) query.getSingleResult();

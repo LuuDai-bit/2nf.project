@@ -60,7 +60,7 @@
                     </div>
                     <div>
                         <label for="role">Vai trò</label>
-                        <c:if test="${users.id <0}">
+                        <c:if test="${users==null}">
                             <select id="role">
                                 <c:forEach items="${roles}" var="role">
                                     <option value="${role.id}" label="${role.code}"></option>
@@ -69,7 +69,7 @@
                         </c:if>
 
                         <c:if test="${users.id >=0}">
-                            <select id="role" selected="${users.role.id}">
+                            <select id="role" selected="${users.role_id}">
                                 <c:forEach items="${roles}" var="role">
                                     <option value="${role.id}" label="${role.code}"></option>
                                 </c:forEach>

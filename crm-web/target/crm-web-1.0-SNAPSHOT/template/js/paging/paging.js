@@ -4,6 +4,7 @@ $("document").ready(function(){
 
 function updateMaxPageItems(){
     $('#userForm').submit();
+    $('#roleForm').submit();
 }
 
 function autoGeneratePagingBar(){
@@ -38,7 +39,7 @@ function previousPage() {
 function nextPage() {
     let totalItems = parseInt($("#totalItem").text());
     let maxPageItems = parseInt($('#maxPageItems').find(":selected").text());
-    let numberOfPage = totalItems/maxPageItems;
+    let numberOfPage = Math.ceil(totalItems/maxPageItems);
     if ($("#page").val()+1 <= numberOfPage)
         $("#page").val($("#page").val()-1);
     updateMaxPageItems();

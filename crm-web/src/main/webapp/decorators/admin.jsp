@@ -32,6 +32,7 @@
     <script type="text/javascript" src="<c:url value="/template/js/global_admin_script.js"/>"></script>
     <script type="text/javascript" src="<c:url value="/template/js/building_admin_js_custom.js"/>"></script>
 
+
 </head>
 <body class="no-skin">
 

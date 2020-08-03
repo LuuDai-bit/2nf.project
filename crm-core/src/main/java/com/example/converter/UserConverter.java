@@ -28,11 +28,6 @@ public class UserConverter {
     }
 
     public UserEntity convertToEntity(UserDTO dto){
-        if(dto.getRole() == null){
-            RoleEntity roleEntity = roleRepository.findOne((long) 1 );
-
-            dto.setRole(roleConverter.convertToDto(roleEntity));
-        }
         UserEntity result = modelMapper.map(dto, UserEntity.class);
         return result;
     }
