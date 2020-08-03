@@ -24,43 +24,58 @@
                 </div>
                 <div class="space-6"></div>
 
-<%--                <form:form id="addUserForm" commandName="users">--%>
                 <div class="container">
+
                     <div class="form-group">
                         <label for="name">Tên người dùng:</label>
-<%--                        <form:input path="name" id="name"--%>
-<%--                                    cssClass="form-control input-sm"--%>
-<%--                                    placeholder="Tên"/>--%>
-                        <input type="text" id="name" class="form-control input-sm" placeholder="Tên"/>
+                        <c:if test="${users.id >=0}">
+                            <input type="text" value="${users.name}" id="name" class="form-control input-sm" placeholder="Tên"/>
+                        </c:if>
+
+                        <c:if test="${users==null}">
+                            <input type="text" id="name" class="form-control input-sm" placeholder="Tên"/>
+                        </c:if>
                     </div>
                     <div class="form-group">
                         <label for="email">Email:</label>
-<%--                        <form:input path="email" id="email"--%>
-<%--                                    cssClass="form-control input-sm"--%>
-<%--                                    placeholder="Email"/>--%>
+                        <c:if test="${users.id >=0}">
+                            <input type="text" value="${users.email}" id="email" class="form-control input-sm" placeholder="Email"/>
+                        </c:if>
 
-                        <input type="text" id="email" class="form-control input-sm" placeholder="Email"/>
+                        <c:if test="${users==null}">
+                            <input type="text" id="email" class="form-control input-sm" placeholder="Email"/>
+                        </c:if>
+
                     </div>
                     <div class="form-group">
                         <label for="phoneNumber">Số điện thoại:</label>
-<%--                        <form:input path="phone" id="phoneNumber"--%>
-<%--                                    cssClass="form-control input-sm"--%>
-<%--                                    placeholder="Số điện thoại"/>--%>
-                        <input type="text" id="phoneNumber" class="form-control input-sm" placeholder="Số điện thoại"/>
+                        <c:if test="${users.id >=0}">
+                            <input type="text" value="${users.phone}" id="phoneNumber" class="form-control input-sm" placeholder="Số điện thoại"/>
+                        </c:if>
+
+                        <c:if test="${users==null}">
+                            <input type="text" id="phoneNumber" class="form-control input-sm" placeholder="Số điện thoại"/>
+                        </c:if>
+
                     </div>
                     <div>
                         <label for="role">Vai trò</label>
-<%--                        <select class="form-control form-control-sm"--%>
-<%--                                data-textxml="${roles}" id="role">--%>
-<%--                            <c:forEach var="role" items="${roles}">--%>
-<%--                                <option value=${role.id}>${role.code}</option>--%>
-<%--                            </c:forEach>--%>
-<%--                        </select>--%>
-                        <select id="role">
-                            <c:forEach items="${roles}" var="role">
-                                <option value="${role.id}" label="${role.code}"></option>
-                            </c:forEach>
-                        </select>
+                        <c:if test="${users.id <0}">
+                            <select id="role">
+                                <c:forEach items="${roles}" var="role">
+                                    <option value="${role.id}" label="${role.code}"></option>
+                                </c:forEach>
+                            </select>
+                        </c:if>
+
+                        <c:if test="${users.id >=0}">
+                            <select id="role" selected="${users.role.id}">
+                                <c:forEach items="${roles}" var="role">
+                                    <option value="${role.id}" label="${role.code}"></option>
+                                </c:forEach>
+                            </select>
+                        </c:if>
+
                     </div>
 
                     <div style="margin-top: 1em" class="form-group">
@@ -71,10 +86,12 @@
 
                     <div class="float-right">
                         <button type="button" class="btn btn-default" onclick="cancelAddUser()">Cancel</button>
-                        <button type="button" class="btn btn-primary" onclick="submitUser()">Thêm</button>
+                        <button type="button" class="btn btn-primary" onclick="submitUser()" id="submitBtn">
+                            Thêm
+                        </button>
                     </div>
                 </div>
-<%--                </form:form>--%>
+
                 <div class="space-6"></div>
             </div><!-- /.widget-main -->
         </div><!-- /.widget-body -->

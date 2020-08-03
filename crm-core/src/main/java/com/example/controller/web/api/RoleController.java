@@ -1,7 +1,6 @@
-package com.example.controller.web;
+package com.example.controller.web.api;
 
 import com.example.dto.RoleDTO;
-import com.example.entity.RoleEntity;
 import com.example.service.IRoleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

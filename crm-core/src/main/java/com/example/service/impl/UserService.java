@@ -65,18 +65,6 @@ public class UserService implements IUserService {
     }
 
     @Override
-    public List<UserDTO> getUsers(Pageable pageable) {
-        List<UserDTO> userDTOs = new ArrayList<>();
-        Page<UserEntity> userPage = userRepository.findAll(pageable);
-        for(UserEntity item: userPage.getContent()){
-            UserDTO userDTO = userConverter.convertToDto(item);
-
-            userDTOs.add(userDTO);
-        }
-        return userDTOs;
-    }
-
-    @Override
     public void saveUser(UserDTO userDto){
         if(userDto.getId() !=null && userRepository.findOne(userDto.getId()) != null){
             UserEntity userEntity = userRepository.findOne(userDto.getId());
@@ -93,17 +81,6 @@ public class UserService implements IUserService {
     }
 
     @Override
-    public boolean deleteUser(Long id){
-        UserEntity userEntity = userRepository.findOne(id);
-        if(userEntity!=null){
-            logger.debug("user's deleted (Y)");
-            userRepository.deleteUserById(id);
-            return true;
-        }
-        return false;
-    }
-
-    @Override
     public void deleteUsers(List<Long> users) {
         for(Long userId : users){
                 userRepository.delete(userId);
@@ -115,5 +92,12 @@ public class UserService implements IUserService {
         int totalItem = 0;
         totalItem = userRepository.getTotalItems(modelSearch).intValue();
         return totalItem;
+    }
+
+    @Override
+    public UserDTO getUserById(Long id) {
+        UserEntity user = userRepository.findOne(id);
+        UserDTO userDTO = userConverter.convertToDto(user);
+        return userDTO;
     }
 }

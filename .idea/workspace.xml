@@ -16,23 +16,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="51b463de-13b6-4cb1-97fe-e0f2aa9f62ad" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../Estate/estate-platform/estate-platform-core/src/main/java/com/estate/repository/custom/impl/CustomerRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Estate/estate-platform/estate-platform-core/src/main/java/com/estate/repository/custom/impl/CustomerRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/WEB-INF/views/admin/user/list.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/css/mycss/home_custom.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-core/src/main/java/com/example/entity/other/ListUserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-core/src/main/java/com/example/entity/other/ListUserDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-core/src/main/java/com/example/repository/IUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-core/src/main/java/com/example/repository/IUserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-core/src/main/java/com/example/repository/custom/UserRepositoryCustom.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-core/src/main/java/com/example/repository/custom/UserRepositoryCustom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-core/src/main/java/com/example/repository/custom/impl/IUserRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-core/src/main/java/com/example/repository/custom/impl/IUserRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-core/src/main/java/com/example/controller/web/RoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-core/src/main/java/com/example/controller/web/api/RoleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-core/src/main/java/com/example/controller/web/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-core/src/main/java/com/example/controller/web/api/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-core/src/main/java/com/example/controller/web/WebController.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-core/src/main/java/com/example/controller/web/WebController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-core/src/main/java/com/example/entity/RoleEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-core/src/main/java/com/example/entity/RoleEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-core/src/main/java/com/example/service/IUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-core/src/main/java/com/example/service/IUserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crm-core/src/main/java/com/example/service/impl/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-core/src/main/java/com/example/service/impl/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-core/target/classes/com/example/repository/IUserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/crm-core/target/classes/com/example/repository/IUserRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-core/target/classes/com/example/repository/custom/UserRepositoryCustom.class" beforeDir="false" afterPath="$PROJECT_DIR$/crm-core/target/classes/com/example/repository/custom/UserRepositoryCustom.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-core/target/classes/com/example/repository/custom/impl/IUserRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/crm-core/target/classes/com/example/repository/custom/impl/IUserRepositoryImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-core/target/classes/com/example/config/JPAConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/crm-core/target/classes/com/example/config/JPAConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-core/target/classes/com/example/controller/web/RoleController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-core/target/classes/com/example/controller/web/UserController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-core/target/classes/com/example/controller/web/WebController.class" beforeDir="false" afterPath="$PROJECT_DIR$/crm-core/target/classes/com/example/controller/web/WebController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-core/target/classes/com/example/entity/RoleEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/crm-core/target/classes/com/example/entity/RoleEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-core/target/classes/com/example/service/IUserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/crm-core/target/classes/com/example/service/IUserService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crm-core/target/classes/com/example/service/impl/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/crm-core/target/classes/com/example/service/impl/UserService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crm-web/src/main/webapp/WEB-INF/views/web/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/WEB-INF/views/web/home.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-web/src/main/webapp/template/js/paging/paging.js" beforeDir="false" afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/js/paging/paging.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-web/src/main/webapp/WEB-INF/views/web/user_add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/WEB-INF/views/admin/user/user_add.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-web/src/main/webapp/decorators/web.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/decorators/web.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-web/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crm-web/src/main/webapp/template/js/user_controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/js/user_controller.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/WEB-INF/lib/crm-core-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/WEB-INF/lib/crm-core-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/WEB-INF/views/web/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/WEB-INF/views/web/home.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/template/js/paging/paging.js" beforeDir="false" afterPath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/template/js/paging/paging.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/WEB-INF/views/web/user_add.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/decorators/web.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/decorators/web.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/template/js/user_controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/template/js/user_controller.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../news-platform/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../news-platform/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../news-platform/applicationfile/database/insert_data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../news-platform/applicationfile/database/insert_data.sql" afterDir="false" />
@@ -87,9 +96,9 @@
       <list>
         <option value="JavaScript File" />
         <option value="Interface" />
-        <option value="Jsp File" />
         <option value="CSS File" />
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -128,7 +137,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="ignore.virus.scanning.warn.message" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Estate" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -138,10 +147,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\javaworkspace\crm\crm-web\src\main\webapp\WEB-INF\views\admin" />
+      <recent name="E:\javaworkspace\crm\crm-web\src\main\webapp\WEB-INF\views" />
+      <recent name="E:\javaworkspace\crm\crm-web\src\main\webapp\WEB-INF\views\web\user" />
       <recent name="E:\javaworkspace\crm\crm-web\src\main\resources" />
       <recent name="E:\javaworkspace\crm\crm-web\src\main\resources\templates" />
-      <recent name="E:\javaworkspace\crm\crm-web\src\main\resources\META-INF\templates" />
-      <recent name="E:\javaworkspace\crm\crm-web\src\main\webapp\WEB-INF\taglibs" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.example.config" />
@@ -268,7 +278,12 @@
       <workItem from="1596244179554" duration="4118000" />
       <workItem from="1596253092204" duration="10751000" />
       <workItem from="1596272896581" duration="7121000" />
-      <workItem from="1596287067983" duration="4380000" />
+      <workItem from="1596287067983" duration="5247000" />
+      <workItem from="1596341781907" duration="1854000" />
+      <workItem from="1596357382804" duration="3334000" />
+      <workItem from="1596365354108" duration="3048000" />
+      <workItem from="1596383315880" duration="2104000" />
+      <workItem from="1596418624741" duration="981000" />
     </task>
     <servers />
   </component>
@@ -308,11 +323,11 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="341" y="166" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1596017378732" />
-    <state x="488" y="48" key="#com.intellij.ide.util.MemberChooser" timestamp="1596276368115">
+    <state x="488" y="48" key="#com.intellij.ide.util.MemberChooser" timestamp="1596358736874">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="488" y="48" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1595666077193" />
-    <state x="488" y="48" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1596276368115" />
+    <state x="488" y="48" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1596358736874" />
     <state x="345" y="288" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1596202689569">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -329,75 +344,75 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1595478322286" />
-    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1596292873343">
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1596359241543">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1595668764715" />
-    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1596292873343" />
-    <state width="1118" height="202" key="GridCell.Tab.0.bottom" timestamp="1596293462301">
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1596359241543" />
+    <state width="1118" height="210" key="GridCell.Tab.0.bottom" timestamp="1596385428309">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1118" height="202" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1596293462301" />
-    <state width="1118" height="202" key="GridCell.Tab.0.center" timestamp="1596293462301">
+    <state width="1118" height="210" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1596385428309" />
+    <state width="1118" height="210" key="GridCell.Tab.0.center" timestamp="1596385428309">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1118" height="202" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1596293462301" />
-    <state width="1118" height="202" key="GridCell.Tab.0.left" timestamp="1596293462301">
+    <state width="1118" height="210" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1596385428309" />
+    <state width="1118" height="210" key="GridCell.Tab.0.left" timestamp="1596385428309">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1118" height="202" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1596293462301" />
-    <state width="1118" height="202" key="GridCell.Tab.0.right" timestamp="1596293462301">
+    <state width="1118" height="210" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1596385428309" />
+    <state width="1118" height="210" key="GridCell.Tab.0.right" timestamp="1596385428309">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1118" height="202" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1596293462301" />
-    <state width="1118" height="202" key="GridCell.Tab.1.bottom" timestamp="1596293462302">
+    <state width="1118" height="210" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1596385428309" />
+    <state width="1118" height="210" key="GridCell.Tab.1.bottom" timestamp="1596385428309">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1118" height="202" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1596293462302" />
-    <state width="1118" height="202" key="GridCell.Tab.1.center" timestamp="1596293462302">
+    <state width="1118" height="210" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1596385428309" />
+    <state width="1118" height="210" key="GridCell.Tab.1.center" timestamp="1596385428309">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1118" height="202" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1596293462302" />
-    <state width="1118" height="202" key="GridCell.Tab.1.left" timestamp="1596293462302">
+    <state width="1118" height="210" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1596385428309" />
+    <state width="1118" height="210" key="GridCell.Tab.1.left" timestamp="1596385428309">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1118" height="202" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1596293462302" />
-    <state width="1118" height="202" key="GridCell.Tab.1.right" timestamp="1596293462302">
+    <state width="1118" height="210" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1596385428309" />
+    <state width="1118" height="210" key="GridCell.Tab.1.right" timestamp="1596385428309">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1118" height="202" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1596293462302" />
-    <state width="1118" height="202" key="GridCell.Tab.2.bottom" timestamp="1596293462125">
+    <state width="1118" height="210" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1596385428309" />
+    <state width="1118" height="210" key="GridCell.Tab.2.bottom" timestamp="1596385428309">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1118" height="202" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1596293462125" />
-    <state width="1118" height="202" key="GridCell.Tab.2.center" timestamp="1596293462125">
+    <state width="1118" height="210" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1596385428309" />
+    <state width="1118" height="210" key="GridCell.Tab.2.center" timestamp="1596385428309">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1118" height="202" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1596293462125" />
-    <state width="1118" height="202" key="GridCell.Tab.2.left" timestamp="1596293462125">
+    <state width="1118" height="210" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1596385428309" />
+    <state width="1118" height="210" key="GridCell.Tab.2.left" timestamp="1596385428309">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1118" height="202" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1596293462125" />
-    <state width="1118" height="202" key="GridCell.Tab.2.right" timestamp="1596293462125">
+    <state width="1118" height="210" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1596385428309" />
+    <state width="1118" height="210" key="GridCell.Tab.2.right" timestamp="1596385428309">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1118" height="202" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1596293462125" />
-    <state width="1118" height="202" key="GridCell.Tab.3.bottom" timestamp="1596293462126">
+    <state width="1118" height="210" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1596385428309" />
+    <state width="1118" height="210" key="GridCell.Tab.3.bottom" timestamp="1596385428310">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1118" height="202" key="GridCell.Tab.3.bottom/0.0.1366.728@0.0.1366.728" timestamp="1596293462126" />
-    <state width="1118" height="202" key="GridCell.Tab.3.center" timestamp="1596293462126">
+    <state width="1118" height="210" key="GridCell.Tab.3.bottom/0.0.1366.728@0.0.1366.728" timestamp="1596385428310" />
+    <state width="1118" height="210" key="GridCell.Tab.3.center" timestamp="1596385428310">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1118" height="202" key="GridCell.Tab.3.center/0.0.1366.728@0.0.1366.728" timestamp="1596293462126" />
-    <state width="1118" height="202" key="GridCell.Tab.3.left" timestamp="1596293462125">
+    <state width="1118" height="210" key="GridCell.Tab.3.center/0.0.1366.728@0.0.1366.728" timestamp="1596385428310" />
+    <state width="1118" height="210" key="GridCell.Tab.3.left" timestamp="1596385428309">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1118" height="202" key="GridCell.Tab.3.left/0.0.1366.728@0.0.1366.728" timestamp="1596293462125" />
-    <state width="1118" height="202" key="GridCell.Tab.3.right" timestamp="1596293462126">
+    <state width="1118" height="210" key="GridCell.Tab.3.left/0.0.1366.728@0.0.1366.728" timestamp="1596385428309" />
+    <state width="1118" height="210" key="GridCell.Tab.3.right" timestamp="1596385428310">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1118" height="202" key="GridCell.Tab.3.right/0.0.1366.728@0.0.1366.728" timestamp="1596293462126" />
+    <state width="1118" height="210" key="GridCell.Tab.3.right/0.0.1366.728@0.0.1366.728" timestamp="1596385428310" />
     <state width="1114" height="235" key="GridCell.Tab.8.bottom" timestamp="1595906655828">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -434,10 +449,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="65" y="25" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1595297700630" />
-    <state x="339" y="162" key="run.anything.popup" timestamp="1595560244151">
+    <state x="339" y="162" width="672" height="677" key="run.anything.popup" timestamp="1596368037801">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1595560244151" />
+    <state x="339" y="162" width="672" height="677" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1596368037801" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1595748400301">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

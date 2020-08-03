@@ -1,12 +1,10 @@
-package com.example.controller.web;
+package com.example.controller.web.api;
 
 import com.example.constant.SystemConstant;
-import com.example.dto.RoleDTO;
 import com.example.dto.UserDTO;
 import com.example.entity.other.ListDTO;
 import com.example.service.IRoleService;
 import com.example.service.IUserService;
-import com.example.utils.DisplayTagUtils;
 import com.example.utils.MessageUtil;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,7 +37,7 @@ public class UserController {
     @RequestMapping(value="/user/list", method = RequestMethod.GET)
     public ModelAndView getUsers(@ModelAttribute(SystemConstant.MODEL) UserDTO model,
                                  HttpServletRequest request){
-        ModelAndView mav = new ModelAndView("web/home");
+        ModelAndView mav = new ModelAndView("admin/user/list");
 
         List<UserDTO> users = userService.searchUsers(model);
         int totalUsers = userService.getTotalItems(model);
@@ -59,13 +57,6 @@ public class UserController {
         return new ResponseEntity("success", HttpStatus.OK);
     }
 
-    @RequestMapping(value="/deleteUser/{id}", method=RequestMethod.DELETE)
-    public ResponseEntity<Long> deleteUser(@PathVariable Long id){
-        boolean isDelete = userService.deleteUser(id);
-        if(!isDelete) return new ResponseEntity("not found", HttpStatus.BAD_REQUEST);
-        return new ResponseEntity("success", HttpStatus.OK);
-    }
-
     @RequestMapping(value="/editUser/{id}", method = RequestMethod.POST)
     @ResponseBody
     public String updateUser(UserDTO userDTO,@PathVariable Long id) {
@@ -74,12 +65,4 @@ public class UserController {
         return "success";
     }
 
-    private void initMessageResponse(ModelAndView mav, HttpServletRequest request) {
-        String message = request.getParameter("message");
-        if (message != null && StringUtils.isNotEmpty(message)) {
-            Map<String, String> messageMap = MessageUtil.getMessageResponse(message);
-            mav.addObject(SystemConstant.ALERT, messageMap.get(SystemConstant.ALERT));
-            mav.addObject(SystemConstant.MESSAGE_RESPONSE, messageMap.get(SystemConstant.MESSAGE_RESPONSE));
-        }
-    }
 }

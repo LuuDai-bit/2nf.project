@@ -10,10 +10,8 @@ import java.util.List;
 public interface IUserService {
     List<UserDTO> searchUsers(UserDTO model);
     List<UserDTO> getAllUsers();
-    List<UserDTO> getUsers(Pageable pageable);
     void saveUser(UserDTO user);
-    boolean deleteUser(Long id);
     void deleteUsers(List<Long> users);
     int getTotalItems(UserDTO modelSearch);
-
+    UserDTO getUserById(Long id);
 }

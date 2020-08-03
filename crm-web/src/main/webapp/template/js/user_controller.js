@@ -1,16 +1,16 @@
 $(document).ready(function () {
-
+    getIdFromURL();
 });
 let checkedUser = [];
 let isAdd = true;
 let editId = -1;
+
 function fire_ajax_submit() {
 
     let form = $('#fileUploadForm')[0];
 
     let data = new FormData(form);
     if(data == null){
-        console.log("Khong lay duoc");
         return;
     }
     // fdata.append("extraField", "This is some extra data, testing");
@@ -77,8 +77,6 @@ function submitUser(){
         alert("Số điện thoại không hợp lệ");
         return;
     }
-    console.log(user);
-    getIdFromURL();
     if(isAdd){
         submitNewUser(user)
     }
@@ -123,25 +121,12 @@ function submitEditUser(user){
     });
 }
 
-$("#deleteUser").click(function () {
-    console.log("hahaha");
-    window.open("facebook.com");
-    // $.ajax({
-    //     type: "DELETE",
-    //     url: "/deleteUser/"+userId,
-    //     dataType: "json"
-    // }).done(function (response) {
-    //     alert("Job done!!!!");
-    // }).fail(function (xhr, status, error) {
-    // });
-});
-
 function selectUser(userId, isChecked){
     if(isChecked) checkedUser.push(userId);
     else{
         checkedUser = checkedUser.filter(elem => elem != userId);
     }
-    console.log(checkedUser);
+
     enableDeleteButton(checkedUser.length==0);
 }
 
@@ -151,7 +136,7 @@ function enableDeleteButton(haveMoreThan0){
 
 $("#deleteUsers").click(function (event) {
     event.preventDefault();
-    console.log("balasat");
+
 
 })
 
@@ -168,10 +153,8 @@ function deleteUsers1() {
         alert(xhr.responseText);
         checkedUser = [];
         enableDeleteButton(checkedUser.length==0);
+        window.location.reload(true);
     });
-}
-function editUser() {
-
 }
 
 function cancelAddUser(){
@@ -179,7 +162,7 @@ function cancelAddUser(){
 }
 
 function addUser(){
-    window.open("/adduserpage");
+    window.open("/adduserpage?id="+-1);
 }
 
 function editUser (id) {
@@ -190,10 +173,13 @@ function editUser (id) {
 
 function getIdFromURL(){
     let queryString = window.location.search;
-    // console.log(queryString);
     let urlParams = new URLSearchParams(queryString);
     if(urlParams.get('id')!=null) editId = urlParams.get('id');
-    if(editId!=null && editId != -1) isAdd = false;
+    if(editId!=null && editId != -1) {
+        isAdd = false;
+        $("#submitBtn").html('Sửa');
+    }
+
 }
 
 $("#searchUser").click(function(){
