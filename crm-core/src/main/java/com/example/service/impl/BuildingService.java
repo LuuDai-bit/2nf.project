@@ -58,7 +58,14 @@ public class BuildingService implements IBuildingService {
     public void saveBuilding(BuildingDTO buildingDto) {
         if(buildingDto.getId() !=null && buildingRepository.findOne(buildingDto.getId()) != null){
             BuildingEntity buildingEntity = buildingRepository.findOne(buildingDto.getId());
-
+            buildingEntity.setAvatar(buildingDto.getAvatar());
+            buildingEntity.setCode(buildingDto.getCode());
+            buildingEntity.setDistrict(buildingDto.getCode());
+            buildingEntity.setLeasedArea(buildingDto.getLeasedArea());
+            buildingEntity.setNote(buildingDto.getNote());
+            buildingEntity.setRoomNumber(buildingDto.getRoomNumber());
+            buildingEntity.setStreet(buildingDto.getCode());
+            buildingEntity.setWard(buildingDto.getWard());
             buildingRepository.save(buildingEntity);
         }
         else {
@@ -72,5 +79,16 @@ public class BuildingService implements IBuildingService {
         for(Long buildingId : buildings){
             buildingRepository.delete(buildingId);
         }
+    }
+
+    @Override
+    public List<BuildingDTO> getAllBuildings() {
+        List<BuildingEntity> buildingEntities = buildingRepository.findAll();
+        List<BuildingDTO> buildingDTOS = new ArrayList<>();
+        for(BuildingEntity elem: buildingEntities){
+            BuildingDTO buildingDTO = buildingConverter.convertToDto(elem);
+            buildingDTOS.add(buildingDTO);
+        }
+        return buildingDTOS;
     }
 }

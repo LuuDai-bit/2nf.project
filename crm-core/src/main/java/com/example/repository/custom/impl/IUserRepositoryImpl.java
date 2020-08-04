@@ -59,12 +59,12 @@ public class IUserRepositoryImpl implements UserRepositoryCustom {
         return (Long) query.getSingleResult();
     }
 
-    @Override
-    public UserEntity findOneById(Long id) {
-        StringBuilder sql = new StringBuilder("SELECT u FROM UserEntity AS ue");
-        sql.append(" WHERE 1=1 ");
-        sql.append("AND ue.id=:"+id);
-        Query query = entityManager.createQuery(sql.toString());
-        return (UserEntity) query.getSingleResult();
-    }
+//    @Override
+//    public UserEntity findOneById(Long id) {
+//        StringBuilder sql = new StringBuilder("SELECT u FROM UserEntity AS ue");
+//        sql.append(" WHERE 1=1 ");
+//        sql.append("AND ue.id=:"+id);
+//        Query query = entityManager.createQuery(sql.toString());
+//        return (UserEntity) query.getSingleResult();
+//    }
 }

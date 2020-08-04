@@ -51,7 +51,7 @@
                         <div class="card bg-primary text-white mb-4">
                             <div class="card-body">Khách hàng</div>
                             <div class="card-footer d-flex align-items-center justify-content-between">
-                                <a class="small text-white stretched-link" href="#">View Details</a>
+                                <a class="small text-white stretched-link" href="/customer/list">View Details</a>
                                 <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                             </div>
                         </div>
@@ -72,7 +72,7 @@
                         <div class="card bg-primary text-white mb-4">
                             <div class="card-body">Thanh Toán</div>
                             <div class="card-footer d-flex align-items-center justify-content-between">
-                                <a class="small text-white stretched-link" href="#">View Details</a>
+                                <a class="small text-white stretched-link" href="/payment/list">View Details</a>
                                 <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                             </div>
                         </div>
@@ -90,7 +90,7 @@
                         <div class="card bg-primary text-white mb-4">
                             <div class="card-body">Đơn vị giá</div>
                             <div class="card-footer d-flex align-items-center justify-content-between">
-                                <a class="small text-white stretched-link" href="#">View Details</a>
+                                <a class="small text-white stretched-link" href="/unitPrice/list">View Details</a>
                                 <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                             </div>
                         </div>

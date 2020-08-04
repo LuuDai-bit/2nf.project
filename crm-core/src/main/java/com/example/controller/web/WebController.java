@@ -1,16 +1,11 @@
 package com.example.controller.web;
 
 import com.example.constant.SystemConstant;
-import com.example.dto.BuildingDTO;
-import com.example.dto.CustomerDTO;
-import com.example.dto.RoleDTO;
-import com.example.dto.UserDTO;
+import com.example.dto.*;
 import com.example.entity.UserEntity;
 import com.example.paging.PageRequest;
 import com.example.paging.Pageable;
-import com.example.service.ICustomerService;
-import com.example.service.IRoleService;
-import com.example.service.IUserService;
+import com.example.service.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,6 +25,12 @@ public class WebController {
     private IRoleService roleService;
     @Autowired
     private ICustomerService customerService;
+    @Autowired
+    private IUnitPriceService unitPriceService;
+    @Autowired
+    private IBuildingService buildingService;
+    @Autowired
+    private IPaymentService paymentService;
 
     @RequestMapping(value="/homepage", method = RequestMethod.GET)
     public ModelAndView homePage(){
@@ -80,6 +81,30 @@ public class WebController {
         if(id<0) return mav;
         customerDTO = customerService.getOneCustomerById(id);
         mav.addObject(SystemConstant.CUSTOMER , customerDTO);
+        return mav;
+    }
+
+    @RequestMapping(value="/unitPrice/add/page", method = RequestMethod.GET)
+    public ModelAndView addUnitPricePage(@RequestParam Long id){
+        ModelAndView mav = new ModelAndView("web/unit_price/add");
+        UnitPriceDTO unitPriceDTO = new UnitPriceDTO();
+        mav.addObject("buildings", buildingService.getAllBuildings());
+        if(id<0) return mav;
+        unitPriceDTO = unitPriceService.getOneUnitPriceById(id);
+        mav.addObject(SystemConstant.UNITPRICE , unitPriceDTO);
+        return mav;
+    }
+
+    @RequestMapping(value="/payment/add/page", method = RequestMethod.GET)
+    public ModelAndView addPaymentPage(@RequestParam Long id){
+        ModelAndView mav = new ModelAndView("web/payment/add");
+
+        //consume getAll()
+        PaymentDTO paymentDTO = new PaymentDTO();
+
+        if(id<0) return mav;
+        paymentDTO = paymentService.getOnePaymentById(id);
+        mav.addObject(SystemConstant.PAYMENT , paymentDTO);
         return mav;
     }
 }

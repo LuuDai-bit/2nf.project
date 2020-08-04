@@ -9,7 +9,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Người dùng</title>
+    <title>Khách hàng</title>
 </head>
 <body>
 
@@ -25,7 +25,7 @@
                 </h4>
                 <form:form id="customerForm" method="GET" action="${formURL}" modelAttribute="customer">
                     <div class="container">
-                        <h1>Người dùng</h1>
+                        <h1>Khách hàng</h1>
 
                         <div class="container-fluid" style="margin-bottom: 2em">
                             <div>

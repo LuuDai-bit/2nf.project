@@ -9,6 +9,5 @@ import java.util.List;
 
 public interface UserRepositoryCustom {
     List<?> findAll(UserDTO userDTO, Pageable pageable);
-    Long getTotalItems(UserDTO customerDTO);
-    UserEntity findOneById(Long id);
+    Long getTotalItems(UserDTO userDTO);
 }

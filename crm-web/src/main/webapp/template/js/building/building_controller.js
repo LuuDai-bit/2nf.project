@@ -91,7 +91,7 @@ function deleteBuilding() {
     }).fail(function (xhr, status, error) {
         alert(xhr.responseText);
         checkedUser = [];
-        enableDeleteButton(checkedUser.length==0);
+        enableBuildingDeleteButton(checkedUser.length==0);
         window.location.reload(true);
     });
 }

@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class CustomerServiceImpl implements ICustomerService {
+public class CustomerService implements ICustomerService {
     @Autowired
     private ICustomerRepository customerRepository;
 
@@ -65,7 +65,10 @@ public class CustomerServiceImpl implements ICustomerService {
     public void saveCustomer(CustomerDTO customerDto) {
         if(customerDto.getId() !=null && customerRepository.findOne(customerDto.getId()) != null){
             CustomerEntity customerEntity = customerRepository.findOne(customerDto.getId());
-
+            customerEntity.setName(customerDto.getName());
+            customerEntity.setEmail(customerDto.getEmail());
+            customerEntity.setPhone(customerDto.getPhone());
+            customerEntity.setPassword(customerDto.getPassword());
             customerRepository.save(customerEntity);
         }
         else {
