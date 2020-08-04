@@ -58,10 +58,10 @@ function selectRole(roleId, isChecked){
         checkedUser = checkedUser.filter(elem => elem != roleId);
     }
 
-    enableDeleteButton(checkedUser.length==0);
+    enableRoleDeleteButton(checkedUser.length==0);
 }
 
-function enableDeleteButton(haveMoreThan0){
+function enableRoleDeleteButton(haveMoreThan0){
     $("#deleteRoles")[0].disabled = haveMoreThan0;
 }
 

@@ -116,7 +116,6 @@
                 <li class="nav-item"><a href="/role/list" class="nav-link">Role</a></li>
                 <li class="nav-item"><a href="/building/list" class="nav-link">Building</a></li>
                 <li class="nav-item"><a href="/customer/list" class="nav-link">Customer</a></li>
-                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
                 <li class="nav-item cta"><a href="contact.html" class="nav-link ml-lg-2"><span class="icon-user"></span> Sign-In</a></li>
                 <li class="nav-item cta cta-colored"><a href="contact.html" class="nav-link"><span class="icon-pencil"></span> Sign-Up</a></li>
 

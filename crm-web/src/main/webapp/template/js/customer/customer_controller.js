@@ -60,10 +60,10 @@ function selectCustomer(customerId, isChecked){
         checkedUser = checkedUser.filter(elem => elem != customerId);
     }
 
-    enableDeleteButton(checkedUser.length==0);
+    enableCustomerDeleteButton(checkedUser.length==0);
 }
 
-function enableDeleteButton(haveMoreThan0){
+function enableCustomerDeleteButton(haveMoreThan0){
     $("#deleteCustomers")[0].disabled = haveMoreThan0;
 }
 

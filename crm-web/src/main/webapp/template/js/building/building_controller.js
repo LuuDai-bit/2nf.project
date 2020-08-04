@@ -72,10 +72,10 @@ function selectBuilding(buildingId, isChecked){
         checkedUser = checkedUser.filter(elem => elem != buildingId);
     }
 
-    enableDeleteButton(checkedUser.length==0);
+    enableBuildingDeleteButton(checkedUser.length==0);
 }
 
-function enableDeleteButton(haveMoreThan0){
+function enableBuildingDeleteButton(haveMoreThan0){
     $("#deleteBuildings")[0].disabled = haveMoreThan0;
 }
 

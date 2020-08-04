@@ -16,33 +16,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="51b463de-13b6-4cb1-97fe-e0f2aa9f62ad" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/crm-core/src/main/java/com/example/controller/web/CustomerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crm-core/src/main/java/com/example/converter/CustomerConverter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crm-core/src/main/java/com/example/repository/ICustomerRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crm-core/src/main/java/com/example/repository/custom/CustomerRepositoryCustom.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crm-core/src/main/java/com/example/repository/custom/impl/ICustomerRepositoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crm-core/src/main/java/com/example/service/ICustomerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crm-core/src/main/java/com/example/service/impl/CustomerServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/WEB-INF/views/web/customer/add.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/WEB-INF/views/web/customer/list.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/js/customer/customer_controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-core/src/main/java/com/example/constant/SystemConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-core/src/main/java/com/example/constant/SystemConstant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-core/src/main/java/com/example/controller/web/BuildingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-core/src/main/java/com/example/controller/web/BuildingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-core/src/main/java/com/example/controller/web/WebController.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-core/src/main/java/com/example/controller/web/WebController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-core/src/main/java/com/example/service/IUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-core/src/main/java/com/example/service/IUserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-core/src/main/java/com/example/service/impl/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-core/src/main/java/com/example/service/impl/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-core/target/classes/com/example/constant/SystemConstant.class" beforeDir="false" afterPath="$PROJECT_DIR$/crm-core/target/classes/com/example/constant/SystemConstant.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-core/target/classes/com/example/controller/web/BuildingController.class" beforeDir="false" afterPath="$PROJECT_DIR$/crm-core/target/classes/com/example/controller/web/BuildingController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-core/target/classes/com/example/controller/web/WebController.class" beforeDir="false" afterPath="$PROJECT_DIR$/crm-core/target/classes/com/example/controller/web/WebController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-core/target/classes/com/example/service/IUserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/crm-core/target/classes/com/example/service/IUserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-core/target/classes/com/example/service/impl/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/crm-core/target/classes/com/example/service/impl/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-web/src/main/webapp/WEB-INF/views/web/building/add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/WEB-INF/views/web/building/add.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crm-web/src/main/webapp/common/web/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/common/web/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-web/src/main/webapp/decorators/web.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/decorators/web.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/WEB-INF/lib/crm-core-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/WEB-INF/lib/crm-core-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/common/web/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/common/web/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/decorators/web.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/decorators/web.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../news-platform/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../news-platform/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../news-platform/applicationfile/database/insert_data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../news-platform/applicationfile/database/insert_data.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../news-platform/news-core/src/main/java/com/example/config/ApplicationConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../news-platform/news-core/src/main/java/com/example/config/ApplicationConfig.java" afterDir="false" />
@@ -285,7 +260,7 @@
       <workItem from="1596365354108" duration="3048000" />
       <workItem from="1596383315880" duration="2104000" />
       <workItem from="1596418624741" duration="26942000" />
-      <workItem from="1596503894049" duration="10839000" />
+      <workItem from="1596503894049" duration="11230000" />
     </task>
     <servers />
   </component>

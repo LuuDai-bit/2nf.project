@@ -123,10 +123,10 @@ function selectUser(userId, isChecked){
         checkedUser = checkedUser.filter(elem => elem != userId);
     }
 
-    enableDeleteButton(checkedUser.length==0);
+    enableUserDeleteButton(checkedUser.length==0);
 }
 
-function enableDeleteButton(haveMoreThan0){
+function enableUserDeleteButton(haveMoreThan0){
     $("#deleteUsers")[0].disabled = haveMoreThan0;
 }
 
