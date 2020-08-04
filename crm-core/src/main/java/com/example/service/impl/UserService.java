@@ -2,7 +2,9 @@ package com.example.service.impl;
 
 import com.example.controller.web.RestUploadController;
 import com.example.converter.UserConverter;
+import com.example.dto.RoleDTO;
 import com.example.dto.UserDTO;
+import com.example.entity.RoleEntity;
 import com.example.entity.UserEntity;
 
 import com.example.repository.IUserRepository;
@@ -48,6 +50,17 @@ public class UserService implements IUserService {
         }
 
         return result;
+    }
+
+    @Override
+    public List<UserDTO> getAllUsers() {
+        List<UserEntity> users = userRepository.findAll();
+        List<UserDTO> userDTOS = new ArrayList<UserDTO>();
+        for(UserEntity user : users){
+            UserDTO userDTO = userConverter.convertToDto(user);
+            userDTOS.add(userDTO);
+        }
+        return userDTOS;
     }
 
     @Override

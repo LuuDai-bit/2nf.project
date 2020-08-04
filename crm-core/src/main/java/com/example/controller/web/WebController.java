@@ -2,11 +2,13 @@ package com.example.controller.web;
 
 import com.example.constant.SystemConstant;
 import com.example.dto.BuildingDTO;
+import com.example.dto.CustomerDTO;
 import com.example.dto.RoleDTO;
 import com.example.dto.UserDTO;
 import com.example.entity.UserEntity;
 import com.example.paging.PageRequest;
 import com.example.paging.Pageable;
+import com.example.service.ICustomerService;
 import com.example.service.IRoleService;
 import com.example.service.IUserService;
 import org.slf4j.Logger;
@@ -16,6 +18,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.util.List;
+
 @Controller
 public class WebController {
 
@@ -24,6 +28,8 @@ public class WebController {
     private IUserService userService;
     @Autowired
     private IRoleService roleService;
+    @Autowired
+    private ICustomerService customerService;
 
     @RequestMapping(value="/homepage", method = RequestMethod.GET)
     public ModelAndView homePage(){
@@ -39,7 +45,7 @@ public class WebController {
         ModelAndView mav = new ModelAndView("admin/user/user_add");
         RoleDTO roleDTO = new RoleDTO();
         Pageable pageable = new PageRequest(roleDTO.getPage(), roleDTO.getMaxPageItems());
-        mav.addObject("roles", roleService.searchRoles(roleDTO, pageable));
+        mav.addObject("roles", roleService.getAllRoles());
         if(id<0) return mav;
         UserDTO userDTO = userService.getUserById(id);
         mav.addObject(SystemConstant.MODEL , userDTO);
@@ -61,6 +67,19 @@ public class WebController {
         if(id<0) return mav;
         BuildingDTO buildingDTO = new BuildingDTO();
         mav.addObject(SystemConstant.BUILDING , buildingDTO);
+        return mav;
+    }
+
+    @RequestMapping(value="/customer/add/page", method = RequestMethod.GET)
+    public ModelAndView addCustomerPage(@RequestParam Long id){
+        ModelAndView mav = new ModelAndView("web/customer/add");
+
+        mav.addObject(SystemConstant.MODEL, userService.getAllUsers());
+        CustomerDTO customerDTO = new CustomerDTO();
+
+        if(id<0) return mav;
+        customerDTO = customerService.getOneCustomerById(id);
+        mav.addObject(SystemConstant.CUSTOMER , customerDTO);
         return mav;
     }
 }

@@ -67,21 +67,21 @@
                     <div class="form-group  col-md-6">
                         <label for="Ward">Diện tích thuê:</label>
                         <c:if test="${building.id >=0}">
-                            <input type="text" value="${building.leasedArea}" id="leasedArea" class="form-control input-sm" placeholder="Diện tích thuê"/>
+                            <input type="number" value="${building.leasedArea}" id="leasedArea" class="form-control input-sm" placeholder="Diện tích thuê"/>
                         </c:if>
 
                         <c:if test="${building==null}">
-                            <input type="text" id="leasedArea" class="form-control input-sm" placeholder="Diện tích thuê"/>
+                            <input type="number" id="leasedArea" class="form-control input-sm" placeholder="Diện tích thuê"/>
                         </c:if>
                     </div>
                     <div class="form-group col-md-6">
                         <label for="Ward">Số phòng:</label>
                         <c:if test="${building.id >=0}">
-                            <input type="text" value="${building.roomNumber}" id="roomNumber" class="form-control input-sm" placeholder="Số phòng"/>
+                            <input type="number" value="${building.roomNumber}" id="roomNumber" class="form-control input-sm" placeholder="Số phòng"/>
                         </c:if>
 
                         <c:if test="${building==null}">
-                            <input type="text" id="roomNumber" class="form-control input-sm" placeholder="Số phòng"/>
+                            <input type="number" id="roomNumber" class="form-control input-sm" placeholder="Số phòng"/>
                         </c:if>
                     </div>
                     <div class="form-group col-md-12">

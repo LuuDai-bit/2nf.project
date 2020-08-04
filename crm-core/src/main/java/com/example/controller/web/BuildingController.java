@@ -36,7 +36,7 @@ public class BuildingController {
     }
 
     @RequestMapping(value="/building/list", method = RequestMethod.GET)
-    public ModelAndView getBuildings(@ModelAttribute(SystemConstant.MODEL) BuildingDTO model,
+    public ModelAndView getBuildings(@ModelAttribute(SystemConstant.BUILDING) BuildingDTO model,
                                  HttpServletRequest request){
         ModelAndView mav = new ModelAndView("web/building/list");
         Pageable pageable = new PageRequest(model.getPage(), model.getMaxPageItems());
