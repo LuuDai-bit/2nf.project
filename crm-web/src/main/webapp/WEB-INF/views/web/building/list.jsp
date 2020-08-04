@@ -62,7 +62,7 @@
                                     <label>Khu vực</label>
                                 </div>
                                 <div class="col-md-4">
-                                    <label>Leased Area?</label>
+                                    <label>Diện tích thuê</label>
                                 </div>
                                 <div class="col-md-4">
                                     <label>Số phòng</label>
@@ -77,7 +77,7 @@
                                 <div style="margin-bottom: 1em" class="col-md-4">
                                     <form:input path="leasedArea" id="searchCode"
                                                 cssClass="form-control input-sm"
-                                                placeholder="Quận"/>
+                                                placeholder="Diện tích thuê"/>
                                 </div>
                                 <div style="margin-bottom: 1em" class="col-md-4">
                                     <form:input path="roomNumber" id="searchCode"

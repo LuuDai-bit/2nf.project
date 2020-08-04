@@ -7,7 +7,7 @@ public class BuildingDTO extends BaseDTO{
     private String district;
     private String street;
     private String ward;
-    private String leasedArea;
+    private int leasedArea;
     private int roomNumber;
     private String avatar;
     private String note;
@@ -45,11 +45,11 @@ public class BuildingDTO extends BaseDTO{
         this.ward = ward;
     }
 
-    public String getLeasedArea() {
+    public int getLeasedArea() {
         return leasedArea;
     }
 
-    public void setLeasedArea(String leasedArea) {
+    public void setLeasedArea(int leasedArea) {
         this.leasedArea = leasedArea;
     }
 

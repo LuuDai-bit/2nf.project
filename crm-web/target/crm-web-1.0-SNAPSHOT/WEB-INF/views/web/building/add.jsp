@@ -24,27 +24,82 @@
 
                 <div class="container">
 
-                    <div class="form-group">
-                        <label for="name">Mã:</label>
-                        <c:if test="${building.id >=0}">
-                            <input type="text" value="${building.name}" id="name" class="form-control input-sm" placeholder="Tên"/>
-                        </c:if>
-
-                        <c:if test="${building==null}">
-                            <input type="text" id="name" class="form-control input-sm" placeholder="Tên"/>
-                        </c:if>
-                    </div>
-                    <div class="form-group">
+                    <div class="form-group col-md-12">
                         <label for="code">Mã:</label>
                         <c:if test="${building.id >=0}">
-                            <input type="text" value="${building.code}" id="code" class="form-control input-sm" placeholder="Mã"/>
+                            <input type="text" value="${building.code}" id="code" class="form-control input-sm" placeholder="Tên"/>
                         </c:if>
 
                         <c:if test="${building==null}">
                             <input type="text" id="code" class="form-control input-sm" placeholder="Mã"/>
                         </c:if>
                     </div>
+                    <div class="form-group col-md-4">
+                        <label for="district">Quận:</label>
+                        <c:if test="${building.id >=0}">
+                            <input type="text" value="${building.district}" id="district" class="form-control input-sm" placeholder="Quận"/>
+                        </c:if>
 
+                        <c:if test="${building==null}">
+                            <input type="text" id="district" class="form-control input-sm" placeholder="Quận"/>
+                        </c:if>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="street">Đường:</label>
+                        <c:if test="${building.id >=0}">
+                            <input type="text" value="${building.street}" id="street" class="form-control input-sm" placeholder="Đường"/>
+                        </c:if>
+
+                        <c:if test="${building==null}">
+                            <input type="text" id="street" class="form-control input-sm" placeholder="Đường"/>
+                        </c:if>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="Ward">Khu vực:</label>
+                        <c:if test="${building.id >=0}">
+                            <input type="text" value="${building.ward}" id="ward" class="form-control input-sm" placeholder="Khu vực"/>
+                        </c:if>
+
+                        <c:if test="${building==null}">
+                            <input type="text" id="ward" class="form-control input-sm" placeholder="Khu vực"/>
+                        </c:if>
+                    </div>
+                    <div class="form-group  col-md-6">
+                        <label for="Ward">Diện tích thuê:</label>
+                        <c:if test="${building.id >=0}">
+                            <input type="text" value="${building.leasedArea}" id="leasedArea" class="form-control input-sm" placeholder="Diện tích thuê"/>
+                        </c:if>
+
+                        <c:if test="${building==null}">
+                            <input type="text" id="leasedArea" class="form-control input-sm" placeholder="Diện tích thuê"/>
+                        </c:if>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="Ward">Số phòng:</label>
+                        <c:if test="${building.id >=0}">
+                            <input type="text" value="${building.roomNumber}" id="roomNumber" class="form-control input-sm" placeholder="Số phòng"/>
+                        </c:if>
+
+                        <c:if test="${building==null}">
+                            <input type="text" id="roomNumber" class="form-control input-sm" placeholder="Số phòng"/>
+                        </c:if>
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label for="note">Chú thích:</label>
+                        <c:if test="${building.id >=0}">
+                            <textarea value="${building.note}" id="note" rows="10" cols="30"></textarea>
+                        </c:if>
+
+                        <c:if test="${building==null}">
+                            <textarea id="note" rows="10" cols="30" class="form-control input-sm"></textarea>
+                        </c:if>
+                    </div>
+                    <div style="margin-top: 1em" class="form-group">
+                        <form method = "POST" enctype="multipart/form-data" id="fileUploadForm">
+                            <label for="imgfile">Ảnh đại diện:</label>
+                            <input id="imgfile" type="file" name="files" accept="image/png, image/jpeg" multiple/><br/><br/>
+                        </form>
+                    </div>
                     <div class="float-right">
                         <button type="button" class="btn btn-default" onclick="cancelAddBuilding()">Cancel</button>
                         <button type="button" class="btn btn-primary" onclick="submitBuilding()" id="submitBtn">

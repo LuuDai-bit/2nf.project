@@ -84,11 +84,7 @@ function submitUser(){
         user.id = editId;
         submitEditUser(user);
     }
-
-    $("#name").val("");
-    $("#email").val("");
-    $("#phoneNumber").val("");
-    $("#imgfile").val("");
+    resetInput();
 
 }
 

@@ -18,7 +18,7 @@ public class BuildingEntity extends BaseEntity{
     @Column
     private String ward;
     @Column
-    private String leasedArea;
+    private Integer leasedArea;
     @Column
     private Integer roomNumber;
     @Column
@@ -60,11 +60,11 @@ public class BuildingEntity extends BaseEntity{
         this.ward = ward;
     }
 
-    public String getLeasedArea() {
+    public Integer getLeasedArea() {
         return leasedArea;
     }
 
-    public void setLeasedArea(String leasedArea) {
+    public void setLeasedArea(Integer leasedArea) {
         this.leasedArea = leasedArea;
     }
 

@@ -10,10 +10,12 @@ function submitBuilding(){
     building.roomNumber =$("#roomNumber").val().trim();
     building.note = $("#note").val().trim();
 
-    // if (building.code==''||building.name==null||!nameRe.test(Building.name)){
-    //     alert("Tên không hợp lệ");
-    //     return;
-    // }
+    building.avatar = "";
+    let avatar = $("#imgfile")[0].files;
+    for(let i = 0; i < avatar.length; i++){
+        building.avatar += avatar[i].name + ',';
+    }
+    if(building.avatar.length>1) building.avatar = building.avatar.slice(0, -1);
 
     if(isAdd){
         submitNewBuilding(building);
@@ -24,6 +26,10 @@ function submitBuilding(){
     }
 
 
+}
+
+function resetInput(){
+    $("input").val('');
 }
 
 function submitNewBuilding(building) {
@@ -37,8 +43,9 @@ function submitNewBuilding(building) {
         alert("Job done!!!!");
     }).fail(function (xhr, status, error) {
         alert(xhr.responseText);
-        $("#name").val('');
-        $("#code").val('');
+        if(xhr.responseText == "success") resetInput();
+    }).always(function() {
+        fire_ajax_submit();
     });
 }
 
@@ -54,6 +61,8 @@ function submitEditBuilding(building){
         alert(xhr.responseText);
         $("#name").val('');
         $("#code").val('');
+    }).always(function () {
+        fire_ajax_submit();
     });
 }
 
