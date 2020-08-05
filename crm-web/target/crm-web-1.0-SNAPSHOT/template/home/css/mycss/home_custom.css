@@ -7,3 +7,7 @@
 .custom-card{
     margin: 1em 1em 1em 1em;
 }
+
+.modal-backdrop.fade {
+    z-index: 0;
+}

@@ -16,50 +16,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="51b463de-13b6-4cb1-97fe-e0f2aa9f62ad" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/crm-core/src/main/java/com/example/controller/web/PaymentController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crm-core/src/main/java/com/example/controller/web/UnitPriceController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crm-core/src/main/java/com/example/converter/PaymentConverter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crm-core/src/main/java/com/example/converter/UnitPriceConverter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crm-core/src/main/java/com/example/repository/IPaymentRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crm-core/src/main/java/com/example/repository/IUnitPriceRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crm-core/src/main/java/com/example/repository/custom/PaymentRepositoryCustom.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crm-core/src/main/java/com/example/repository/custom/UnitPriceRepositoryCustom.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crm-core/src/main/java/com/example/repository/custom/impl/IPaymentRepositoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crm-core/src/main/java/com/example/repository/custom/impl/IUnitPriceRepositoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crm-core/src/main/java/com/example/service/IPaymentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crm-core/src/main/java/com/example/service/IUnitPriceService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crm-core/src/main/java/com/example/service/impl/PaymentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crm-core/src/main/java/com/example/service/impl/UnitPriceService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/WEB-INF/views/web/payment/add.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/WEB-INF/views/web/payment/list.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/WEB-INF/views/web/unit_price/add.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/WEB-INF/views/web/unit_price/list.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/js/payment/payment_controller.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/js/unit_price/unit_price_controller.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-core/src/main/java/com/example/constant/SystemConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-core/src/main/java/com/example/constant/SystemConstant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-core/src/main/java/com/example/controller/web/RestUploadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-core/src/main/java/com/example/controller/web/RestUploadController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crm-core/src/main/java/com/example/controller/web/WebController.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-core/src/main/java/com/example/controller/web/WebController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-core/src/main/java/com/example/repository/custom/UserRepositoryCustom.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-core/src/main/java/com/example/repository/custom/UserRepositoryCustom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-core/src/main/java/com/example/repository/custom/impl/IUserRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-core/src/main/java/com/example/repository/custom/impl/IUserRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-core/src/main/java/com/example/service/IBuildingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-core/src/main/java/com/example/service/IBuildingService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-core/src/main/java/com/example/service/impl/BuildingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-core/src/main/java/com/example/service/impl/BuildingService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-core/src/main/java/com/example/service/impl/CustomerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-core/src/main/java/com/example/service/impl/CustomerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-core/target/classes/com/example/constant/SystemConstant.class" beforeDir="false" afterPath="$PROJECT_DIR$/crm-core/target/classes/com/example/constant/SystemConstant.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-core/target/classes/META-INF/crm-core.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-core/target/classes/com/example/controller/web/RestUploadController.class" beforeDir="false" afterPath="$PROJECT_DIR$/crm-core/target/classes/com/example/controller/web/RestUploadController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crm-core/target/classes/com/example/controller/web/WebController.class" beforeDir="false" afterPath="$PROJECT_DIR$/crm-core/target/classes/com/example/controller/web/WebController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-core/target/classes/com/example/repository/custom/UserRepositoryCustom.class" beforeDir="false" afterPath="$PROJECT_DIR$/crm-core/target/classes/com/example/repository/custom/UserRepositoryCustom.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-core/target/classes/com/example/repository/custom/impl/IUserRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/crm-core/target/classes/com/example/repository/custom/impl/IUserRepositoryImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-core/target/classes/com/example/service/IBuildingService.class" beforeDir="false" afterPath="$PROJECT_DIR$/crm-core/target/classes/com/example/service/IBuildingService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-core/target/classes/com/example/service/impl/BuildingService.class" beforeDir="false" afterPath="$PROJECT_DIR$/crm-core/target/classes/com/example/service/impl/BuildingService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-core/target/classes/com/example/service/impl/CustomerServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-web/src/main/webapp/WEB-INF/views/web/customer/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/WEB-INF/views/web/customer/list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-web/src/main/webapp/WEB-INF/views/web/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/WEB-INF/views/web/home.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-web/src/main/webapp/decorators/web.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/decorators/web.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-core/target/crm-core-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/crm-core/target/crm-core-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-core/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/crm-core/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-core/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/crm-core/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-core/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/crm-core/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-web/src/main/webapp/WEB-INF/context/dispatcher-servlet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/WEB-INF/context/dispatcher-servlet.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-web/src/main/webapp/WEB-INF/views/admin/user/user_add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/WEB-INF/views/admin/user/user_add.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-web/src/main/webapp/WEB-INF/views/web/building/add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/WEB-INF/views/web/building/add.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-web/src/main/webapp/WEB-INF/views/web/building/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/WEB-INF/views/web/building/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-web/src/main/webapp/WEB-INF/views/web/customer/add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/WEB-INF/views/web/customer/add.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/css/mycss/home_custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/home/css/mycss/home_custom.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crm-web/src/main/webapp/template/js/building/building_controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/js/building/building_controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-web/src/main/webapp/template/js/user_controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/crm-web/src/main/webapp/template/js/user_controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/WEB-INF/context/dispatcher-servlet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/WEB-INF/context/dispatcher-servlet.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/WEB-INF/lib/crm-core-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/WEB-INF/lib/crm-core-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/WEB-INF/views/web/customer/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/WEB-INF/views/web/customer/list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/WEB-INF/views/web/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/WEB-INF/views/web/home.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/decorators/web.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/decorators/web.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/WEB-INF/views/admin/user/user_add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/WEB-INF/views/admin/user/user_add.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/WEB-INF/views/web/building/add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/WEB-INF/views/web/building/add.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/WEB-INF/views/web/customer/add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/WEB-INF/views/web/customer/add.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/template/js/building/building_controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/template/js/building/building_controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/template/js/user_controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/template/js/user_controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-web/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/crm-web/target/maven-archiver/pom.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../news-platform/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../news-platform/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../news-platform/applicationfile/database/insert_data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../news-platform/applicationfile/database/insert_data.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../news-platform/news-core/src/main/java/com/example/config/ApplicationConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../news-platform/news-core/src/main/java/com/example/config/ApplicationConfig.java" afterDir="false" />
@@ -112,11 +95,11 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="Jsp File" />
         <option value="JavaFXApplication" />
         <option value="JavaScript File" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -158,10 +141,10 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/crm-web/src/main/webapp/template/js/payment" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="Errors" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -302,7 +285,9 @@
       <workItem from="1596365354108" duration="3048000" />
       <workItem from="1596383315880" duration="2104000" />
       <workItem from="1596418624741" duration="26942000" />
-      <workItem from="1596503894049" duration="24854000" />
+      <workItem from="1596503894049" duration="26282000" />
+      <workItem from="1596549827349" duration="1775000" />
+      <workItem from="1596591312976" duration="23375000" />
     </task>
     <servers />
   </component>
@@ -334,10 +319,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="163" y="0" key="#Project_Structure/0.0.1366.728@0.0.1366.728" timestamp="1596094568243" />
-    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1596437525596">
+    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1596551461742">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1596437525596" />
+    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1596551461742" />
     <state x="341" y="166" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1596017378732">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -347,6 +332,10 @@
     </state>
     <state x="488" y="48" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1595666077193" />
     <state x="488" y="48" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1596527569034" />
+    <state x="413" y="3" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable" timestamp="1596550172791">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="413" y="3" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable/0.0.1366.728@0.0.1366.728" timestamp="1596550172791" />
     <state x="345" y="288" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1596202689569">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -368,70 +357,70 @@
     </state>
     <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1595668764715" />
     <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1596523583490" />
-    <state width="1118" height="220" key="GridCell.Tab.0.bottom" timestamp="1596533613144">
+    <state width="1118" height="215" key="GridCell.Tab.0.bottom" timestamp="1596618824999">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1118" height="220" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1596533613144" />
-    <state width="1118" height="220" key="GridCell.Tab.0.center" timestamp="1596533613143">
+    <state width="1118" height="215" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1596618824999" />
+    <state width="1118" height="215" key="GridCell.Tab.0.center" timestamp="1596618824999">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1118" height="220" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1596533613143" />
-    <state width="1118" height="220" key="GridCell.Tab.0.left" timestamp="1596533613143">
+    <state width="1118" height="215" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1596618824999" />
+    <state width="1118" height="215" key="GridCell.Tab.0.left" timestamp="1596618824999">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1118" height="220" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1596533613143" />
-    <state width="1118" height="220" key="GridCell.Tab.0.right" timestamp="1596533613143">
+    <state width="1118" height="215" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1596618824999" />
+    <state width="1118" height="215" key="GridCell.Tab.0.right" timestamp="1596618824999">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1118" height="220" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1596533613143" />
-    <state width="1118" height="220" key="GridCell.Tab.1.bottom" timestamp="1596533613144">
+    <state width="1118" height="215" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1596618824999" />
+    <state width="1118" height="215" key="GridCell.Tab.1.bottom" timestamp="1596618824999">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1118" height="220" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1596533613144" />
-    <state width="1118" height="220" key="GridCell.Tab.1.center" timestamp="1596533613144">
+    <state width="1118" height="215" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1596618824999" />
+    <state width="1118" height="215" key="GridCell.Tab.1.center" timestamp="1596618824999">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1118" height="220" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1596533613144" />
-    <state width="1118" height="220" key="GridCell.Tab.1.left" timestamp="1596533613144">
+    <state width="1118" height="215" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1596618824999" />
+    <state width="1118" height="215" key="GridCell.Tab.1.left" timestamp="1596618824999">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1118" height="220" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1596533613144" />
-    <state width="1118" height="220" key="GridCell.Tab.1.right" timestamp="1596533613144">
+    <state width="1118" height="215" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1596618824999" />
+    <state width="1118" height="215" key="GridCell.Tab.1.right" timestamp="1596618824999">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1118" height="220" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1596533613144" />
-    <state width="1118" height="220" key="GridCell.Tab.2.bottom" timestamp="1596533612903">
+    <state width="1118" height="215" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1596618824999" />
+    <state width="1118" height="215" key="GridCell.Tab.2.bottom" timestamp="1596618824787">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1118" height="220" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1596533612903" />
-    <state width="1118" height="220" key="GridCell.Tab.2.center" timestamp="1596533612903">
+    <state width="1118" height="215" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1596618824787" />
+    <state width="1118" height="215" key="GridCell.Tab.2.center" timestamp="1596618824787">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1118" height="220" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1596533612903" />
-    <state width="1118" height="220" key="GridCell.Tab.2.left" timestamp="1596533612903">
+    <state width="1118" height="215" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1596618824787" />
+    <state width="1118" height="215" key="GridCell.Tab.2.left" timestamp="1596618824787">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1118" height="220" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1596533612903" />
-    <state width="1118" height="220" key="GridCell.Tab.2.right" timestamp="1596533612903">
+    <state width="1118" height="215" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1596618824787" />
+    <state width="1118" height="215" key="GridCell.Tab.2.right" timestamp="1596618824787">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1118" height="220" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1596533612903" />
-    <state width="1118" height="220" key="GridCell.Tab.3.bottom" timestamp="1596533612903">
+    <state width="1118" height="215" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1596618824787" />
+    <state width="1118" height="215" key="GridCell.Tab.3.bottom" timestamp="1596618824787">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1118" height="220" key="GridCell.Tab.3.bottom/0.0.1366.728@0.0.1366.728" timestamp="1596533612903" />
-    <state width="1118" height="220" key="GridCell.Tab.3.center" timestamp="1596533612903">
+    <state width="1118" height="215" key="GridCell.Tab.3.bottom/0.0.1366.728@0.0.1366.728" timestamp="1596618824787" />
+    <state width="1118" height="215" key="GridCell.Tab.3.center" timestamp="1596618824787">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1118" height="220" key="GridCell.Tab.3.center/0.0.1366.728@0.0.1366.728" timestamp="1596533612903" />
-    <state width="1118" height="220" key="GridCell.Tab.3.left" timestamp="1596533612903">
+    <state width="1118" height="215" key="GridCell.Tab.3.center/0.0.1366.728@0.0.1366.728" timestamp="1596618824787" />
+    <state width="1118" height="215" key="GridCell.Tab.3.left" timestamp="1596618824787">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1118" height="220" key="GridCell.Tab.3.left/0.0.1366.728@0.0.1366.728" timestamp="1596533612903" />
-    <state width="1118" height="220" key="GridCell.Tab.3.right" timestamp="1596533612903">
+    <state width="1118" height="215" key="GridCell.Tab.3.left/0.0.1366.728@0.0.1366.728" timestamp="1596618824787" />
+    <state width="1118" height="215" key="GridCell.Tab.3.right" timestamp="1596618824787">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1118" height="220" key="GridCell.Tab.3.right/0.0.1366.728@0.0.1366.728" timestamp="1596533612903" />
+    <state width="1118" height="215" key="GridCell.Tab.3.right/0.0.1366.728@0.0.1366.728" timestamp="1596618824787" />
     <state width="1114" height="235" key="GridCell.Tab.8.bottom" timestamp="1595906655828">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -456,10 +445,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="408" y="66" key="RollbackChangesDialog/0.0.1366.728@0.0.1366.728" timestamp="1595910869862" />
-    <state x="184" y="0" key="SettingsEditor" timestamp="1595817934269">
+    <state x="184" y="0" key="SettingsEditor" timestamp="1596550385418">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="184" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1595817934269" />
+    <state x="184" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1596550385418" />
     <state x="390" y="97" width="585" height="558" key="find.popup" timestamp="1596437637156">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

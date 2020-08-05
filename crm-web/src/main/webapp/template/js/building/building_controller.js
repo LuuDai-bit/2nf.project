@@ -1,3 +1,6 @@
+function popThisUp() {
+    // $("#buildingModal").modal('show');
+}
 function submitBuilding(){
     let building = {};
     let nameRe = /^[a-zA-Z ]+$/;
@@ -43,9 +46,11 @@ function submitNewBuilding(building) {
         alert("Job done!!!!");
     }).fail(function (xhr, status, error) {
         alert(xhr.responseText);
-        if(xhr.responseText == "success") resetInput();
+        if(xhr.responseText == "success") {
+            fire_ajax_submit();
+        }
     }).always(function() {
-        fire_ajax_submit();
+
     });
 }
 
@@ -101,7 +106,8 @@ function addBuilding(){
 }
 
 function cancelAddBuilding(){
-    window.close();
+    $("#myModal").modal('hide');
+    resetInput();
 }
 
 function editBuilding (id) {

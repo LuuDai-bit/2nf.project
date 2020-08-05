@@ -28,6 +28,7 @@ function fire_ajax_submit() {
         timeout: 600000,
         success: function (result) {
             console.log("SUCCESS : ", result);
+            resetInput()
         },
         error: function (e) {
 

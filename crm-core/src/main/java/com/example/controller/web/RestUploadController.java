@@ -25,7 +25,7 @@ public class RestUploadController {
     private final Logger logger = LoggerFactory.getLogger(RestUploadController.class);
 
     //Save the uploaded file to this folder
-    private static String UPLOADED_FOLDER = "E://pictures//";
+    private static String UPLOADED_FOLDER = "E:\\javaworkspace\\crm\\crm-web\\src\\main\\webapp\\template\\pictures\\";
 
     // 3.1.1 Single file upload
     @PostMapping("/api/upload")

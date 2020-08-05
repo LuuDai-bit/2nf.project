@@ -79,10 +79,28 @@
                     </div>
 
                     <div style="margin-top: 1em" class="form-group">
+                        <label>Ảnh đại diện</label>
                         <form method = "POST" enctype="multipart/form-data" id="fileUploadForm">
                             <input id="imgfile" type="file" name="files" accept="image/png, image/jpeg" multiple/><br/><br/>
                         </form>
                     </div>
+
+                    <%--                    Display image--%>
+                    <c:if test="${users.id >=0}">
+                        <div>
+                            <c:if test="${not empty users.avatar}">
+                                <c:forEach var="ava" items="${users.avatar}">
+                                    <%--                                    <c:set var="image" value="E://pictures//${ava}"/>--%>
+                                    <img style="width: 200px;padding-top: 20px; height:200px" alt="users Pic" src='<c:url value='/template/pictures/${ava}'/>'
+                                    />
+
+                                </c:forEach>
+
+                            </c:if>
+                        </div>
+                    </c:if>
+                    <%--                            End display image--%>
+
 
                     <div class="float-right">
                         <button type="button" class="btn btn-default" onclick="cancelAddUser()">Cancel</button>

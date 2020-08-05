@@ -44,8 +44,6 @@ public class WebController {
     @RequestMapping(value="/adduserpage", method = RequestMethod.GET)
     public ModelAndView addUserPage(@RequestParam Long id){
         ModelAndView mav = new ModelAndView("admin/user/user_add");
-        RoleDTO roleDTO = new RoleDTO();
-        Pageable pageable = new PageRequest(roleDTO.getPage(), roleDTO.getMaxPageItems());
         mav.addObject("roles", roleService.getAllRoles());
         if(id<0) return mav;
         UserDTO userDTO = userService.getUserById(id);
@@ -66,7 +64,7 @@ public class WebController {
     public ModelAndView addBuildingPage(@RequestParam Long id){
         ModelAndView mav = new ModelAndView("web/building/add");
         if(id<0) return mav;
-        BuildingDTO buildingDTO = new BuildingDTO();
+        BuildingDTO buildingDTO = buildingService.getOneBuildingById(id);
         mav.addObject(SystemConstant.BUILDING , buildingDTO);
         return mav;
     }

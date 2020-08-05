@@ -1,8 +1,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@include file="/common/taglib.jsp" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<%--<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>--%>
-<%--<c:url var="formURL" value="/addCustomer" />--%>
+
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -80,7 +79,7 @@
                         <c:if test="${customer.id >=0}">
                             <select id="user" selected="${customer.user_id}">
                                 <c:forEach items="${users}" var="elem">
-                                    <option value="${elem.id}" label="${elem.code}"></option>
+                                    <option value="${elem.id}" label="${elem.name}"></option>
                                 </c:forEach>
                             </select>
                         </c:if>

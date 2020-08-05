@@ -14,7 +14,7 @@
 <body>
 
 <%--    <form:hidden path="/homepage"/>--%>
-<div class="position-relative">
+<div class="position-relative" id="outside">
 
     <div id="login-box" class="login-box visible widget-box no-border">
         <div class="widget-body">
@@ -161,6 +161,8 @@
 
                     </div>
                 </form:form>
+
+
                 <div class="space-6"></div>
 
 
@@ -169,6 +171,19 @@
         </div><!-- /.widget-body -->
     </div><!-- /.login-box -->
 </div><!-- /.position-relative -->
+<button type="button" class="btn btn-primary" data-toggle="modal"
+        data-target=".bd-example-modal-lg">Large modal</button>
+<%--Modal--%>
+<div style="margin: 0 auto" id="myModal" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <%@ include file="/WEB-INF/views/web/building/add.jsp" %>
+        </div>
+    </div>
+</div>
 
+<%--End Modal--%>
 </body>
+
+
 </html>
