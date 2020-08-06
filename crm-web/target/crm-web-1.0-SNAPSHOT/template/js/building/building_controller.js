@@ -1,9 +1,5 @@
-function buildingValidate(){
-
-}
 function submitBuilding(){
     let building = {};
-    let nameRe = /^[a-zA-Z ]+$/;
 
     building.code = $("#code").val().trim();
     building.district =  $("#district").val().trim();
@@ -127,3 +123,14 @@ function editBuilding (id) {
 $("#searchBuilding").click(function(){
     $('#buildingForm').submit();
 })
+
+function exportCSV(){
+    console.log('zo');
+    let paramObj = {};
+    $.each($('#buildingForm').serializeArray(), function(_, kv) {
+        paramObj[kv.name] = kv.value;
+    });
+    let params = jQuery.param(paramObj);
+    let url = '/building/export?'+ params;
+    window.open(url, '_blank');
+}

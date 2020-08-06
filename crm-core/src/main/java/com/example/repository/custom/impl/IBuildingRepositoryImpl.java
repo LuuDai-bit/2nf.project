@@ -39,6 +39,27 @@ public class IBuildingRepositoryImpl implements BuildingRepositoryCustom {
     }
 
     @Override
+    public List<?> findAllWithoutPageable(BuildingDTO buildingDTO) {
+        StringBuilder sql = new StringBuilder("SELECT ue FROM BuildingEntity ue");
+        sql.append(" WHERE 1=1 ");
+        if (StringUtils.isNotBlank(buildingDTO.getCode())) {
+            sql.append("AND LOWER(ue.code) LIKE LOWER('%" + buildingDTO.getCode() + "%')");
+        }
+        if (StringUtils.isNotBlank(buildingDTO.getDistrict())) {
+            sql.append("AND LOWER(ue.district) LIKE LOWER('%" + buildingDTO.getDistrict() + "%')");
+        }
+        if (StringUtils.isNotBlank(buildingDTO.getStreet())) {
+            sql.append("AND LOWER(ue.street) LIKE LOWER('%" + buildingDTO.getStreet() + "%')");
+        }
+        if (StringUtils.isNotBlank(buildingDTO.getWard())) {
+            sql.append("AND LOWER(ue.ward) LIKE LOWER('%" + buildingDTO.getWard() + "%')");
+        }
+
+        Query query = entityManager.createQuery(sql.toString());
+        return query.getResultList();
+    }
+
+    @Override
     public Long getTotalItems(BuildingDTO buildingDTO) {
         StringBuilder sql = new StringBuilder("SELECT COUNT(*) FROM BuildingEntity AS ue");
         sql.append(" WHERE 1=1 ");

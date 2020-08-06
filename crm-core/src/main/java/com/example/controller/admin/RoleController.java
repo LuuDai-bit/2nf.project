@@ -25,25 +25,28 @@ import java.io.Writer;
 import java.nio.charset.StandardCharsets;
 import java.util.List;
 
-@Controller
+@RestController
 public class RoleController {
     @Autowired
     private IRoleService roleService;
 
-    @RequestMapping(value = "/role/{id}", method = RequestMethod.GET)
+//    @RequestMapping(value = "/role/{id}", method = RequestMethod.GET)
+    @GetMapping(value = "/role/{id}")
     public RoleDTO getRole(@PathVariable Long id){
         RoleDTO roleDTO = roleService.getOneRoleById(id);
         return roleDTO;
     }
 
-    @RequestMapping(value="/addRole", method= RequestMethod.POST)
-    @ResponseBody
+//    @RequestMapping(value="/addRole", method= RequestMethod.POST)
+//    @ResponseBody
+    @PostMapping(value = "/addRole")
     public String submit(@RequestBody RoleDTO roleDTO) {
         roleService.saveRole(roleDTO);
         return "success";
     }
 
-    @RequestMapping(value="/role/list", method = RequestMethod.GET)
+//    @RequestMapping(value="/role/list", method = RequestMethod.GET)
+    @GetMapping(value = "/role/list")
     public ModelAndView getRoles(@ModelAttribute(SystemConstant.MODEL) RoleDTO model,
                                  HttpServletRequest request){
         ModelAndView mav = new ModelAndView("admin/role/list");
@@ -57,7 +60,8 @@ public class RoleController {
         return mav;
     }
 
-    @RequestMapping(value="/deleteRoles", method=RequestMethod.DELETE)
+//    @RequestMapping(value="/deleteRoles", method=RequestMethod.DELETE)
+    @DeleteMapping(value = "/deleteRoles")
     public ResponseEntity<?> deleteRoles(@RequestBody ListDTO checkedRoles){
         if(checkedRoles.getItems().isEmpty())
             return new ResponseEntity("not found", HttpStatus.BAD_REQUEST);
@@ -66,15 +70,17 @@ public class RoleController {
         return new ResponseEntity("success", HttpStatus.OK);
     }
 
-    @RequestMapping(value="/editRole/{id}", method = RequestMethod.POST)
-    @ResponseBody
+//    @RequestMapping(value="/editRole/{id}", method = RequestMethod.POST)
+//    @ResponseBody
+    @PostMapping(value = "/editRole/{id}")
     public String updateRole(RoleDTO RoleDTO,@PathVariable Long id) {
         RoleDTO.setId(id);
         roleService.saveRole(RoleDTO);
         return "success";
     }
 
-    @RequestMapping(value = "/role/export", method = RequestMethod.GET)
+//    @RequestMapping(value = "/role/export", method = RequestMethod.GET)
+    @GetMapping(value = "/role/export")
     public void exportRoleToCSV(HttpServletResponse response) throws IOException {
         response.setContentType("text/csv");
         String fileName = "roles.csv";

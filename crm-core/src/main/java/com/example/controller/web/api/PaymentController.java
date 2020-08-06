@@ -1,4 +1,4 @@
-package com.example.controller.web;
+package com.example.controller.web.api;
 
 import com.example.constant.SystemConstant;
 import com.example.dto.PaymentDTO;
@@ -24,26 +24,29 @@ import java.io.Writer;
 import java.nio.charset.StandardCharsets;
 import java.util.List;
 
-@Controller
+@RestController
 public class PaymentController {
     @Autowired
     private IPaymentService paymentService;
 
-    @RequestMapping(value = "/payment/{id}", method = RequestMethod.GET)
+//    @RequestMapping(value = "/payment/{id}", method = RequestMethod.GET)
+    @GetMapping(value = "/payment/{id}")
     public PaymentDTO getPayment(@PathVariable Long id){
         PaymentDTO paymentDTO = paymentService.getOnePaymentById(id);
         return paymentDTO;
     }
 
-    @RequestMapping(value="/addPayment", method= RequestMethod.POST)
-    @ResponseBody
-//    @PostMapping(value = "/addPayment")
+//    @RequestMapping(value="/addPayment", method= RequestMethod.POST)
+//    @ResponseBody
+
+    @PostMapping(value = "/addPayment")
     public String submit(@RequestBody PaymentDTO paymentDTO) {
         paymentService.savePayment(paymentDTO);
         return "success";
     }
 
-    @RequestMapping(value="/payment/list", method = RequestMethod.GET)
+//    @RequestMapping(value="/payment/list", method = RequestMethod.GET)
+    @GetMapping(value = "/payment/list")
     public ModelAndView getPayments(@ModelAttribute(SystemConstant.PAYMENT) PaymentDTO model,
                                      HttpServletRequest request){
         ModelAndView mav = new ModelAndView("web/payment/list");
@@ -57,7 +60,8 @@ public class PaymentController {
         return mav;
     }
 
-    @RequestMapping(value="/deletePayments", method=RequestMethod.DELETE)
+//    @RequestMapping(value="/deletePayments", method=RequestMethod.DELETE)
+    @DeleteMapping(value = "/deletePayments")
     public ResponseEntity<?> deletePayments(@RequestBody ListDTO checkedPayments){
         if(checkedPayments.getItems().isEmpty())
             return new ResponseEntity("not found", HttpStatus.BAD_REQUEST);
@@ -66,15 +70,17 @@ public class PaymentController {
         return new ResponseEntity("success", HttpStatus.OK);
     }
 
-    @RequestMapping(value="/editPayment/{id}", method = RequestMethod.POST)
-    @ResponseBody
+//    @RequestMapping(value="/editPayment/{id}", method = RequestMethod.POST)
+//    @ResponseBody
+    @PostMapping(value = "/editPayment/{id}")
     public String updatePayment(PaymentDTO paymentDTO,@PathVariable Long id) {
         paymentDTO.setId(id);
         paymentService.savePayment(paymentDTO);
         return "success";
     }
 
-    @RequestMapping(value = "/payment/export", method = RequestMethod.GET)
+//    @RequestMapping(value = "/payment/export", method = RequestMethod.GET)
+    @GetMapping(value = "/payment/export")
     public void exportPaymentToCSV(HttpServletResponse response) throws IOException {
         response.setContentType("text/csv");
         String fileName = "payments.csv";

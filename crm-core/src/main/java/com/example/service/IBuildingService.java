@@ -11,5 +11,6 @@ public interface IBuildingService {
     int getTotalItems(BuildingDTO modelSearch);
     void saveBuilding(BuildingDTO building);
     void deleteBuildings(List<Long> buildings);
+    List<BuildingDTO> getAllBuildings(BuildingDTO buildingDTO);
     List<BuildingDTO> getAllBuildings();
 }

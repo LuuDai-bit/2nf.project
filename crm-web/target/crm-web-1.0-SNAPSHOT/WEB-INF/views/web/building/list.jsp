@@ -23,7 +23,7 @@
                     <i class="ace-icon fa fa-coffee green"></i>
 
                 </h4>
-                <form:form id="BuildingForm" method="GET" action="${formURL}" modelAttribute="building">
+                <form:form id="buildingForm" method="GET" action="${formURL}" modelAttribute="building">
                     <div class="container">
                         <h1>Tòa nhà</h1>
 
@@ -143,7 +143,8 @@
                                 </c:forEach>
                                 </tbody>
                             </table>
-                            <a style="float:right" href="/building/export">Export CSV</a>
+<%--                            <a style="float:right" href="/building/export">Export CSV</a>--%>
+                            <button type="button" onclick="exportCSV()">Export CSV</button>
                         </div>
 
                         <div>

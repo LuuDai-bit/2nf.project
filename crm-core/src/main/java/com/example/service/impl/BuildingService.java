@@ -91,4 +91,15 @@ public class BuildingService implements IBuildingService {
         }
         return buildingDTOS;
     }
+
+    @Override
+    public List<BuildingDTO> getAllBuildings(BuildingDTO buildingDTO) {
+        List<BuildingEntity> buildingEntities = (List<BuildingEntity>) buildingRepository.findAllWithoutPageable(buildingDTO);
+        List<BuildingDTO> buildingDTOS = new ArrayList<>();
+        for(BuildingEntity elem: buildingEntities){
+            BuildingDTO building = buildingConverter.convertToDto(elem);
+            buildingDTOS.add(building);
+        }
+        return buildingDTOS;
+    }
 }

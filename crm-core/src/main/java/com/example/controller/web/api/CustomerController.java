@@ -1,4 +1,4 @@
-package com.example.controller.web;
+package com.example.controller.web.api;
 
 import com.example.constant.SystemConstant;
 import com.example.dto.CustomerDTO;
@@ -25,26 +25,29 @@ import java.io.Writer;
 import java.nio.charset.StandardCharsets;
 import java.util.List;
 
-@Controller
+@RestController
 public class CustomerController {
     @Autowired
     private ICustomerService customerService;
 
-    @RequestMapping(value = "/customer/{id}", method = RequestMethod.GET)
+//    @RequestMapping(value = "/customer/{id}", method = RequestMethod.GET)
+    @GetMapping(value = "/customer/{id}")
     public CustomerDTO getCustomer(@PathVariable Long id){
         CustomerDTO customerDTO = customerService.getOneCustomerById(id);
         return customerDTO;
     }
 
-    @RequestMapping(value="/addCustomer", method= RequestMethod.POST)
-    @ResponseBody
-//    @PostMapping(value = "/addCustomer")
+//    @RequestMapping(value="/addCustomer", method= RequestMethod.POST)
+//    @ResponseBody
+
+    @PostMapping(value = "/addCustomer")
     public String submit(@RequestBody CustomerDTO customerDTO) {
         customerService.saveCustomer(customerDTO);
         return "success";
     }
 
-    @RequestMapping(value="/customer/list", method = RequestMethod.GET)
+//    @RequestMapping(value="/customer/list", method = RequestMethod.GET)
+    @GetMapping(value = "/customer/list")
     public ModelAndView getCustomers(@ModelAttribute(SystemConstant.CUSTOMER) CustomerDTO model,
                                      HttpServletRequest request){
         ModelAndView mav = new ModelAndView("web/customer/list");
@@ -58,7 +61,8 @@ public class CustomerController {
         return mav;
     }
 
-    @RequestMapping(value="/deleteCustomers", method=RequestMethod.DELETE)
+//    @RequestMapping(value="/deleteCustomers", method=RequestMethod.DELETE)
+    @DeleteMapping(value = "/deleteCustomers")
     public ResponseEntity<?> deleteCustomers(@RequestBody ListDTO checkedCustomers){
         if(checkedCustomers.getItems().isEmpty())
             return new ResponseEntity("not found", HttpStatus.BAD_REQUEST);
@@ -67,15 +71,17 @@ public class CustomerController {
         return new ResponseEntity("success", HttpStatus.OK);
     }
 
-    @RequestMapping(value="/editCustomer/{id}", method = RequestMethod.POST)
-    @ResponseBody
+//    @RequestMapping(value="/editCustomer/{id}", method = RequestMethod.POST)
+//    @ResponseBody
+    @PostMapping(value = "/editCustomer/{id}")
     public String updateCustomer(CustomerDTO customerDTO,@PathVariable Long id) {
         customerDTO.setId(id);
         customerService.saveCustomer(customerDTO);
         return "success";
     }
 
-    @RequestMapping(value = "/customer/export", method = RequestMethod.GET)
+//    @RequestMapping(value = "/customer/export", method = RequestMethod.GET)
+    @GetMapping(value = "/customer/export")
     public void exportCustomerToCSV(HttpServletResponse response) throws IOException {
         response.setContentType("text/csv");
         String fileName = "customers.csv";

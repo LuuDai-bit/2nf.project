@@ -1,4 +1,4 @@
-package com.example.controller.web;
+package com.example.controller.web.api;
 
 import com.example.constant.SystemConstant;
 import com.example.dto.BuildingDTO;
@@ -25,26 +25,28 @@ import java.io.Writer;
 import java.nio.charset.StandardCharsets;
 import java.util.List;
 
-@Controller
+@RestController
 public class UnitPriceController {
     @Autowired
     private IUnitPriceService unitPriceService;
 
-    @RequestMapping(value = "/unitPrice/{id}", method = RequestMethod.GET)
+//    @RequestMapping(value = "/unitPrice/{id}", method = RequestMethod.GET)
+    @GetMapping(value = "/unitPrice/{id}")
     public UnitPriceDTO getUnitPrice(@PathVariable Long id){
         UnitPriceDTO unitPriceDTO = unitPriceService.getOneUnitPriceById(id);
         return unitPriceDTO;
     }
 
-    @RequestMapping(value="/addUnitPrice", method= RequestMethod.POST)
-    @ResponseBody
-//    @PostMapping(value = "/addUnitPrice")
+//    @RequestMapping(value="/addUnitPrice", method= RequestMethod.POST)
+//    @ResponseBody
+    @PostMapping(value = "/addUnitPrice")
     public String submit(@RequestBody UnitPriceDTO unitPriceDTO) {
         unitPriceService.saveUnitPrice(unitPriceDTO);
         return "success";
     }
 
-    @RequestMapping(value="/unitPrice/list", method = RequestMethod.GET)
+//    @RequestMapping(value="/unitPrice/list", method = RequestMethod.GET)
+    @GetMapping(value = "/unitPrice/list")
     public ModelAndView getUnitPrices(@ModelAttribute(SystemConstant.UNITPRICE) UnitPriceDTO model,
                                      HttpServletRequest request){
         ModelAndView mav = new ModelAndView("web/unit_price/list");
@@ -58,7 +60,8 @@ public class UnitPriceController {
         return mav;
     }
 
-    @RequestMapping(value="/deleteUnitPrices", method=RequestMethod.DELETE)
+//    @RequestMapping(value="/deleteUnitPrices", method=RequestMethod.DELETE)
+    @DeleteMapping(value = "/deleteUnitPrices")
     public ResponseEntity<?> deleteUnitPrices(@RequestBody ListDTO checkedUnitPrices){
         if(checkedUnitPrices.getItems().isEmpty())
             return new ResponseEntity("not found", HttpStatus.BAD_REQUEST);
@@ -67,15 +70,17 @@ public class UnitPriceController {
         return new ResponseEntity("success", HttpStatus.OK);
     }
 
-    @RequestMapping(value="/editUnitPrice/{id}", method = RequestMethod.POST)
-    @ResponseBody
+//    @RequestMapping(value="/editUnitPrice/{id}", method = RequestMethod.POST)
+//    @ResponseBody
+    @PostMapping(value = "/editUnitPrice/{id}")
     public String updateUnitPrice(UnitPriceDTO unitPriceDTO,@PathVariable Long id) {
         unitPriceDTO.setId(id);
         unitPriceService.saveUnitPrice(unitPriceDTO);
         return "success";
     }
 
-    @RequestMapping(value = "/unitPrice/export", method = RequestMethod.GET)
+//    @RequestMapping(value = "/unitPrice/export", method = RequestMethod.GET)
+    @GetMapping(value = "/unitPrice/export")
     public void exportUnitPriceToCSV(HttpServletResponse response) throws IOException {
         response.setContentType("text/csv");
         String fileName = "UnitPrices.csv";

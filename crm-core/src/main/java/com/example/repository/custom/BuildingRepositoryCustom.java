@@ -8,5 +8,6 @@ import java.util.List;
 
 public interface BuildingRepositoryCustom {
     List<?> findAll(BuildingDTO buildingDTO, Pageable pageable);
+    List<?> findAllWithoutPageable(BuildingDTO buildingDTO);
     Long getTotalItems(BuildingDTO buildingDTO);
 }

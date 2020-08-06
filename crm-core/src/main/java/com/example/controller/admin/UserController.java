@@ -29,7 +29,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.List;
 import java.util.Map;
 
-@Controller
+@RestController
 public class UserController {
     @Autowired
     private IUserService userService;
@@ -37,15 +37,16 @@ public class UserController {
     @Autowired
     private IRoleService roleService;
 
-    @RequestMapping(value="/addUser", method= RequestMethod.POST)
-    @ResponseBody
-//    @PostMapping(value = "/addUser")
+//    @RequestMapping(value="/addUser", method= RequestMethod.POST)
+//    @ResponseBody
+    @PostMapping(value = "/addUser")
     public String submit(@RequestBody UserDTO userDTO) {
         userService.saveUser(userDTO);
         return "success";
     }
 
-    @RequestMapping(value="/user/list", method = RequestMethod.GET)
+//    @RequestMapping(value="/user/list", method = RequestMethod.GET)
+    @GetMapping(value = "/user/list")
     public ModelAndView getUsers(@ModelAttribute(SystemConstant.MODEL) UserDTO model,
                                  HttpServletRequest request){
         ModelAndView mav = new ModelAndView("admin/user/list");
@@ -60,7 +61,8 @@ public class UserController {
         return mav;
     }
 
-    @RequestMapping(value="/deleteUsers", method=RequestMethod.DELETE)
+//    @RequestMapping(value="/deleteUsers", method=RequestMethod.DELETE)
+    @DeleteMapping(value = "/deleteUsers")
     public ResponseEntity<?> deleteUsers(@RequestBody ListDTO checkedUsers){
         if(checkedUsers.getItems().isEmpty())
             return new ResponseEntity("not found", HttpStatus.BAD_REQUEST);
@@ -69,15 +71,17 @@ public class UserController {
         return new ResponseEntity("success", HttpStatus.OK);
     }
 
-    @RequestMapping(value="/editUser/{id}", method = RequestMethod.POST)
-    @ResponseBody
+//    @RequestMapping(value="/editUser/{id}", method = RequestMethod.POST)
+//    @ResponseBody
+    @PostMapping(value = "/editUser/{id}")
     public String updateUser(UserDTO userDTO,@PathVariable Long id) {
         userDTO.setId(id);
         userService.saveUser(userDTO);
         return "success";
     }
 
-    @RequestMapping(value = "/user/export", method = RequestMethod.GET)
+//    @RequestMapping(value = "/user/export", method = RequestMethod.GET)
+    @GetMapping(value = "/user/export")
     public void exportUserToCSV(HttpServletResponse response) throws IOException {
         response.setContentType("text/csv");
         String fileName = "users.csv";
