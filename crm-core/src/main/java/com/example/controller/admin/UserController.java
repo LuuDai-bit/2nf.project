@@ -23,6 +23,9 @@ import org.supercsv.prefs.CsvPreference;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.OutputStreamWriter;
+import java.io.Writer;
+import java.nio.charset.StandardCharsets;
 import java.util.List;
 import java.util.Map;
 
@@ -86,8 +89,10 @@ public class UserController {
         List<UserDTO> users = userService.getAllUsers();
 
         //Support utf-8
+        Writer writer = new OutputStreamWriter(response.getOutputStream(), StandardCharsets.UTF_8);
+        writer.write('\uFEFF'); // BOM for UTF-*
 
-        ICsvBeanWriter csvWriter = new CsvBeanWriter(response.getWriter(), CsvPreference.STANDARD_PREFERENCE);
+        ICsvBeanWriter csvWriter = new CsvBeanWriter(writer, CsvPreference.STANDARD_PREFERENCE);
 
         String[] csvHeader = {"Name", "Email", "Phone"};
 

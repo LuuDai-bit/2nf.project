@@ -90,8 +90,10 @@ public class BuildingController {
         List<BuildingDTO> buildings = buildingService.getAllBuildings();
 
         //Support utf-8
+        Writer writer = new OutputStreamWriter(response.getOutputStream(), StandardCharsets.UTF_8);
+        writer.write('\uFEFF'); // BOM for UTF-*
 
-        ICsvBeanWriter csvWriter = new CsvBeanWriter(response.getWriter(), CsvPreference.STANDARD_PREFERENCE);
+        ICsvBeanWriter csvWriter = new CsvBeanWriter(writer, CsvPreference.STANDARD_PREFERENCE);
 
         String[] csvHeader = {"Code", "District", "Street", "Ward", "Leased Area", "Room Number", "Note"};
 
