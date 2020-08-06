@@ -82,17 +82,25 @@ function deletePayment() {
 }
 
 function addPayment(){
-    window.open("/payment/add/page?id="+-1);
+    let url = "/add/payment/page?id=" + -1;
+    $.get(url, function (data) {
+        $('#edit-container').html(data);
+        $('#myModal').modal('show');
+    });
 }
 
 function cancelAddPayment(){
-    window.close();
+    $("#myModal").modal('hide');
+    resetInput();
 }
 
 function editPayment (id) {
     editId = id;
-    window.open("/payment/add/page?id="+id);
-    isAdd = false;
+    let url = "/add/payment/page?id=";
+    $.get(url + id, function (data) {
+        $('#edit-container').html(data);
+        $('#myModal').modal('show');
+    });
 }
 
 $("#searchPayment").click(function(){

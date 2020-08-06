@@ -85,17 +85,25 @@ function deleteCustomer() {
 }
 
 function addCustomer(){
-    window.open("/customer/add/page?id="+-1);
+    let url = "/add/customer/page?id=" + -1;
+    $.get(url, function (data) {
+        $('#edit-container').html(data);
+        $('#myModal').modal('show');
+    });
 }
 
 function cancelAddCustomer(){
-    window.close();
+    $("#myModal").modal('hide');
+    resetInput();
 }
 
 function editCustomer (id) {
     editId = id;
-    window.open("/customer/add/page?id="+id);
-    isAdd = false;
+    let url = "/add/customer/page?id=";
+    $.get(url + id, function (data) {
+        $('#edit-container').html(data);
+        $('#myModal').modal('show');
+    });
 }
 
 $("#searchCustomer").click(function(){

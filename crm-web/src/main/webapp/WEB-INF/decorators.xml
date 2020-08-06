@@ -5,10 +5,15 @@
         <pattern>/api*</pattern>
         <pattern>/access-denied</pattern>
         <pattern>/ckfinder</pattern>
+        <pattern>/add/*</pattern>
     </excludes>
 
     <decorator name="admin" page="admin.jsp">
         <pattern>/admin*</pattern>
+    </decorator>
+
+    <decorator name = "add" page="add.jsp">
+        <pattern>/add*</pattern>
     </decorator>
 
     <decorator name="client" page="web.jsp">
@@ -18,4 +23,6 @@
     <decorator name = "login" page="login.jsp">
         <pattern>/dang-nhap</pattern>
     </decorator>
+
+
 </decorators>

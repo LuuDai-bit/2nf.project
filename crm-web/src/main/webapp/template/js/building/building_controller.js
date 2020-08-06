@@ -102,7 +102,11 @@ function deleteBuilding() {
 }
 
 function addBuilding(){
-    window.open("/building/add/page?id="+-1);
+    let url = "/add/building/page?id=" + -1;
+    $.get(url, function (data) {
+        $('#edit-container').html(data);
+        $('#myModal').modal('show');
+    });
 }
 
 function cancelAddBuilding(){
@@ -112,8 +116,11 @@ function cancelAddBuilding(){
 
 function editBuilding (id) {
     editId = id;
-    window.open("/building/add/page?id="+id);
-    isAdd = false;
+    let url = "/add/building/page?id=";
+    $.get(url + id, function (data) {
+        $('#edit-container').html(data);
+        $('#myModal').modal('show');
+    });
 }
 
 $("#searchBuilding").click(function(){

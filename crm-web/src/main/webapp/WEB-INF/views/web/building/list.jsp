@@ -91,13 +91,14 @@
                         </div>
 
                         <div>
-                            <button type="button" class="btn btn-primary" onclick="addBuilding()">
-                                <i class="flaticon-plus"></i>
-                                Thêm mới</button>
+
+                            <button type="button" class="btn btn-primary" data-toggle="modal" onclick="addBuilding()"
+                                    data-target=".bd-example-modal-lg">Thêm mới</button>
                             <button id="deleteBuildings" type="button" onclick="deleteBuilding()"
                                     class="btn btn-danger" disabled>
                                 <i class="fa fa-trash" aria-hidden="true"></i>
                                 Xóa</button>
+
                             <div style="float:right; display:inline">
                                 <form:select path="maxPageItems" cssClass="my-select" onchange="updateMaxPageItems()">
                                     <form:option value="5">5</form:option>
@@ -142,7 +143,7 @@
                                 </c:forEach>
                                 </tbody>
                             </table>
-
+                            <a style="float:right" href="/building/export">Export CSV</a>
                         </div>
 
                         <div>
@@ -161,8 +162,6 @@
 
                     </div>
                 </form:form>
-
-
                 <div class="space-6"></div>
 
 
@@ -171,13 +170,12 @@
         </div><!-- /.widget-body -->
     </div><!-- /.login-box -->
 </div><!-- /.position-relative -->
-<button type="button" class="btn btn-primary" data-toggle="modal"
-        data-target=".bd-example-modal-lg">Large modal</button>
+
 <%--Modal--%>
 <div style="margin: 0 auto" id="myModal" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <%@ include file="/WEB-INF/views/web/building/add.jsp" %>
+    <div class="modal-dialog modal-lg" style="margin: 15em auto">
+        <div class="modal-content" id="edit-container">
+
         </div>
     </div>
 </div>

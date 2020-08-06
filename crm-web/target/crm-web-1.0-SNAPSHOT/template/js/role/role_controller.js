@@ -83,17 +83,25 @@ function deleteRole() {
 }
 
 function addRole(){
-    window.open("/role/add/page?id="+-1);
+    let url = "/add/role/page?id=" + -1;
+    $.get(url, function (data) {
+        $('#edit-container').html(data);
+        $('#myModal').modal('show');
+    });
 }
 
 function cancelAddRole(){
-    window.close();
+    $("#myModal").modal('hide');
+    resetInput();
 }
 
 function editRole (id) {
     editId = id;
-    window.open("/role/add/page?id="+id);
-    isAdd = false;
+    let url = "/add/role/page?id=";
+    $.get(url + id, function (data) {
+        $('#edit-container').html(data);
+        $('#myModal').modal('show');
+    });
 }
 
 $("#searchRole").click(function(){

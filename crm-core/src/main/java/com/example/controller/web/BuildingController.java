@@ -2,6 +2,8 @@ package com.example.controller.web;
 
 import com.example.constant.SystemConstant;
 import com.example.dto.BuildingDTO;
+import com.example.dto.UserDTO;
+import com.example.entity.BuildingEntity;
 import com.example.entity.other.ListDTO;
 import com.example.paging.PageRequest;
 import com.example.paging.Pageable;
@@ -12,8 +14,18 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
+import org.supercsv.io.CsvBeanWriter;
+import org.supercsv.io.ICsvBeanReader;
+import org.supercsv.io.ICsvBeanWriter;
+import org.supercsv.prefs.CsvPreference;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
+import java.io.Writer;
+import java.nio.charset.StandardCharsets;
 import java.util.List;
 
 @Controller
@@ -64,5 +76,31 @@ public class BuildingController {
         buildingDTO.setId(id);
         buildingService.saveBuilding(buildingDTO);
         return "success";
+    }
+
+    @RequestMapping(value = "/building/export", method = RequestMethod.GET)
+    public void exportBuildingToCSV(HttpServletResponse response) throws IOException {
+        response.setContentType("text/csv");
+        String fileName = "buildings.csv";
+        String headerKey = "Content-Disposition";
+        String headerValue = "attachment; filename=" + fileName;
+
+        response.setHeader(headerKey, headerValue);
+
+        List<BuildingDTO> buildings = buildingService.getAllBuildings();
+
+        //Support utf-8
+
+        ICsvBeanWriter csvWriter = new CsvBeanWriter(response.getWriter(), CsvPreference.STANDARD_PREFERENCE);
+
+        String[] csvHeader = {"Code", "District", "Street", "Ward", "Leased Area", "Room Number", "Note"};
+
+        String[] nameMapping = {"code", "district", "street", "ward", "leasedArea", "roomNumber", "note"};
+
+        csvWriter.writeHeader(csvHeader);
+        for(BuildingDTO buildingDTO : buildings){
+            csvWriter.write(buildingDTO, nameMapping);
+        }
+        csvWriter.close();
     }
 }

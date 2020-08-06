@@ -12,8 +12,13 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
+import org.supercsv.io.CsvBeanWriter;
+import org.supercsv.io.ICsvBeanWriter;
+import org.supercsv.prefs.CsvPreference;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 import java.util.List;
 
 @Controller
@@ -64,5 +69,31 @@ public class PaymentController {
         paymentDTO.setId(id);
         paymentService.savePayment(paymentDTO);
         return "success";
+    }
+
+    @RequestMapping(value = "/payment/export", method = RequestMethod.GET)
+    public void exportPaymentToCSV(HttpServletResponse response) throws IOException {
+        response.setContentType("text/csv");
+        String fileName = "payments.csv";
+        String headerKey = "Content-Disposition";
+        String headerValue = "attachment; filename=" + fileName;
+
+        response.setHeader(headerKey, headerValue);
+
+        List<PaymentDTO> payments = paymentService.getAllPayments();
+
+        //Support utf-8
+
+        ICsvBeanWriter csvWriter = new CsvBeanWriter(response.getWriter(), CsvPreference.STANDARD_PREFERENCE);
+
+        String[] csvHeader = {"Paid", "Payable"};
+
+        String[] nameMapping = {"amountPaid", "amountPayable"};
+
+        csvWriter.writeHeader(csvHeader);
+        for(PaymentDTO paymentDTO : payments){
+            csvWriter.write(paymentDTO, nameMapping);
+        }
+        csvWriter.close();
     }
 }

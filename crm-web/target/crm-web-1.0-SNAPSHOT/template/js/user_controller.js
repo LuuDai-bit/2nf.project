@@ -155,17 +155,25 @@ function deleteUsers1() {
 }
 
 function cancelAddUser(){
-    window.close();
+    $("#myModal").modal('hide');
+    resetInput();
 }
 
 function addUser(){
-    window.open("/adduserpage?id="+-1);
+    let url = "/add/customer/page?id=" + -1;
+    $.get(url, function (data) {
+        $('#edit-container').html(data);
+        $('#myModal').modal('show');
+    });
 }
 
 function editUser (id) {
     editId = id;
-    window.open("/adduserpage?id="+id);
-    isAdd = false;
+    let url = "/add/user/page?id=";
+    $.get(url + id, function (data) {
+        $('#edit-container').html(data);
+        $('#myModal').modal('show');
+    });
 }
 
 function getIdFromURL(){

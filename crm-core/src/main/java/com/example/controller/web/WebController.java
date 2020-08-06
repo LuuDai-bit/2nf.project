@@ -2,7 +2,6 @@ package com.example.controller.web;
 
 import com.example.constant.SystemConstant;
 import com.example.dto.*;
-import com.example.entity.UserEntity;
 import com.example.paging.PageRequest;
 import com.example.paging.Pageable;
 import com.example.service.*;
@@ -41,7 +40,7 @@ public class WebController {
         return mav;
     }
 
-    @RequestMapping(value="/adduserpage", method = RequestMethod.GET)
+    @RequestMapping(value="/add/user/page", method = RequestMethod.GET)
     public ModelAndView addUserPage(@RequestParam Long id){
         ModelAndView mav = new ModelAndView("admin/user/user_add");
         mav.addObject("roles", roleService.getAllRoles());
@@ -51,7 +50,7 @@ public class WebController {
         return mav;
     }
 
-    @RequestMapping(value="/role/add/page", method = RequestMethod.GET)
+    @RequestMapping(value="/add/role/page", method = RequestMethod.GET)
     public ModelAndView addRolePage(@RequestParam Long id){
         ModelAndView mav = new ModelAndView("admin/role/add");
         if(id<0) return mav;
@@ -60,7 +59,7 @@ public class WebController {
         return mav;
     }
 
-    @RequestMapping(value="/building/add/page", method = RequestMethod.GET)
+    @RequestMapping(value="/add/building/page", method = RequestMethod.GET)
     public ModelAndView addBuildingPage(@RequestParam Long id){
         ModelAndView mav = new ModelAndView("web/building/add");
         if(id<0) return mav;
@@ -69,7 +68,7 @@ public class WebController {
         return mav;
     }
 
-    @RequestMapping(value="/customer/add/page", method = RequestMethod.GET)
+    @RequestMapping(value="/add/customer/page", method = RequestMethod.GET)
     public ModelAndView addCustomerPage(@RequestParam Long id){
         ModelAndView mav = new ModelAndView("web/customer/add");
 
@@ -82,7 +81,7 @@ public class WebController {
         return mav;
     }
 
-    @RequestMapping(value="/unitPrice/add/page", method = RequestMethod.GET)
+    @RequestMapping(value="/add/unitPrice/page", method = RequestMethod.GET)
     public ModelAndView addUnitPricePage(@RequestParam Long id){
         ModelAndView mav = new ModelAndView("web/unit_price/add");
         UnitPriceDTO unitPriceDTO = new UnitPriceDTO();
@@ -93,7 +92,7 @@ public class WebController {
         return mav;
     }
 
-    @RequestMapping(value="/payment/add/page", method = RequestMethod.GET)
+    @RequestMapping(value="/add/payment/page", method = RequestMethod.GET)
     public ModelAndView addPaymentPage(@RequestParam Long id){
         ModelAndView mav = new ModelAndView("web/payment/add");
 

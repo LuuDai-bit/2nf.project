@@ -2,6 +2,7 @@ package com.example.controller.admin;
 
 import com.example.constant.SystemConstant;
 import com.example.dto.RoleDTO;
+import com.example.dto.UnitPriceDTO;
 import com.example.entity.other.ListDTO;
 import com.example.paging.PageRequest;
 import com.example.paging.Pageable;
@@ -12,8 +13,13 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
+import org.supercsv.io.CsvBeanWriter;
+import org.supercsv.io.ICsvBeanWriter;
+import org.supercsv.prefs.CsvPreference;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 import java.util.List;
 
 @Controller
@@ -63,5 +69,31 @@ public class RoleController {
         RoleDTO.setId(id);
         roleService.saveRole(RoleDTO);
         return "success";
+    }
+
+    @RequestMapping(value = "/role/export", method = RequestMethod.GET)
+    public void exportRoleToCSV(HttpServletResponse response) throws IOException {
+        response.setContentType("text/csv");
+        String fileName = "roles.csv";
+        String headerKey = "Content-Disposition";
+        String headerValue = "attachment; filename=" + fileName;
+
+        response.setHeader(headerKey, headerValue);
+
+        List<RoleDTO> roles = roleService.getAllRoles();
+
+        //Support utf-8
+
+        ICsvBeanWriter csvWriter = new CsvBeanWriter(response.getWriter(), CsvPreference.STANDARD_PREFERENCE);
+
+        String[] csvHeader = {"Name", "Code"};
+
+        String[] nameMapping = {"name", "code"};
+
+        csvWriter.writeHeader(csvHeader);
+        for(RoleDTO roleDTO : roles){
+            csvWriter.write(roleDTO, nameMapping);
+        }
+        csvWriter.close();
     }
 }

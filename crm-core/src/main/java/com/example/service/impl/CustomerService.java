@@ -86,4 +86,15 @@ public class CustomerService implements ICustomerService {
             customerRepository.delete(customerId);
         }
     }
+
+    @Override
+    public List<CustomerDTO> getAllCustomers() {
+        List<CustomerEntity> customerEntities = customerRepository.findAll();
+        List<CustomerDTO> customerDTOS = new ArrayList<>();
+        for(CustomerEntity elem: customerEntities){
+            CustomerDTO customerDTO = customerConverter.convertToDto(elem);
+            customerDTOS.add(customerDTO);
+        }
+        return customerDTOS;
+    }
 }

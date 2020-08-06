@@ -1,6 +1,7 @@
 package com.example.controller.web;
 
 import com.example.constant.SystemConstant;
+import com.example.dto.BuildingDTO;
 import com.example.dto.UnitPriceDTO;
 import com.example.entity.other.ListDTO;
 import com.example.paging.PageRequest;
@@ -12,8 +13,13 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
+import org.supercsv.io.CsvBeanWriter;
+import org.supercsv.io.ICsvBeanWriter;
+import org.supercsv.prefs.CsvPreference;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 import java.util.List;
 
 @Controller
@@ -64,5 +70,31 @@ public class UnitPriceController {
         unitPriceDTO.setId(id);
         unitPriceService.saveUnitPrice(unitPriceDTO);
         return "success";
+    }
+
+    @RequestMapping(value = "/unitPrice/export", method = RequestMethod.GET)
+    public void exportUnitPriceToCSV(HttpServletResponse response) throws IOException {
+        response.setContentType("text/csv");
+        String fileName = "UnitPrices.csv";
+        String headerKey = "Content-Disposition";
+        String headerValue = "attachment; filename=" + fileName;
+
+        response.setHeader(headerKey, headerValue);
+
+        List<UnitPriceDTO> unitPrices = unitPriceService.getAllUnitPrices();
+
+        //Support utf-8
+
+        ICsvBeanWriter csvWriter = new CsvBeanWriter(response.getWriter(), CsvPreference.STANDARD_PREFERENCE);
+
+        String[] csvHeader = {"Electricity Price", "Water Price", "Room Price", "Date"};
+
+        String[] nameMapping = {"electricityPrice", "waterPrice", "roomPrice", "date"};
+
+        csvWriter.writeHeader(csvHeader);
+        for(UnitPriceDTO unitPriceDTO : unitPrices){
+            csvWriter.write(unitPriceDTO, nameMapping);
+        }
+        csvWriter.close();
     }
 }

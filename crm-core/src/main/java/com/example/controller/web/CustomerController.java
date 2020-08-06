@@ -2,6 +2,7 @@ package com.example.controller.web;
 
 import com.example.constant.SystemConstant;
 import com.example.dto.CustomerDTO;
+import com.example.dto.CustomerDTO;
 import com.example.entity.other.ListDTO;
 import com.example.paging.PageRequest;
 import com.example.paging.Pageable;
@@ -12,8 +13,13 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
+import org.supercsv.io.CsvBeanWriter;
+import org.supercsv.io.ICsvBeanWriter;
+import org.supercsv.prefs.CsvPreference;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 import java.util.List;
 
 @Controller
@@ -64,5 +70,31 @@ public class CustomerController {
         customerDTO.setId(id);
         customerService.saveCustomer(customerDTO);
         return "success";
+    }
+
+    @RequestMapping(value = "/customer/export", method = RequestMethod.GET)
+    public void exportCustomerToCSV(HttpServletResponse response) throws IOException {
+        response.setContentType("text/csv");
+        String fileName = "customers.csv";
+        String headerKey = "Content-Disposition";
+        String headerValue = "attachment; filename=" + fileName;
+
+        response.setHeader(headerKey, headerValue);
+
+        List<CustomerDTO> customers = customerService.getAllCustomers();
+
+        //Support utf-8
+
+        ICsvBeanWriter csvWriter = new CsvBeanWriter(response.getWriter(), CsvPreference.STANDARD_PREFERENCE);
+
+        String[] csvHeader = {"Name", "Email", "Phone"};
+
+        String[] nameMapping = {"name", "email", "phone"};
+
+        csvWriter.writeHeader(csvHeader);
+        for(CustomerDTO customerDTO : customers){
+            csvWriter.write(customerDTO, nameMapping);
+        }
+        csvWriter.close();
     }
 }

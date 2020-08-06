@@ -106,7 +106,7 @@
                                 </c:forEach>
                                 </tbody>
                             </table>
-
+                            <a style="float:right" href="/customer/export">Export CSV</a>
                         </div>
 
                         <div>
@@ -134,5 +134,15 @@
     </div><!-- /.login-box -->
 </div><!-- /.position-relative -->
 
+<%--Modal--%>
+<div style="margin: 0 auto" id="myModal" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" style="margin: 15em auto">
+        <div class="modal-content" id="edit-container">
+
+        </div>
+    </div>
+</div>
+
+<%--End Modal--%>
 </body>
 </html>

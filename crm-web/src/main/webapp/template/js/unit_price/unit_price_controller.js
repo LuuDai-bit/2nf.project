@@ -93,17 +93,25 @@ function deleteUnitPrice() {
 }
 
 function addUnitPrice(){
-    window.open("/unitPrice/add/page?id="+-1);
+    let url = "/add/unitPrice/page?id=" + -1;
+    $.get(url, function (data) {
+        $('#edit-container').html(data);
+        $('#myModal').modal('show');
+    });
 }
 
 function cancelAddUnitPrice(){
-    window.close();
+    $("#myModal").modal('hide');
+    resetInput();
 }
 
 function editUnitPrice (id) {
     editId = id;
-    window.open("/unitPrice/add/page?id="+id);
-    isAdd = false;
+    let url = "/add/unitPrice/page?id=";
+    $.get(url + id, function (data) {
+        $('#edit-container').html(data);
+        $('#myModal').modal('show');
+    });
 }
 
 $("#searchUnitPrice").click(function(){
