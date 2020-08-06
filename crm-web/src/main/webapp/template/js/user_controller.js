@@ -148,7 +148,7 @@ function deleteUsers1() {
     }).fail(function (xhr, status, error) {
         alert(xhr.responseText);
         checkedUser = [];
-        enableDeleteButton(checkedUser.length==0);
+        enableUserDeleteButton(checkedUser.length==0);
         window.location.reload(true);
     });
 }
