@@ -66,7 +66,7 @@
                             <button type="button" class="btn btn-primary" onclick="addCustomer()">
                                 <i class="flaticon-plus"></i>
                                 Thêm mới</button>
-                            <button id="deleteCustomer" type="button" onclick="deleteCustomer()"
+                            <button id="deleteCustomers" type="button" onclick="deleteCustomer()"
                                     class="btn btn-danger" disabled>
                                 <i class="fa fa-trash" aria-hidden="true"></i>
                                 Xóa</button>
@@ -144,5 +144,6 @@
 </div>
 
 <%--End Modal--%>
+
 </body>
 </html>

@@ -12,11 +12,11 @@
             <label for="code">Mã:</label>
             <c:choose>
                 <c:when test="${building.id >=0}">
-                    <input type="text" value="${building.code}" id="code" class="form-control input-sm" placeholder="Tên"/>
+                    <input type="text" value="${building.code}" id="code" class="form-control input-sm" placeholder="Tên" required/>
                 </c:when>
 
                 <c:otherwise>
-                    <input type="text" id="code" class="form-control input-sm" placeholder="Mã"/>
+                    <input type="text" id="code" class="form-control input-sm" placeholder="Mã" required/>
                 </c:otherwise>
             </c:choose>
         </div>
@@ -24,11 +24,11 @@
             <label for="district">Quận:</label>
             <c:choose>
                 <c:when test="${building.id >=0}">
-                    <input type="text" value="${building.district}" id="district" class="form-control input-sm" placeholder="Quận"/>
+                    <input type="text" value="${building.district}" id="district" class="form-control input-sm" placeholder="Quận" required/>
                 </c:when>
 
                 <c:otherwise>
-                    <input type="text" id="district" class="form-control input-sm" placeholder="Quận"/>
+                    <input type="text" id="district" class="form-control input-sm" placeholder="Quận" required/>
                 </c:otherwise>
             </c:choose>
 
@@ -37,11 +37,11 @@
             <label for="street">Đường:</label>
             <c:choose>
                 <c:when test="${building.id >=0}">
-                    <input type="text" value="${building.street}" id="street" class="form-control input-sm" placeholder="Đường"/>
+                    <input type="text" value="${building.street}" id="street" class="form-control input-sm" placeholder="Đường" required/>
                 </c:when>
 
                 <c:otherwise>
-                    <input type="text" id="street" class="form-control input-sm" placeholder="Đường"/>
+                    <input type="text" id="street" class="form-control input-sm" placeholder="Đường" required/>
                 </c:otherwise>
             </c:choose>
         </div>
@@ -49,11 +49,11 @@
             <label for="Ward">Khu vực:</label>
             <c:choose>
                 <c:when test="${building.id >=0}">
-                    <input type="text" value="${building.ward}" id="ward" class="form-control input-sm" placeholder="Khu vực"/>
+                    <input type="text" value="${building.ward}" id="ward" class="form-control input-sm" placeholder="Khu vực" required/>
                 </c:when>
 
                 <c:otherwise>
-                    <input type="text" id="ward" class="form-control input-sm" placeholder="Khu vực"/>
+                    <input type="text" id="ward" class="form-control input-sm" placeholder="Khu vực" required/>
                 </c:otherwise>
             </c:choose>
         </div>
@@ -61,11 +61,11 @@
             <label for="Ward">Diện tích thuê:</label>
             <c:choose>
                 <c:when test="${building.id >=0}">
-                    <input type="number" value="${building.leasedArea}" id="leasedArea" class="form-control input-sm" placeholder="Diện tích thuê"/>
+                    <input type="number" value="${building.leasedArea}" id="leasedArea" class="form-control input-sm" placeholder="Diện tích thuê" required/>
                 </c:when>
 
                 <c:otherwise>
-                    <input type="number" id="leasedArea" class="form-control input-sm" placeholder="Diện tích thuê"/>
+                    <input type="number" id="leasedArea" class="form-control input-sm" placeholder="Diện tích thuê" required/>
                 </c:otherwise>
             </c:choose>
 
@@ -74,11 +74,11 @@
             <label for="Ward">Số phòng:</label>
             <c:choose>
                 <c:when test="${building.id >=0}">
-                    <input type="number" value="${building.roomNumber}" id="roomNumber" class="form-control input-sm" placeholder="Số phòng"/>
+                    <input type="number" value="${building.roomNumber}" id="roomNumber" class="form-control input-sm" placeholder="Số phòng" required/>
                 </c:when>
 
                 <c:otherwise>
-                    <input type="number" id="roomNumber" class="form-control input-sm" placeholder="Số phòng"/>
+                    <input type="number" id="roomNumber" class="form-control input-sm" placeholder="Số phòng" required/>
                 </c:otherwise>
             </c:choose>
 

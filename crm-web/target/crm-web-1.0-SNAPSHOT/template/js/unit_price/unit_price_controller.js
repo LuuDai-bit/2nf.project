@@ -117,3 +117,7 @@ function editUnitPrice (id) {
 $("#searchUnitPrice").click(function(){
     $('#UnitPriceForm').submit();
 });
+
+$(function () {
+    $('#effectiveDate').datepicker();
+});

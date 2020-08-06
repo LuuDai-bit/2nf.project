@@ -1,5 +1,5 @@
-function popThisUp() {
-    // $("#buildingModal").modal('show');
+function buildingValidate(){
+
 }
 function submitBuilding(){
     let building = {};
@@ -28,7 +28,8 @@ function submitBuilding(){
         submitEditBuilding(building);
     }
 
-
+    $("#myModal").modal('hide');
+    resetInput();
 }
 
 function resetInput(){

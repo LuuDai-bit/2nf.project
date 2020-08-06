@@ -6,25 +6,25 @@
 
     <div class="container" style="width: inherit">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-        <h1>Thêm/chỉnh sửa vai trò</h1>
+        <h1>Thêm/chỉnh sửa thanh toán</h1>
         <div class="form-group">
             <label for="amountPaid">Đã trả:</label>
             <c:if test="${payment.id >=0}">
-                <input type="text" value="${payment.amountPaid}" id="amountPaid" class="form-control input-sm" placeholder="Đã trả"/>
+                <input type="number" value="${payment.amountPaid}" id="amountPaid" class="form-control input-sm" placeholder="Đã trả"/>
             </c:if>
 
             <c:if test="${payment==null}">
-                <input type="text" id="amountPaid" class="form-control input-sm" placeholder="Tên"/>
+                <input type="number" id="amountPaid" class="form-control input-sm" placeholder="Đã trả"/>
             </c:if>
         </div>
         <div class="form-group">
             <label for="amountPayable">Có thể trả:</label>
             <c:if test="${payment.id >=0}">
-                <input type="text" value="${payment.amountPayable}" id="amountPayable" class="form-control input-sm" placeholder="Có thể trả"/>
+                <input type="number" value="${payment.amountPayable}" id="amountPayable" class="form-control input-sm" placeholder="Có thể trả"/>
             </c:if>
 
             <c:if test="${payment==null}">
-                <input type="text" id="amountPayable" class="form-control input-sm" placeholder="Có thể trả"/>
+                <input type="number" id="amountPayable" class="form-control input-sm" placeholder="Có thể trả"/>
             </c:if>
         </div>
         <div>

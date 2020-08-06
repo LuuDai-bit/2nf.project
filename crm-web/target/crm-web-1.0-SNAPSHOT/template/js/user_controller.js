@@ -28,7 +28,8 @@ function fire_ajax_submit() {
         timeout: 600000,
         success: function (result) {
             console.log("SUCCESS : ", result);
-            resetInput()
+            resetInput();
+            window.location.reload(true);
         },
         error: function (e) {
 
@@ -133,8 +134,6 @@ function enableUserDeleteButton(haveMoreThan0){
 
 $("#deleteUsers").click(function (event) {
     event.preventDefault();
-
-
 })
 
 function deleteUsers1() {

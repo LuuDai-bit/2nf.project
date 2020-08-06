@@ -142,12 +142,13 @@
 <%--Modal--%>
 <div style="margin: 0 auto" id="myModal" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
-        <div class="modal-content" id="edit-container">
+        <div class="modal-content" id="edit-container" style="margin: 15em auto">
 
         </div>
     </div>
 </div>
 
 <%--End Modal--%>
+
 </body>
 </html>
