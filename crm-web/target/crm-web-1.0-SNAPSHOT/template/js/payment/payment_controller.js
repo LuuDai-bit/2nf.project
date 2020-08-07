@@ -11,10 +11,7 @@ function submitPayment(){
         payment.id = editId;
         submitEditPayment(payment);
     }
-}
-
-function resetInput(){
-    $("input").val('');
+    $("#myModal").modal('hide');
 }
 
 function submitNewPayment(payment) {
@@ -25,11 +22,8 @@ function submitNewPayment(payment) {
         dataType: "json",
         contentType: "application/json"
     }).done(function (response) {
-        alert("Job done!!!!");
+        fire_ajax_submit();
     }).fail(function (xhr, status, error) {
-        alert(xhr.responseText);
-        if(xhr.responseText == "success") resetInput();
-    }).always(function() {
         fire_ajax_submit();
     });
 }
@@ -41,13 +35,9 @@ function submitEditPayment(payment){
         data: Payment,
         dataType: "json"
     }).done(function (response) {
-        alert("Job done!!!!");
+        alert(response);
     }).fail(function (xhr, status, error) {
         alert(xhr.responseText);
-        $("#name").val('');
-        $("#code").val('');
-    }).always(function () {
-        fire_ajax_submit();
     });
 }
 
@@ -91,7 +81,6 @@ function addPayment(){
 
 function cancelAddPayment(){
     $("#myModal").modal('hide');
-    resetInput();
 }
 
 function editPayment (id) {
@@ -101,6 +90,7 @@ function editPayment (id) {
         $('#edit-container').html(data);
         $('#myModal').modal('show');
     });
+    isAdd = false;
 }
 
 $("#searchPayment").click(function(){

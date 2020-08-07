@@ -99,4 +99,15 @@ public class UserService implements IUserService {
         UserDTO userDTO = userConverter.convertToDto(user);
         return userDTO;
     }
+
+    @Override
+    public List<UserDTO> getAllUsers(UserDTO userDTO) {
+        List<UserEntity> users = (List<UserEntity>) userRepository.findAllWithoutPageable(userDTO);
+        List<UserDTO> userDTOS = new ArrayList<UserDTO>();
+        for(UserEntity user : users){
+            UserDTO dto = userConverter.convertToDto(user);
+            userDTOS.add(dto);
+        }
+        return userDTOS;
+    }
 }

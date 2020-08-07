@@ -143,8 +143,8 @@
                                 </c:forEach>
                                 </tbody>
                             </table>
-<%--                            <a style="float:right" href="/building/export">Export CSV</a>--%>
-                            <button type="button" onclick="exportCSV()">Export CSV</button>
+<%--                            <button type="button" onclick="exportCSV()">Export CSV</button>--%>
+                            <button style="float:right" type="button" class="btn btn-link" onclick="exportCSV('building')">Xuất CSV</button>
                         </div>
 
                         <div>
@@ -165,7 +165,8 @@
                 </form:form>
                 <div class="space-6"></div>
 
-
+                <div>
+                </div>
                 <div class="space-6"></div>
             </div><!-- /.widget-main -->
         </div><!-- /.widget-body -->

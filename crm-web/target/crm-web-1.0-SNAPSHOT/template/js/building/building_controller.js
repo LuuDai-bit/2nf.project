@@ -25,11 +25,6 @@ function submitBuilding(){
     }
 
     $("#myModal").modal('hide');
-    resetInput();
-}
-
-function resetInput(){
-    $("input").val('');
 }
 
 function submitNewBuilding(building) {
@@ -40,14 +35,9 @@ function submitNewBuilding(building) {
         dataType: "json",
         contentType: "application/json"
     }).done(function (response) {
-        alert("Job done!!!!");
+        fire_ajax_submit();
     }).fail(function (xhr, status, error) {
-        alert(xhr.responseText);
-        if(xhr.responseText == "success") {
-            fire_ajax_submit();
-        }
-    }).always(function() {
-
+        fire_ajax_submit();
     });
 }
 
@@ -58,12 +48,8 @@ function submitEditBuilding(building){
         data: building,
         dataType: "json"
     }).done(function (response) {
-        alert("Job done!!!!");
+        fire_ajax_submit();
     }).fail(function (xhr, status, error) {
-        alert(xhr.responseText);
-        $("#name").val('');
-        $("#code").val('');
-    }).always(function () {
         fire_ajax_submit();
     });
 }
@@ -108,7 +94,6 @@ function addBuilding(){
 
 function cancelAddBuilding(){
     $("#myModal").modal('hide');
-    resetInput();
 }
 
 function editBuilding (id) {
@@ -118,19 +103,9 @@ function editBuilding (id) {
         $('#edit-container').html(data);
         $('#myModal').modal('show');
     });
+    isAdd = false;
 }
 
 $("#searchBuilding").click(function(){
     $('#buildingForm').submit();
 })
-
-function exportCSV(){
-    console.log('zo');
-    let paramObj = {};
-    $.each($('#buildingForm').serializeArray(), function(_, kv) {
-        paramObj[kv.name] = kv.value;
-    });
-    let params = jQuery.param(paramObj);
-    let url = '/building/export?'+ params;
-    window.open(url, '_blank');
-}

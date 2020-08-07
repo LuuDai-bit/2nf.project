@@ -106,7 +106,8 @@
                                 </c:forEach>
                                 </tbody>
                             </table>
-                            <a style="float:right" href="/customer/export">Export CSV</a>
+<%--                            <a style="float:right" href="/customer/export">Export CSV</a>--%>
+                            <button style="float:right" type="button" class="btn btn-link" onclick="exportCSV('customer')">Xuất CSV</button>
                         </div>
 
                         <div>

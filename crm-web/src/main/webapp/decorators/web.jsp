@@ -46,6 +46,7 @@
     <script type="text/javascript" src="<c:url value='/template/js/customer/customer_controller.js' />"></script>
     <script type="text/javascript" src="<c:url value='/template/js/unit_price/unit_price_controller.js' />"></script>
     <script type="text/javascript" src="<c:url value='/template/js/payment/payment_controller.js' />"></script>
+    <script type="text/javascript" src="<c:url value='/template/js/common.js' />"></script>
 </head>
 <style type="text/css">
     option {

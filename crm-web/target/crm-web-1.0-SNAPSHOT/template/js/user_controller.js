@@ -1,48 +1,3 @@
-$(document).ready(function () {
-    getIdFromURL();
-});
-let checkedUser = [];
-let isAdd = true;
-let editId = -1;
-
-function fire_ajax_submit() {
-
-    let form = $('#fileUploadForm')[0];
-
-    let data = new FormData(form);
-    if(data == null){
-        return;
-    }
-    // fdata.append("extraField", "This is some extra data, testing");
-
-    $("#btnSubmit").prop("disabled", true);
-
-    $.ajax({
-        type: "POST",
-        enctype: "multipart/form-data",
-        url: "/api/upload/multi",
-        data: data,
-        processData: false,
-        contentType: false,
-        cache: false,
-        timeout: 600000,
-        success: function (result) {
-            console.log("SUCCESS : ", result);
-            resetInput();
-            window.location.reload(true);
-        },
-        error: function (e) {
-
-            $("#result").text(e.responseText);
-            console.log("ERROR : ", e);
-            $("#btnSubmit").prop("disabled", false);
-
-        }
-    });
-
-
-}
-
 function submitUser(){
     let user = {};
     let phoneNumberRe = /^\d+$/;
@@ -53,7 +8,6 @@ function submitUser(){
     user.email = $("#email").val().trim();
     user.phone = $("#phoneNumber").val().trim();
     let avatar = $("#imgfile")[0].files;
-
     let role_id = $( "#role option:selected" ).val();
 
     user.role_id = role_id;
@@ -86,8 +40,7 @@ function submitUser(){
         user.id = editId;
         submitEditUser(user);
     }
-    resetInput();
-
+    $("#myModal").modal('hide');
 }
 
 function submitNewUser(user) {
@@ -98,12 +51,12 @@ function submitNewUser(user) {
         dataType: "json",
         contentType: "application/json"
     }).done(function (response) {
-        alert("Job done!!!!");
+        fire_ajax_submit();
     }).fail(function (xhr, status, error) {
-        alert(xhr.responseText);
+        fire_ajax_submit();
     });
 
-    fire_ajax_submit();
+
 }
 
 function submitEditUser(user){
@@ -113,9 +66,9 @@ function submitEditUser(user){
         data: user,
         dataType: "json"
     }).done(function (response) {
-        alert("Job done!!!!");
+        fire_ajax_submit();
     }).fail(function (xhr, status, error) {
-        alert(xhr.responseText);
+        fire_ajax_submit();
     });
 }
 
@@ -155,11 +108,10 @@ function deleteUsers1() {
 
 function cancelAddUser(){
     $("#myModal").modal('hide');
-    resetInput();
 }
 
 function addUser(){
-    let url = "/add/customer/page?id=" + -1;
+    let url = "/add/user/page?id=" + -1;
     $.get(url, function (data) {
         $('#edit-container').html(data);
         $('#myModal').modal('show');
@@ -173,6 +125,7 @@ function editUser (id) {
         $('#edit-container').html(data);
         $('#myModal').modal('show');
     });
+    isAdd = false;
 }
 
 function getIdFromURL(){

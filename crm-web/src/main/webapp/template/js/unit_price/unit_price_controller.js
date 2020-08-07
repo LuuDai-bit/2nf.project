@@ -20,12 +20,7 @@ function submitUnitPrice(){
         unitPrice.id = editId;
         submitEditUnitPrice(unitPrice);
     }
-
-
-}
-
-function resetInput(){
-    $("input").val('');
+    $("#myModal").modal('hide');
 }
 
 function submitNewUnitPrice(unitPrice) {
@@ -39,9 +34,6 @@ function submitNewUnitPrice(unitPrice) {
         alert("Job done!!!!");
     }).fail(function (xhr, status, error) {
         alert(xhr.responseText);
-        if(xhr.responseText == "success") resetInput();
-    }).always(function() {
-        fire_ajax_submit();
     });
 }
 
@@ -55,10 +47,6 @@ function submitEditUnitPrice(unitPrice){
         alert("Job done!!!!");
     }).fail(function (xhr, status, error) {
         alert(xhr.responseText);
-        $("#name").val('');
-        $("#code").val('');
-    }).always(function () {
-        fire_ajax_submit();
     });
 }
 
@@ -102,7 +90,6 @@ function addUnitPrice(){
 
 function cancelAddUnitPrice(){
     $("#myModal").modal('hide');
-    resetInput();
 }
 
 function editUnitPrice (id) {
@@ -112,6 +99,7 @@ function editUnitPrice (id) {
         $('#edit-container').html(data);
         $('#myModal').modal('show');
     });
+    isAdd = false;
 }
 
 $("#searchUnitPrice").click(function(){

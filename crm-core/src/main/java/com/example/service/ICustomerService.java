@@ -12,4 +12,5 @@ public interface ICustomerService {
     void saveCustomer(CustomerDTO Customer);
     void deleteCustomers(List<Long> Customers);
     List<CustomerDTO> getAllCustomers();
+    List<CustomerDTO> getAllCustomers(CustomerDTO dto);
 }

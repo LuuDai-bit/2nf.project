@@ -97,4 +97,15 @@ public class CustomerService implements ICustomerService {
         }
         return customerDTOS;
     }
+
+    @Override
+    public List<CustomerDTO> getAllCustomers(CustomerDTO dto) {
+        List<CustomerEntity> customerEntities = (List<CustomerEntity>) customerRepository.findAllWithoutPageable(dto);
+        List<CustomerDTO> customerDTOS = new ArrayList<>();
+        for(CustomerEntity elem: customerEntities){
+            CustomerDTO customerDTO = customerConverter.convertToDto(elem);
+            customerDTOS.add(customerDTO);
+        }
+        return customerDTOS;
+    }
 }

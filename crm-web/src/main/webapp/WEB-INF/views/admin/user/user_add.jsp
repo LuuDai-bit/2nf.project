@@ -74,7 +74,7 @@
                     <c:if test="${not empty users.avatar}">
                         <c:forEach var="ava" items="${users.avatar}">
                             <%--                                    <c:set var="image" value="E://pictures//${ava}"/>--%>
-                            <img style="width: 200px;padding-top: 20px; height:200px" alt="users Pic" src='<c:url value='/template/pictures/${ava}'/>'
+                            <img style="width: 200px;padding-top: 20px; height:200px" alt="users Pic" src='<c:url value='/image-resource?ava=${ava}'/>'
                             />
 
                         </c:forEach>

@@ -17,8 +17,7 @@ function submitRole(){
         role.id = editId;
         submitEditRole(role);
     }
-
-
+    $("#myModal").modal('hide');
 }
 
 function submitNewRole(role) {
@@ -92,7 +91,6 @@ function addRole(){
 
 function cancelAddRole(){
     $("#myModal").modal('hide');
-    resetInput();
 }
 
 function editRole (id) {
@@ -102,6 +100,7 @@ function editRole (id) {
         $('#edit-container').html(data);
         $('#myModal').modal('show');
     });
+    isAdd = false;
 }
 
 $("#searchRole").click(function(){

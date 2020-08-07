@@ -114,7 +114,8 @@
                                 </c:forEach>
                                 </tbody>
                             </table>
-                            <a style="float:right" href="/user/export">Export CSV</a>
+
+                            <button style="float:right" type="button" class="btn btn-link" onclick="exportCSV('user')">Xuất CSV</button>
                         </div>
 
                         <div>

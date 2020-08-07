@@ -82,7 +82,7 @@ public class CustomerController {
 
 //    @RequestMapping(value = "/customer/export", method = RequestMethod.GET)
     @GetMapping(value = "/customer/export")
-    public void exportCustomerToCSV(HttpServletResponse response) throws IOException {
+    public void exportCustomerToCSV(CustomerDTO dto, HttpServletResponse response) throws IOException {
         response.setContentType("text/csv");
         String fileName = "customers.csv";
         String headerKey = "Content-Disposition";
@@ -90,7 +90,7 @@ public class CustomerController {
 
         response.setHeader(headerKey, headerValue);
 
-        List<CustomerDTO> customers = customerService.getAllCustomers();
+        List<CustomerDTO> customers = customerService.getAllCustomers(dto);
 
         //Support utf-8
         Writer writer = new OutputStreamWriter(response.getOutputStream(), StandardCharsets.UTF_8);

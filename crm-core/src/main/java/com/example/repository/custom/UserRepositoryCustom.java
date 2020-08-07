@@ -9,5 +9,6 @@ import java.util.List;
 
 public interface UserRepositoryCustom {
     List<?> findAll(UserDTO userDTO, Pageable pageable);
+    List<?> findAllWithoutPageable(UserDTO userDTO);
     Long getTotalItems(UserDTO userDTO);
 }

@@ -23,4 +23,17 @@ http://www.springframework.org/schema/context/spring-context.xsd">
     <mcv:resources mapping="/template/**" location="/template/"/>
     <mvc:annotation-driven/>
 
+    <mvc:annotation-driven>
+        <mvc:message-converters>
+            <bean class="org.springframework.http.converter.ByteArrayHttpMessageConverter">
+                <property name="supportedMediaTypes">
+                    <list>
+                        <value>image/jpeg</value>
+                        <value>image/png</value>
+                    </list>
+                </property>
+            </bean>
+        </mvc:message-converters>
+    </mvc:annotation-driven>
+
 </beans>

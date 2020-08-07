@@ -16,17 +16,17 @@ public class ICustomerRepositoryImpl implements CustomerRepositoryCustom {
     @PersistenceContext
     private EntityManager entityManager;
 
-    public List<?> findAll(CustomerDTO CustomerDTO, Pageable pageable) {
+    public List<?> findAll(CustomerDTO customerDTO, Pageable pageable) {
         StringBuilder sql = new StringBuilder("SELECT ue FROM CustomerEntity ue");
         sql.append(" WHERE 1=1 ");
-        if (StringUtils.isNotBlank(CustomerDTO.getName())) {
-            sql.append("AND LOWER(ue.name) LIKE LOWER('%" + CustomerDTO.getName() + "%')");
+        if (StringUtils.isNotBlank(customerDTO.getName())) {
+            sql.append("AND LOWER(ue.name) LIKE LOWER('%" + customerDTO.getName() + "%')");
         }
-        if (StringUtils.isNotBlank(CustomerDTO.getEmail())) {
-            sql.append("AND LOWER(ue.email) LIKE LOWER('%" + CustomerDTO.getEmail() + "%')");
+        if (StringUtils.isNotBlank(customerDTO.getEmail())) {
+            sql.append("AND LOWER(ue.email) LIKE LOWER('%" + customerDTO.getEmail() + "%')");
         }
-        if (StringUtils.isNotBlank(CustomerDTO.getPhone())) {
-            sql.append("AND LOWER(ue.phone) LIKE LOWER('%" + CustomerDTO.getPhone() + "%')");
+        if (StringUtils.isNotBlank(customerDTO.getPhone())) {
+            sql.append("AND LOWER(ue.phone) LIKE LOWER('%" + customerDTO.getPhone() + "%')");
         }
 
         Query query = entityManager.createQuery(sql.toString());
@@ -36,17 +36,35 @@ public class ICustomerRepositoryImpl implements CustomerRepositoryCustom {
     }
 
     @Override
-    public Long getTotalItems(CustomerDTO CustomerDTO) {
+    public List<?> findAllWithoutPageable(CustomerDTO customerDTO) {
+        StringBuilder sql = new StringBuilder("SELECT ue FROM CustomerEntity ue");
+        sql.append(" WHERE 1=1 ");
+        if (StringUtils.isNotBlank(customerDTO.getName())) {
+            sql.append("AND LOWER(ue.name) LIKE LOWER('%" + customerDTO.getName() + "%')");
+        }
+        if (StringUtils.isNotBlank(customerDTO.getEmail())) {
+            sql.append("AND LOWER(ue.email) LIKE LOWER('%" + customerDTO.getEmail() + "%')");
+        }
+        if (StringUtils.isNotBlank(customerDTO.getPhone())) {
+            sql.append("AND LOWER(ue.phone) LIKE LOWER('%" + customerDTO.getPhone() + "%')");
+        }
+
+        Query query = entityManager.createQuery(sql.toString());
+        return query.getResultList();
+    }
+
+    @Override
+    public Long getTotalItems(CustomerDTO customerDTO) {
         StringBuilder sql = new StringBuilder("SELECT COUNT(*) FROM CustomerEntity AS ue");
         sql.append(" WHERE 1=1 ");
-        if (StringUtils.isNotBlank(CustomerDTO.getName())) {
-            sql.append("AND LOWER(ue.name) LIKE LOWER('%" + CustomerDTO.getName() + "%')");
+        if (StringUtils.isNotBlank(customerDTO.getName())) {
+            sql.append("AND LOWER(ue.name) LIKE LOWER('%" + customerDTO.getName() + "%')");
         }
-        if (StringUtils.isNotBlank(CustomerDTO.getEmail())) {
-            sql.append("AND LOWER(ue.email) LIKE LOWER('%" + CustomerDTO.getEmail() + "%')");
+        if (StringUtils.isNotBlank(customerDTO.getEmail())) {
+            sql.append("AND LOWER(ue.email) LIKE LOWER('%" + customerDTO.getEmail() + "%')");
         }
-        if (StringUtils.isNotBlank(CustomerDTO.getPhone())) {
-            sql.append("AND LOWER(ue.phone) LIKE LOWER('%" + CustomerDTO.getPhone() + "%')");
+        if (StringUtils.isNotBlank(customerDTO.getPhone())) {
+            sql.append("AND LOWER(ue.phone) LIKE LOWER('%" + customerDTO.getPhone() + "%')");
         }
 
         Query query = entityManager.createQuery(sql.toString());

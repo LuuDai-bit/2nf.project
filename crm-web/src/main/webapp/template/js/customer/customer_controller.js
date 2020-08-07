@@ -14,12 +14,7 @@ function submitCustomer(){
         customer.id = editId;
         submitEditCustomer(customer);
     }
-
-
-}
-
-function resetInput(){
-    $("input").val('');
+    $("#myModal").modal('hide');
 }
 
 function submitNewCustomer(customer) {
@@ -33,7 +28,6 @@ function submitNewCustomer(customer) {
         alert("Job done!!!!");
     }).fail(function (xhr, status, error) {
         alert(xhr.responseText);
-        if(xhr.responseText == "success") resetInput();
     }).always(function() {
     });
 }
@@ -94,7 +88,6 @@ function addCustomer(){
 
 function cancelAddCustomer(){
     $("#myModal").modal('hide');
-    resetInput();
 }
 
 function editCustomer (id) {
@@ -104,6 +97,7 @@ function editCustomer (id) {
         $('#edit-container').html(data);
         $('#myModal').modal('show');
     });
+    isAdd = false;
 }
 
 $("#searchCustomer").click(function(){

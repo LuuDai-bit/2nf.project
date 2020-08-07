@@ -1,5 +1,6 @@
 package com.example.service;
 
+import com.example.dto.BuildingDTO;
 import com.example.dto.RoleDTO;
 import com.example.dto.UserDTO;
 
@@ -15,4 +16,5 @@ public interface IUserService {
     void deleteUsers(List<Long> users);
     int getTotalItems(UserDTO modelSearch);
     UserDTO getUserById(Long id);
+    List<UserDTO> getAllUsers(UserDTO userDTO);
 }

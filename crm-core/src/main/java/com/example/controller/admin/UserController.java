@@ -82,7 +82,7 @@ public class UserController {
 
 //    @RequestMapping(value = "/user/export", method = RequestMethod.GET)
     @GetMapping(value = "/user/export")
-    public void exportUserToCSV(HttpServletResponse response) throws IOException {
+    public void exportUserToCSV(UserDTO model,HttpServletResponse response) throws IOException {
         response.setContentType("text/csv");
         String fileName = "users.csv";
         String headerKey = "Content-Disposition";
@@ -90,7 +90,7 @@ public class UserController {
 
         response.setHeader(headerKey, headerValue);
 
-        List<UserDTO> users = userService.getAllUsers();
+        List<UserDTO> users = userService.getAllUsers(model);
 
         //Support utf-8
         Writer writer = new OutputStreamWriter(response.getOutputStream(), StandardCharsets.UTF_8);

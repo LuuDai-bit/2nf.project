@@ -40,6 +40,27 @@ public class IUserRepositoryImpl implements UserRepositoryCustom {
     }
 
     @Override
+    public List<?> findAllWithoutPageable(UserDTO userDTO) {
+        StringBuilder sql = new StringBuilder("SELECT u FROM UserEntity u");
+        sql.append(" WHERE 1=1 ");
+        if (StringUtils.isNotBlank(userDTO.getName())) {
+            sql.append("AND LOWER(u.name) LIKE LOWER('%"+ userDTO.getName()+"%') ");
+        }
+        if (StringUtils.isNotBlank(userDTO.getEmail())) {
+            sql.append("AND LOWER(u.email) LIKE LOWER('%"+ userDTO.getEmail()+"%') ");
+        }
+        if (StringUtils.isNotBlank(userDTO.getPhone())) {
+            sql.append("AND LOWER(u.phone) LIKE LOWER('%"+ userDTO.getPhone()+"%')");
+        }
+        if (userDTO.getRole_id() != null) {
+            sql.append("AND u.role_id = "+ userDTO.getRole_id() + "");
+        }
+
+        Query query = entityManager.createQuery(sql.toString());
+        return query.getResultList();
+    }
+
+    @Override
     public Long getTotalItems(UserDTO userDTO) {
         StringBuilder sql = new StringBuilder("SELECT COUNT(*) FROM UserEntity AS ue");
         sql.append(" WHERE 1=1 ");

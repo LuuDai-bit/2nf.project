@@ -5,14 +5,26 @@ import com.example.dto.*;
 import com.example.paging.PageRequest;
 import com.example.paging.Pageable;
 import com.example.service.*;
+import org.apache.commons.io.IOUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.context.support.ServletContextResource;
 import org.springframework.web.servlet.ModelAndView;
 
-import java.util.List;
+import javax.servlet.*;
+import javax.servlet.descriptor.JspConfigDescriptor;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.*;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.*;
 
 @Controller
 public class WebController {
@@ -30,6 +42,8 @@ public class WebController {
     private IBuildingService buildingService;
     @Autowired
     private IPaymentService paymentService;
+    @Autowired
+    private ServletContext servletContext;
 
     @RequestMapping(value="/homepage", method = RequestMethod.GET)
     public ModelAndView homePage(){
@@ -103,5 +117,25 @@ public class WebController {
         paymentDTO = paymentService.getOnePaymentById(id);
         mav.addObject(SystemConstant.PAYMENT , paymentDTO);
         return mav;
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "/image-resource", method = RequestMethod.GET)
+    public void getImageAsResource(@RequestParam("ava") String pictureName,
+                                   HttpServletRequest request, HttpServletResponse response)
+            throws IOException{
+        String dir = "E:\\pictures\\";
+        ServletOutputStream outStream;
+        outStream = response.getOutputStream();
+        FileInputStream fin = new FileInputStream(dir+pictureName);
+        BufferedInputStream bin = new BufferedInputStream(fin);
+        BufferedOutputStream bout = new BufferedOutputStream(outStream);
+        int ch =0;
+        while((ch=bin.read())!=-1)
+            bout.write(ch);
+        bin.close();
+        fin.close();
+        bout.close();
+        outStream.close();
     }
 }
