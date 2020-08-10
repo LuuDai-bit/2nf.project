@@ -5,11 +5,16 @@ import com.example.dto.*;
 import com.example.paging.PageRequest;
 import com.example.paging.Pageable;
 import com.example.service.*;
-import org.apache.commons.io.IOUtils;
+
+import org.apache.poi.util.IOUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.Resource;
+import org.springframework.http.CacheControl;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.context.support.ServletContextResource;
@@ -119,23 +124,15 @@ public class WebController {
         return mav;
     }
 
-    @ResponseBody
-    @RequestMapping(value = "/image-resource", method = RequestMethod.GET)
-    public void getImageAsResource(@RequestParam("ava") String pictureName,
-                                   HttpServletRequest request, HttpServletResponse response)
-            throws IOException{
+    @RequestMapping(value = "/image-response-entity", method = RequestMethod.GET)
+    public ResponseEntity<byte[]> getImageAsResponseEntity(@RequestParam("ava") String pictureName) throws IOException {
+        HttpHeaders headers = new HttpHeaders();
         String dir = "E:\\pictures\\";
-        ServletOutputStream outStream;
-        outStream = response.getOutputStream();
         FileInputStream fin = new FileInputStream(dir+pictureName);
-        BufferedInputStream bin = new BufferedInputStream(fin);
-        BufferedOutputStream bout = new BufferedOutputStream(outStream);
-        int ch =0;
-        while((ch=bin.read())!=-1)
-            bout.write(ch);
-        bin.close();
-        fin.close();
-        bout.close();
-        outStream.close();
+        byte[] media = IOUtils.toByteArray(fin);
+        headers.setCacheControl(CacheControl.noCache().getHeaderValue());
+
+        ResponseEntity<byte[]> responseEntity = new ResponseEntity<>(media, headers, HttpStatus.OK);
+        return responseEntity;
     }
 }

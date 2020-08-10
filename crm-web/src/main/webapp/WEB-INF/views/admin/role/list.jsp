@@ -101,7 +101,7 @@
                         <div>
                             <div>
                                 <span>Có tất cả <span id="totalItem">${role.totalItems}</span> bản ghi</span>
-                                <span>Bản ghi x - y</span>
+                                <span>Bản ghi ${(role.page - 1) * role.maxPageItems +1} - ${role.listResult.size()}</span>
                             </div>
                             <div>
                                 <nav aria-label="...">

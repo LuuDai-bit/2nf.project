@@ -117,7 +117,7 @@
                         <div>
                             <div>
                                 <span>Có tất cả <span id="totalItem">${unitPrice.totalItems}</span> bản ghi</span>
-                                <span>Bản ghi x - y</span>
+                                <span>Bản ghi ${(unitPrice.page - 1) * unitPrice.maxPageItems +1} - ${unitPrice.listResult.size()}</span>
                             </div>
                             <div>
                                 <nav aria-label="...">

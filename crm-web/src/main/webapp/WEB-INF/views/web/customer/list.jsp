@@ -113,7 +113,7 @@
                         <div>
                             <div>
                                 <span>Có tất cả <span id="totalItem">${elem.totalItems}</span> bản ghi</span>
-                                <span>Bản ghi x - y</span>
+                                <span>Bản ghi ${(customer.page - 1) * customer.maxPageItems +1} - ${customer.listResult.size()}</span>
                             </div>
                             <div>
                                 <nav aria-label="...">

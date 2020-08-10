@@ -21,7 +21,6 @@
             <div class="widget-main">
                 <h4 class="header blue lighter bigger">
                     <i class="ace-icon fa fa-coffee green"></i>
-
                 </h4>
                 <form:form id="unitPriceForm" method="GET" action="${formURL}" modelAttribute="unitPrice">
                     <div class="container">
@@ -111,13 +110,12 @@
                                 </c:forEach>
                                 </tbody>
                             </table>
-<%--                            <a style="float:right" href="/unitPrice/export">Export CSV</a>--%>
                         </div>
 
                         <div>
                             <div>
                                 <span>Có tất cả <span id="totalItem">${unitPrice.totalItems}</span> bản ghi</span>
-                                <span>Bản ghi x - y</span>
+                                <span>Bản ghi ${(unitPrice.page - 1) * unitPrice.maxPageItems +1} - ${unitPrice.listResult.size()}</span>
                             </div>
                             <div>
                                 <nav aria-label="...">

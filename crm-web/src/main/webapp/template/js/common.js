@@ -51,12 +51,12 @@ function validateDateInput(date) {
 
 
 function exportCSV(category){
-    console.log('zo');
     let paramObj = {};
     $.each($('#buildingForm').serializeArray(), function(_, kv) {
         paramObj[kv.name] = kv.value;
     });
     let params = jQuery.param(paramObj);
     let url = '/'+category+'/export?'+ params;
-    window.open(url, '_blank');
+    window.location.replace(url);
+    // window.location.href(url);
 }

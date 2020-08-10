@@ -116,12 +116,13 @@
                             </table>
 
                             <button style="float:right" type="button" class="btn btn-link" onclick="exportCSV('user')">Xuất CSV</button>
+
                         </div>
 
                         <div>
                             <div>
                                 <span>Có tất cả <span id="totalItem">${users.totalItems}</span> bản ghi</span>
-                                <span>Bản ghi x - y</span>
+                                <span>Bản ghi ${(users.page - 1) * users.maxPageItems +1} - ${users.listResult.size()}</span>
                             </div>
                             <div>
                                 <nav aria-label="...">

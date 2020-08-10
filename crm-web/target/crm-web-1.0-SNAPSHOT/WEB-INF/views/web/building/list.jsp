@@ -150,7 +150,7 @@
                         <div>
                             <div>
                                 <span>Có tất cả <span id="totalItem">${building.totalItems}</span> bản ghi</span>
-                                <span>Bản ghi x - y</span>
+                                <span>Bản ghi ${(building.page - 1) * building.maxPageItems +1} - ${building.listResult.size()}</span>
                             </div>
                             <div>
                                 <nav aria-label="...">
